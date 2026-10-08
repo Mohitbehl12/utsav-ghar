@@ -1,0 +1,122 @@
+[
+ {
+  "id": "DEP-001",
+  "module": "Deployment",
+  "page": "Any page over http://",
+  "name": "Plain HTTP is redirected to HTTPS",
+  "expected": "301 to https://",
+  "actual": "301 → https://localhost:4000/shop",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "DEP-002",
+  "module": "Deployment",
+  "page": "/",
+  "name": "HTTPS response has HSTS, CSP and no X-Powered-By",
+  "expected": "Headers present",
+  "actual": "strict-transport-security, content-security-policy, x-frame-options",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "DEP-003",
+  "module": "Deployment",
+  "page": "/api/settings/public",
+  "name": "TEST MODE is reported to the website",
+  "expected": "test_mode = true",
+  "actual": "test_mode=True",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "DEP-004",
+  "module": "Deployment",
+  "page": "Server log",
+  "name": "Start-up log contains no password or secret",
+  "expected": "None found",
+  "actual": "none",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "DEP-005",
+  "module": "Deployment",
+  "page": "/api/unknown",
+  "name": "Unknown API path gives a short JSON error, no stack trace",
+  "expected": "404 JSON, no \"at \" frames or paths",
+  "actual": "404 b'{\"error\":\"Not found\"}'",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "DEP-006",
+  "module": "Deployment",
+  "page": "/api/auth/login",
+  "name": "Malformed request in production shows no internals",
+  "expected": "No parser text, no stack",
+  "actual": "400 b'{\"error\":\"We could not read that request. Please refresh the page and try again.\"}'",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "DEP-007",
+  "module": "Deployment",
+  "page": "Server start",
+  "name": "Production refuses to start without strong secrets",
+  "expected": "Exits with a clear message",
+  "actual": "FATAL: JWT_SECRET must be set to a random string of 32+ characters in production.",
+  "status": "PASS",
+  "severity": "Critical"
+ },
+ {
+  "id": "DEP-008",
+  "module": "Deployment",
+  "page": "Sign-up / forgot password",
+  "name": "With TEST_MODE off, codes are never sent to the browser",
+  "expected": "No dev_otp; test_mode false",
+  "actual": "test_mode=False, code in reply: False",
+  "status": "PASS",
+  "severity": "Critical"
+ },
+ {
+  "id": "DEP-010",
+  "module": "Deployment",
+  "page": "/",
+  "name": "TEST MODE banner is visible on the Store",
+  "expected": "Banner shown",
+  "actual": "visible",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "DEP-011",
+  "module": "Deployment",
+  "page": "/dealer",
+  "name": "TEST MODE banner is visible on the Dealer app",
+  "expected": "Banner shown",
+  "actual": "visible",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "DEP-012",
+  "module": "Deployment",
+  "page": "/admin",
+  "name": "TEST MODE banner is visible on the Admin panel",
+  "expected": "Banner shown",
+  "actual": "visible",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "DEP-013",
+  "module": "Deployment",
+  "page": "/cart",
+  "name": "TEST MODE banner is visible on the Checkout",
+  "expected": "Banner shown",
+  "actual": "visible",
+  "status": "PASS",
+  "severity": "Medium"
+ }
+]

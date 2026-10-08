@@ -1,0 +1,642 @@
+[
+ {
+  "id": "ADM-LOG-001",
+  "module": "Admin",
+  "page": "Login",
+  "name": "Wrong password",
+  "expected": "401",
+  "actual": "401 Incorrect email or password.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-LOG-002",
+  "module": "Admin",
+  "page": "Login",
+  "name": "First sign-in with the default password",
+  "expected": "Everything except changing the password is blocked",
+  "actual": "403 MUST_CHANGE_PASSWORD on every area",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-LOG-003",
+  "module": "Admin",
+  "page": "Login",
+  "name": "Owner session works after password change",
+  "expected": "200 /admin/me with perms",
+  "actual": "Owner (Super Admin)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-LOG-004",
+  "module": "Admin",
+  "page": "Login",
+  "name": "Admin cookie flags",
+  "expected": "HttpOnly, SameSite=Strict",
+  "actual": "Max-Age=43200; Path=/; Expires=Wed, 07 Oct 2026 20:08:32 GMT; HttpOnly; Secure; SameSite=Strict",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-DSH-001",
+  "module": "Admin",
+  "page": "Dashboard",
+  "name": "Dashboard numbers",
+  "expected": "Sales, orders, pending payments, low stock",
+  "actual": "grossProfit, totalSales, todaySales, orders, todayOrders, pendingPayments, awaitingPayment, toShip, products, customers",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-DSH-002",
+  "module": "Admin",
+  "page": "Dashboard",
+  "name": "Legal & Compliance overview cards",
+  "expected": "Active policies, pending review, expiring soon, acceptance rate",
+  "actual": "{\"active\":5,\"total\":31,\"published_30d\":5,\"pending_review\":0,\"internal\":0,\"legal\":0,\"ready_to_publish\":0,\"changes_requested\":0,\"expiring\":0,\"overdue\":0,\"no_review_date\":5,\"acceptance_rate\":null,\"accept",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-001",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Only the owner can open Admin users",
+  "expected": "Owner 200",
+  "actual": "1 admin(s)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-002",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Add admin with a bad email / unknown role",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-ADD-manager",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Create a manager admin",
+  "expected": "201 with one-time password; must set own password",
+  "actual": "qa.manager.c75b8c@example.com · first sign-in blocked until password set",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-ADD-support",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Create a support admin",
+  "expected": "201 with one-time password; must set own password",
+  "actual": "qa.support.856eec@example.com · first sign-in blocked until password set",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-ADD-legal",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Create a legal admin",
+  "expected": "201 with one-time password; must set own password",
+  "actual": "qa.legal.10ef6a@example.com · first sign-in blocked until password set",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-ADD-dealer_admin",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Create a dealer_admin admin",
+  "expected": "201 with one-time password; must set own password",
+  "actual": "qa.dealer_admin.1f6ab0@example.com · first sign-in blocked until password set",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-ADD-finance",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Create a finance admin",
+  "expected": "201 with one-time password; must set own password",
+  "actual": "qa.finance.5e790a@example.com · first sign-in blocked until password set",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-ADD-operations",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Create a operations admin",
+  "expected": "201 with one-time password; must set own password",
+  "actual": "qa.operations.df0915@example.com · first sign-in blocked until password set",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-ADD-readonly",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Create a readonly admin",
+  "expected": "201 with one-time password; must set own password",
+  "actual": "qa.readonly.ef07ee@example.com · first sign-in blocked until password set",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-003",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Duplicate admin email",
+  "expected": "409",
+  "actual": "409 An admin with this email already exists.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-MTX-manager",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Permission matrix — manager: can open exactly its areas",
+  "expected": "200 where the map allows, 403 elsewhere (19 areas)",
+  "actual": "18 areas open, others 403",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-MTX-support",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Permission matrix — support: can open exactly its areas",
+  "expected": "200 where the map allows, 403 elsewhere (19 areas)",
+  "actual": "11 areas open, others 403",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-MTX-legal",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Permission matrix — legal: can open exactly its areas",
+  "expected": "200 where the map allows, 403 elsewhere (19 areas)",
+  "actual": "6 areas open, others 403",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-MTX-dealer_admin",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Permission matrix — dealer_admin: can open exactly its areas",
+  "expected": "200 where the map allows, 403 elsewhere (19 areas)",
+  "actual": "9 areas open, others 403",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-MTX-finance",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Permission matrix — finance: can open exactly its areas",
+  "expected": "200 where the map allows, 403 elsewhere (19 areas)",
+  "actual": "10 areas open, others 403",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-MTX-operations",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Permission matrix — operations: can open exactly its areas",
+  "expected": "200 where the map allows, 403 elsewhere (19 areas)",
+  "actual": "9 areas open, others 403",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-MTX-readonly",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Permission matrix — readonly: can open exactly its areas",
+  "expected": "200 where the map allows, 403 elsewhere (19 areas)",
+  "actual": "17 areas open, others 403",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-004",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Read-only admin tries to change things",
+  "expected": "403 on confirm payment, product edit, settings",
+  "actual": "403 / 403 / 403 · \"Your role can view this page but cannot make changes.\"",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-005",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Support cannot confirm payments or refunds",
+  "expected": "403",
+  "actual": "403 Your role does not have access to this page.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-006",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Finance confirms the payment",
+  "expected": "200",
+  "actual": "confirmed",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-007",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Operations processes the order but cannot refund",
+  "expected": "process 200 · refund 403",
+  "actual": "200 / 403",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-008",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Legal admin edits policies; cannot open payments",
+  "expected": "create draft 201 · payments 403",
+  "actual": "201 / 403",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-009",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Manager can view legal but not publish",
+  "expected": "GET 200 · create draft 403",
+  "actual": "200 / 403",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-010",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Dealer admin can verify dealers but not pay settlements",
+  "expected": "verification 200 · settlement create 403",
+  "actual": "200 / 403",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-011",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Non-owner cannot manage admins (privilege escalation)",
+  "expected": "403 for create / promote self",
+  "actual": "403 / 403",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-012",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Owner cannot disable or demote themselves",
+  "expected": "400",
+  "actual": "400 You cannot change your own role or disable yourself. Ask another owner.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-013",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Role change signs the person out",
+  "expected": "Old session 401 after change",
+  "actual": "401 Admin session expired. Please sign in again.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-014",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Disabled admin cannot sign in",
+  "expected": "401",
+  "actual": "login 401 · old session 401",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-015",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Reset another admin password",
+  "expected": "One-time password; must change at next sign-in",
+  "actual": "reset · must change password",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ROL-016",
+  "module": "Admin",
+  "page": "Roles & permissions",
+  "name": "Customer and dealer sessions on /api/admin",
+  "expected": "401",
+  "actual": "401 Admin sign-in required.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-CUS-001",
+  "module": "Admin",
+  "page": "Customers, orders & payments",
+  "name": "Customer list",
+  "expected": "Registered customers with order counts",
+  "actual": "1 customers",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ORD-001",
+  "module": "Admin",
+  "page": "Customers, orders & payments",
+  "name": "Orders list filters",
+  "expected": "payment=confirmed returns only confirmed",
+  "actual": "3 confirmed",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ORD-002",
+  "module": "Admin",
+  "page": "Customers, orders & payments",
+  "name": "Order search by phone",
+  "expected": "Finds the order",
+  "actual": "found #DIWALI10248",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ORD-003",
+  "module": "Admin",
+  "page": "Customers, orders & payments",
+  "name": "Unknown action / unknown order",
+  "expected": "400 / 404",
+  "actual": "400 / 404",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-PAY-001",
+  "module": "Admin",
+  "page": "Customers, orders & payments",
+  "name": "Payments to verify tab",
+  "expected": "Only verification_pending",
+  "actual": "1 to verify",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-LEG-001",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Create a new policy draft",
+  "expected": "Draft v1.x created",
+  "actual": "Festival Delivery Promise 9d9f0a (custom_festival_delivery_promise_9d9f0a) v1.0 · draft",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-LEG-002",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Save draft edits",
+  "expected": "200, change note stored",
+  "actual": "saved",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-LEG-003",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Publish without approval",
+  "expected": "409 — unapproved policy cannot go live",
+  "actual": "409 Only a version approved in legal review can be published. Send the draft for review first.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-LEG-004",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Approve before internal review",
+  "expected": "409",
+  "actual": "409 Only a version in legal review can be approved.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-LEG-005",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Submit → internal review → legal review",
+  "expected": "Statuses move in order; draft locked while in review",
+  "actual": "internal_review → legal_review · edit 409",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-LEG-006",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Legal approval needs reviewer + confirmation",
+  "expected": "400 without",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-LEG-007",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Approve and publish with effective date",
+  "expected": "Published; reviewer recorded",
+  "actual": "approved by Adv. Meera Iyer · published",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-LEG-008",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Published version cannot be edited or deleted",
+  "expected": "409 / 409",
+  "actual": "409 / 409",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-VER-001",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "New version from the live one (v1 → v1.1 / v2.0)",
+  "expected": "New draft with a higher number; old version still published",
+  "actual": "v1.1 draft · v1.0 published",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-VER-002",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Version number cannot go backwards / duplicate",
+  "expected": "400/409 for an existing version number",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-VER-003",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Delete an unpublished draft",
+  "expected": "200",
+  "actual": "deleted",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-VER-004",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Old accepted agreement versions stay as signed",
+  "expected": "Customer acceptance rows keep their version + filled text after a new version",
+  "actual": "acceptance #1 keeps v1.0 text (7970 chars)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ACC-001",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Acceptance tracking per document",
+  "expected": "Accepted / pending counts per version",
+  "actual": "{\"stats\":[{\"kind\":\"customer_terms\",\"who\":\"customer\",\"version\":\"1.0\",\"required\":1,\"accepted\":1,\"older\":0,\"pending\":0,\"rate\":100,\"title\":\"Customer Terms & Agreeme",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-ACC-002",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Acceptance report (for CSV export)",
+  "expected": "Header + one row per acceptance",
+  "actual": "3 rows · columns: Agreement no., Who, ID, Name, Email, Mobile, Document, Version, Accepted at, Verification, IP",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-PDF-001",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Policy PDF (public) with company name, version and page numbers",
+  "expected": "pdftotext finds \"Utsav Ghar\", \"v1\", \"Page 1 of\"",
+  "actual": "3KB · company, version, \"Page 1 of N\", no broken characters",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-PDF-002",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Admin downloads a signed acceptance PDF",
+  "expected": "PDF",
+  "actual": "13KB",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-LEG-009",
+  "module": "Admin",
+  "page": "Legal & policy workflow",
+  "name": "Archive (retire) a published policy",
+  "expected": "Retired; not offered to new users",
+  "actual": "retired · removed from public list",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-AUD-001",
+  "module": "Admin",
+  "page": "Audit, reports & settings",
+  "name": "Audit log records admin actions with who and when",
+  "expected": "Entries for admin_created, confirm_payment, return/settlement actions",
+  "actual": "34 entries · e.g. login, admin_password_reset, admin_updated, change_password, admin_created, process, confirm_payment",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-AUD-002",
+  "module": "Admin",
+  "page": "Audit, reports & settings",
+  "name": "Legal audit trail",
+  "expected": "Version created/approved/published events",
+  "actual": "12 legal events",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-RPT-001",
+  "module": "Admin",
+  "page": "Audit, reports & settings",
+  "name": "Reports export (tracking, pricing CSV)",
+  "expected": "CSV files",
+  "actual": "200 / 200",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-SET-001",
+  "module": "Admin",
+  "page": "Audit, reports & settings",
+  "name": "Store settings: invalid delivery fee",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-SET-002",
+  "module": "Admin",
+  "page": "Audit, reports & settings",
+  "name": "Security page checklist",
+  "expected": "Checks listed with fixes",
+  "actual": "✓ Running in production mode (HTTPS redirect, secure cookies, HSTS) | ✗ TEST MODE is off (codes are not shown on screen) | ✓ Default admin password changed | ✗ Two-step login (authenticator app) on owner accounts | ✓ Payment webhook signature secret set (if using Razorpay) | ✗ Database backed up in the last 2 days | ✗ Admin panel limited to your IP addresses (optional)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "ADM-MAN-001",
+  "module": "Admin",
+  "page": "Audit, reports & settings",
+  "name": "Admin manual files only for admins",
+  "expected": "Public 401 · admin 200",
+  "actual": "401 / 200",
+  "status": "PASS",
+  "severity": "-"
+ }
+]

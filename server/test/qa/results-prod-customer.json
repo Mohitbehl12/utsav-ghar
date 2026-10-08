@@ -1,0 +1,1262 @@
+[
+ {
+  "id": "CUS-REG-001",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Invalid email format",
+  "expected": "400 with email field error",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-002",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Invalid mobile (9 digits / starts with 5)",
+  "expected": "400 phone error",
+  "actual": "400 / 400",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-003",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Mobile with +91 and spaces is normalised",
+  "expected": "Accepted (code sent)",
+  "actual": "200, sent to ******7100 and an•••@example.com",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-004",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Resend code within 30 seconds",
+  "expected": "429 \"Please wait N seconds\"",
+  "actual": "429 Please wait 30 seconds before asking for a new code.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-005",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Weak password (common)",
+  "expected": "400 password field error, no account",
+  "actual": "400 Please check the highlighted fields. · This password is too common — choose something harder to guess",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-006",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Password mismatch",
+  "expected": "400 confirm_password error",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-007",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "All mandatory fields empty",
+  "expected": "400 listing every missing field",
+  "actual": "400 with 10 field errors",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-008",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Name of only spaces",
+  "expected": "400 name error",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-009",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Very long name (500 chars)",
+  "expected": "400 — rejected, no crash",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-010",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Mandatory legal box missing (privacy unticked)",
+  "expected": "400 and account NOT created",
+  "actual": "400 Please check the highlighted fields. · users unchanged (0)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-011",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Consent sent as string \"true\" (bypass attempt)",
+  "expected": "400 — only boolean true accepted",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-012",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "No OTP entered",
+  "expected": "400 otp field error",
+  "actual": "400 Enter the 6-digit code. · Enter the 6-digit code.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-013",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Incorrect OTP",
+  "expected": "400 \"Wrong code. N tries left\"",
+  "actual": "Wrong code. 4 tries left.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-014",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "OTP sent for a different email",
+  "expected": "400 \"different email\"",
+  "actual": "400 The code was sent for a different email. Ask for a new code.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-015",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Expired OTP (11 minutes old)",
+  "expected": "400 \"code has expired\"",
+  "actual": "This code has expired. Ask for a new one.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-016",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "5 wrong OTPs lock the code",
+  "expected": "429 after the 5th wrong try; correct code then refused",
+  "actual": "5th: 429; correct after lock: 429 (Too many wrong codes. Ask for a new one.)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-017",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "More than 5 codes in an hour",
+  "expected": "429 \"Too many codes\"",
+  "actual": "429 Too many codes requested. Please try again in an hour or contact support.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-018",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Valid registration with OTP + all boxes",
+  "expected": "201, signed in, consents recorded with version & time",
+  "actual": "201 · 3 acceptances (refund_cancellation v1.0, privacy v1.0, customer_terms v1.0) · mobile verified",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-019",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Same OTP reused for a second account",
+  "expected": "400 — code is consumed after use",
+  "actual": "409 This mobile number is already registered.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-020",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Duplicate email",
+  "expected": "409 \"already exists\"",
+  "actual": "409 An account with this email already exists.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-021",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Duplicate mobile",
+  "expected": "409 \"mobile already registered\"",
+  "actual": "409 This mobile number is already registered.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-022",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Hindi name and special characters (Unicode)",
+  "expected": "201 — name stored exactly",
+  "actual": "अंजलि D'Souza-Rao",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-REG-023",
+  "module": "Customer",
+  "page": "Registration",
+  "name": "Bot honeypot field filled",
+  "expected": "400 blocked",
+  "actual": "400 Request blocked. Please try again.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-001",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Correct credentials",
+  "expected": "200 and session cookie",
+  "actual": "200 · sa_session set (HttpOnly)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-002",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Wrong password",
+  "expected": "401 generic message",
+  "actual": "401 Incorrect email or password.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-003",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Unknown email gives the same message",
+  "expected": "401 identical text (no account enumeration)",
+  "actual": "401 Incorrect email or password.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-004",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Empty email and password",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-005",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "5 wrong passwords lock sign-in",
+  "expected": "429 on the 5th, even the right password refused",
+  "actual": "5th → 429; correct password while locked → 429",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-006",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Forgot password for unknown email",
+  "expected": "200 generic message, no code",
+  "actual": "If an account exists for this email, we have sent a 6-digit code to its email and mobile.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-007",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Forgot password for a real account",
+  "expected": "200 same message; code sent to email + mobile",
+  "actual": "200 · 2 messages queued (email + WhatsApp)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-008",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Reset with wrong code",
+  "expected": "400 otp error",
+  "actual": "Wrong code. 4 tries left.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-009",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Reset with weak new password",
+  "expected": "400 password error (code kept)",
+  "actual": "This password is too common — choose something harder to guess",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-010",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Reset with the right code",
+  "expected": "200; old sessions signed out; new password works; old fails",
+  "actual": "old session → signed out · new password 200 · old password 401",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-011",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Reset code used twice",
+  "expected": "400 (single use)",
+  "actual": "400 Ask for a code first.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-012",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Expired reset code",
+  "expected": "400 \"expired\"",
+  "actual": "This code has expired. Ask for a new one.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-013",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Logout",
+  "expected": "200; /auth/me returns null",
+  "actual": "signed out",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-014",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Tampered session cookie",
+  "expected": "Treated as signed out",
+  "actual": "me=null · /account/orders 401",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-015",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Expired session (JWT exp in the past)",
+  "expected": "401 on account pages",
+  "actual": "401 Please sign in to continue.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LOG-016",
+  "module": "Customer",
+  "page": "Login & password",
+  "name": "Two devices + \"sign out everywhere\"",
+  "expected": "Both sessions end",
+  "actual": "device 2 signed out after device 1 chose sign out everywhere",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PRO-001",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "View profile",
+  "expected": "/auth/me returns name, email, mobile",
+  "actual": "Meera Kulkarni · qa.79ebf5@example.com · 9740084517",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PRO-002",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Edit name and mobile",
+  "expected": "200 and saved",
+  "actual": "saved",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PRO-003",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Mobile already used by another account",
+  "expected": "409",
+  "actual": "409 This mobile number is used by another account.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PRO-004",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Invalid mobile in profile",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PRO-005",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Change email — wrong password",
+  "expected": "400 password error",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PRO-006",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Change email — address used by someone else",
+  "expected": "409",
+  "actual": "409 This email is used by another account.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PRO-007",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Change email — code to the new address, then confirm",
+  "expected": "200; can sign in with the new email",
+  "actual": "email changed; sign-in with new email works; old email notified",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ADR-001",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Sign-up address saved as default",
+  "expected": "1 address, default",
+  "actual": "1 · default",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ADR-002",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Add address",
+  "expected": "201",
+  "actual": "201 · id 6",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ADR-003",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Add address with bad PIN",
+  "expected": "400 pincode error",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ADR-004",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Edit address",
+  "expected": "200 and changed",
+  "actual": "updated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ADR-005",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Set as default",
+  "expected": "Only the chosen address is default",
+  "actual": "one default",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ADR-006",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Delete the default address",
+  "expected": "Another address becomes default",
+  "actual": "remaining address is default",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ADR-007",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Edit / delete another customer's address (IDOR)",
+  "expected": "404, nothing changed",
+  "actual": "404 / 404 · address intact",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ADR-008",
+  "module": "Customer",
+  "page": "Profile & addresses",
+  "name": "Address limit (10)",
+  "expected": "11th refused with 400",
+  "actual": "400 You can save up to 10 addresses.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-001",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "Search \"diya\"",
+  "expected": "Results containing diya",
+  "actual": "16 results, first: Premium Brass Diya",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-002",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "Misspelt search \"diyaa lamp\"",
+  "expected": "Corrected results",
+  "actual": "16 results",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-003",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "No results",
+  "expected": "200, empty list",
+  "actual": "total 0",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-004",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "SQL-like and script text in search",
+  "expected": "200, no error",
+  "actual": "200 / 200",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-005",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "Search longer than 80 characters",
+  "expected": "400 friendly error (no crash)",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-006",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "Category filter",
+  "expected": "Only that category",
+  "actual": "5 items, all diyas-candles",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-007",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "Sort price low → high",
+  "expected": "Ascending prices",
+  "actual": "60 items ascending",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-008",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "Sort price high → low",
+  "expected": "Descending prices",
+  "actual": "descending",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-009",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "Price range filter",
+  "expected": "All prices inside the range",
+  "actual": "32 items between ₹100–500",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-010",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "Pagination",
+  "expected": "Page 1 and 2 have different items; pages count right",
+  "actual": "80 total, 16 pages, no overlap",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-011",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "Bad page / limit values",
+  "expected": "400 for limit=0 and limit=1000",
+  "actual": "400 / 400",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-012",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "Product details",
+  "expected": "200 with price, stock status, images, no cost price",
+  "actual": "Classic Diwali Hamper · in_stock",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-013",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "Unknown product",
+  "expected": "404",
+  "actual": "404 Product not found",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAT-014",
+  "module": "Customer",
+  "page": "Search & product",
+  "name": "Public product API never exposes cost or exact stock",
+  "expected": "No cost_price / stock fields in list",
+  "actual": "no cost_price, no exact stock",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CRT-001",
+  "module": "Customer",
+  "page": "Cart & checkout",
+  "name": "Quote: total = subtotal − discount + delivery",
+  "expected": "Arithmetic holds for 1, 2, 3 and 5 pieces",
+  "actual": "1pc: ₹1499−0+0=₹1499 · 2pc: ₹2998−299.8+0=₹2698.2 · 3pc: ₹4497−899.4+0=₹3597.6 · 5pc: ₹7495−2248.5+0=₹5246.5",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CRT-002",
+  "module": "Customer",
+  "page": "Cart & checkout",
+  "name": "Buy More Save More tiers (2 → 10%, 3 → 20%, 5 → 30%)",
+  "expected": "Discount percent matches the tier",
+  "actual": "discount % for 2/3/5 pieces: 10 / 20 / 30",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CRT-003",
+  "module": "Customer",
+  "page": "Cart & checkout",
+  "name": "Quantity 0 / 100 / text",
+  "expected": "400 for each",
+  "actual": "400 / 400 / 400",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CRT-004",
+  "module": "Customer",
+  "page": "Cart & checkout",
+  "name": "More than in stock",
+  "expected": "Quote flags the line; order refused 409",
+  "actual": "quote error QTY_REDUCED · order 409",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CRT-005",
+  "module": "Customer",
+  "page": "Cart & checkout",
+  "name": "Invalid coupon",
+  "expected": "Quote shows couponError; no discount",
+  "actual": "This coupon code is invalid or has expired.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CRT-006",
+  "module": "Customer",
+  "page": "Cart & checkout",
+  "name": "Cart saved to the account (persistence)",
+  "expected": "Cart returned after signing in on another device",
+  "actual": "same cart on second device",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CHK-001",
+  "module": "Customer",
+  "page": "Cart & checkout",
+  "name": "Price/offer changed between quote and order",
+  "expected": "409 with the new quote",
+  "actual": "409 Prices, offers or delivery charges have changed. Please review the updated total.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CHK-002",
+  "module": "Customer",
+  "page": "Cart & checkout",
+  "name": "Missing address fields",
+  "expected": "400 with field errors",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CHK-003",
+  "module": "Customer",
+  "page": "Cart & checkout",
+  "name": "Guest cannot order (account required)",
+  "expected": "401 LOGIN_REQUIRED",
+  "actual": "401 Please sign in or create an account to place your order.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CHK-004",
+  "module": "Customer",
+  "page": "Cart & checkout",
+  "name": "Place order",
+  "expected": "201; order total = quote total; stock reduced",
+  "actual": "#DIWALI10248 ₹2698.2 = 2998 − 299.8 + 0 · stock 58→56",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CHK-005",
+  "module": "Customer",
+  "page": "Cart & checkout",
+  "name": "Order in the history",
+  "expected": "Listed in My Orders",
+  "actual": "1 order(s)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CHK-006",
+  "module": "Customer",
+  "page": "Cart & checkout",
+  "name": "Order is transactional (one item out of stock)",
+  "expected": "No order row, no stock taken from the other item",
+  "actual": "409 · orders unchanged · stock unchanged",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PAY-001",
+  "module": "Customer",
+  "page": "Payment",
+  "name": "UTR in wrong format",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PAY-002",
+  "module": "Customer",
+  "page": "Payment",
+  "name": "Submit valid UTR",
+  "expected": "200 → Payment Verification Pending (not confirmed)",
+  "actual": "verification_pending",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PAY-003",
+  "module": "Customer",
+  "page": "Payment",
+  "name": "Submit payment twice",
+  "expected": "409 already submitted",
+  "actual": "409 Payment for this order has already been submitted.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PAY-004",
+  "module": "Customer",
+  "page": "Payment",
+  "name": "Same UTR on another order",
+  "expected": "409 \"already been used\"",
+  "actual": "409 This UPI reference has already been used for another order.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PAY-005",
+  "module": "Customer",
+  "page": "Payment",
+  "name": "Online gateway when not configured",
+  "expected": "400 friendly message",
+  "actual": "400 Online gateway is not enabled. Please pay using the UPI QR.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PAY-006",
+  "module": "Customer",
+  "page": "Payment",
+  "name": "Gateway signature forged",
+  "expected": "400 signature verification failed",
+  "actual": "400 Payment signature verification failed.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PAY-007",
+  "module": "Customer",
+  "page": "Payment",
+  "name": "Admin confirms payment",
+  "expected": "Payment Confirmed",
+  "actual": "payment_confirmed",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-PAY-008",
+  "module": "Customer",
+  "page": "Payment",
+  "name": "Confirm the same payment again",
+  "expected": "409",
+  "actual": "409 Payment is already confirmed.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ORD-001",
+  "module": "Customer",
+  "page": "Orders & tracking",
+  "name": "Open another customer's order (IDOR)",
+  "expected": "404",
+  "actual": "404 Order not found.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ORD-002",
+  "module": "Customer",
+  "page": "Orders & tracking",
+  "name": "Guest link with the order token",
+  "expected": "200",
+  "actual": "200",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ORD-003",
+  "module": "Customer",
+  "page": "Orders & tracking",
+  "name": "Wrong order token",
+  "expected": "404",
+  "actual": "404 Order not found.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ORD-004",
+  "module": "Customer",
+  "page": "Orders & tracking",
+  "name": "Track with order number + right mobile",
+  "expected": "200, personal data minimised",
+  "actual": "payment_confirmed · address shows city/PIN only",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ORD-005",
+  "module": "Customer",
+  "page": "Orders & tracking",
+  "name": "Track with wrong mobile",
+  "expected": "404",
+  "actual": "404 We could not find an order with those details.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ORD-006",
+  "module": "Customer",
+  "page": "Orders & tracking",
+  "name": "Ship before processing",
+  "expected": "409 invalid transition",
+  "actual": "409 Order has not shipped yet.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-ORD-007",
+  "module": "Customer",
+  "page": "Orders & tracking",
+  "name": "Process an unpaid order",
+  "expected": "409",
+  "actual": "409 Confirm payment before processing.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAN-001",
+  "module": "Customer",
+  "page": "Cancellation",
+  "name": "Cancel without a reason",
+  "expected": "400 reason error",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAN-002",
+  "module": "Customer",
+  "page": "Cancellation",
+  "name": "Cancel an unpaid order",
+  "expected": "Cancelled, stock back, no refund opened",
+  "actual": "cancelled · stock 54→55 · refunds 0",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAN-003",
+  "module": "Customer",
+  "page": "Cancellation",
+  "name": "Cancel twice",
+  "expected": "409",
+  "actual": "409 This order is already cancelled.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAN-004",
+  "module": "Customer",
+  "page": "Cancellation",
+  "name": "Pay for a cancelled order",
+  "expected": "409",
+  "actual": "409 This order was cancelled.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAN-005",
+  "module": "Customer",
+  "page": "Cancellation",
+  "name": "Cancel a paid order before packing",
+  "expected": "Cancelled + full refund pending",
+  "actual": "refund ₹2698.2 pending (paid ₹2698.2)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAN-006",
+  "module": "Customer",
+  "page": "Cancellation",
+  "name": "Cancel after packing / processing started",
+  "expected": "409 \"cannot be cancelled here\"",
+  "actual": "409 This order is already being packed or on its way, so it cannot be cancelled here. You can refuse the delivery or request a return.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-CAN-007",
+  "module": "Customer",
+  "page": "Cancellation",
+  "name": "Admin cancels a paid order",
+  "expected": "Refund opened once; mark refunded",
+  "actual": "1 refund · refunded · second mark → 409",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-001",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Return before delivery",
+  "expected": "409",
+  "actual": "409 You can request a return after the order is delivered.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-002",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Return without choosing a reason",
+  "expected": "400",
+  "actual": "400 Choose a reason.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-003",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Return more pieces than bought",
+  "expected": "409 \"at most 3\"",
+  "actual": "409 You can return at most 3 of “Classic Diwali Hamper”.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-004",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Item from another order",
+  "expected": "400",
+  "actual": "400 One of the items is not in this order.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-005",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Damaged item without a photo",
+  "expected": "400 photo needed",
+  "actual": "400 Please add a photo of the item and the box.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-006",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Damaged item with photo",
+  "expected": "201 Return requested; refund = paid share + delivery charge",
+  "actual": "RET-1001 · refund ₹1199.2 (incl. delivery ₹0)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-007",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Second return while one is open",
+  "expected": "409",
+  "actual": "409 You already have an open return request (RET-1001) for this order. We will reply soon.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-008",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Admin raises refund above calculated amount",
+  "expected": "409",
+  "actual": "409 The refund can be lowered but not raised above the calculated amount.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-009",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Reject without a reason",
+  "expected": "409 reason required",
+  "actual": "409 Write the reason the customer will see.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-010",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Mark received before approval",
+  "expected": "409",
+  "actual": "409 Approve the return before marking it received.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-011",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Approve",
+  "expected": "Approved — pickup pending",
+  "actual": "approved",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-012",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Mark received (resaleable)",
+  "expected": "Stock +1; refund opened for finance",
+  "actual": "stock 52→53 · refund ₹1199.2 pending",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-013",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Record refund without reference",
+  "expected": "400",
+  "actual": "400 Enter the refund reference (UTR / gateway refund ID).",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-014",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Refund fails, then retried",
+  "expected": "Failed → then Refunded",
+  "actual": "failed → processed",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-015",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Duplicate refund prevention",
+  "expected": "Second \"mark refunded\" → 409",
+  "actual": "409 This refund is already marked as paid.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-016",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Customer sees Refunded with reference",
+  "expected": "Return status Refunded on the order page",
+  "actual": "refunded · ref RF6305ed898e06",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-017",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Refunds can never exceed the amount paid",
+  "expected": "Sum of refunds ≤ order total after returning everything",
+  "actual": "refunds ₹3597.6 ≤ paid ₹3597.6",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-018",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Return after the 7-day window",
+  "expected": "409 window ended",
+  "actual": "409 The return window (7 days from delivery) has ended.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-RET-019",
+  "module": "Customer",
+  "page": "Returns & refunds",
+  "name": "Another customer's return (IDOR)",
+  "expected": "404",
+  "actual": "404 Order not found.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LEG-001",
+  "module": "Customer",
+  "page": "Legal & agreements",
+  "name": "View Customer Terms, Privacy, Cancellation/Return/Refund",
+  "expected": "3 documents with version and simple + full text",
+  "actual": "Customer Terms & Agreement v1.0 · Privacy Policy v1.0 · Cancellation, Return & Refund Policy v1.0",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LEG-002",
+  "module": "Customer",
+  "page": "Legal & agreements",
+  "name": "Download policy PDFs",
+  "expected": "Each is a real PDF",
+  "actual": "customer_terms 12KB · privacy 6KB · refund_cancellation 5KB",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LEG-003",
+  "module": "Customer",
+  "page": "Legal & agreements",
+  "name": "All published policies page",
+  "expected": "/api/legal/policies lists customer + company policies only",
+  "actual": "3 policies, no dealer documents",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LEG-004",
+  "module": "Customer",
+  "page": "Legal & agreements",
+  "name": "Acceptance record PDF",
+  "expected": "PDF with name, version, date",
+  "actual": "UGC-20261007-000009-0E4D · 7KB",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "CUS-LEG-005",
+  "module": "Customer",
+  "page": "Legal & agreements",
+  "name": "Another customer's acceptance PDF (IDOR)",
+  "expected": "404",
+  "actual": "404 Not found",
+  "status": "PASS",
+  "severity": "-"
+ }
+]

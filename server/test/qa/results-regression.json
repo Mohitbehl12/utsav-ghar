@@ -1,0 +1,4532 @@
+[
+ {
+  "id": "REG-CORE-001",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "POST without CSRF token is rejected",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-002",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "product filter + sort",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-003",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "1 item → \"Add 1 more eligible product to unlock 10% OFF.\"",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-004",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "2 items → 10% off, upsell: \"Add 1 more eligible product to get 20% OFF.\"",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-005",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "3 items → 20% off (299.4 off 1497)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-006",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "order with a mismatched (tampered) total is refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-007",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "order DIWALI10245 created with server total ₹1197.6",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-008",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "order hidden without access token",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-009",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "guest can view own order with token",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-010",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "invalid UTR rejected",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-011",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "\"I have paid\" → Payment Verification Pending (not auto-confirmed)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-012",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "public tracking works and hides PII",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-013",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "admin API requires login",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-014",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "admin login",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-015",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "admin panel locked until the default password is changed",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-016",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "default admin password changed",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-017",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "cannot ship before payment is confirmed",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-018",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "admin: confirm_payment → payment_confirmed",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-019",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "admin: process → processing",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-020",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "admin: ship → shipped",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-021",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "admin: out_for_delivery → out_for_delivery",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-022",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "admin: deliver → delivered",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-023",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "timeline complete",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-024",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "admin updates offer to Buy 2 → 25%",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-025",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "new rule applied immediately by the server",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-026",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "combo: ₹999 for items worth ₹1396",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-027",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "combo with rangoli powder is blocked for UAE delivery",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-028",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "UAE shipping for 2 items: ₹1698 (6–10 business days)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-029",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "international order placed (pay by link), currency remembered",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-030",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "newsletter sign-up returns WELCOME10",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-031",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "WELCOME10 refused for a returning phone number",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-032",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "event page_view recorded",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-033",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "event view_item recorded",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-034",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "event add_to_cart recorded",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-035",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "marketing report: instagram/uae-test 1 visit, 1 order, ₹500 spend",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-036",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "checkout session saved for reminders",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-037",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "cart can be restored from the reminder link",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-038",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "dashboard: total sales ₹1197.6, 2 orders",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-039",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "public settings expose UPI ID but not merchant internals",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-040",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "profit per unit = selling − cost (Lotus Tealight Holder: ₹235)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-041",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "realised gross profit ₹419.6 at 35% margin",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-042",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "pricing edit rejects MRP below selling price",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CORE-043",
+  "module": "Regression · Store core (orders, payments, admin)",
+  "page": "e2e.mjs",
+  "name": "cost price is never exposed on the public API",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-001",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "subscribe without ticking consent is refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-002",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "must choose WhatsApp or email",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-003",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "subscribed (daily, WhatsApp + email): \"Done! Your daily picks start tomorrow.\"",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-004",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "same person via footer newsletter (email in other case)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-005",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "browsing signals synced",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-006",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "order with \"+91 91234-56789\" accepted and opted in to offers",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-007",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "admin login",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-008",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "admin panel locked until the default password is changed",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-009",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "default admin password changed",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-010",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "overview: 2 active, 2 on WhatsApp",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-011",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "festival calendar: next is Navratri in 4 days",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-012",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "subscriber list (no tokens leaked)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-013",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "checkout opt-in saved with normalised phone",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-014",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "picks preview: Lotus Tealight Holder, Premium Brass Diya, Temple Incense Collection",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-015",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "festival preview: \"🎄 Christmas is 3 weeks away — plan early and save\"",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-016",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "run now: 2 people, 4 skipped (no email/WhatsApp provider configured yet)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-017",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "every message logged in the outbox",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-018",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "CSV export",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-019",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "message link opens 4 products",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-020",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "order placed from the message link",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-021",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "click and order credited to the message",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-022",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "one-tap unsubscribe",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-023",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "unsubscribed person is not messaged again",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-CRM-024",
+  "module": "Regression · Customer messages",
+  "page": "e2e-crm.mjs",
+  "name": "unknown link → 404",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-001",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "12 help topics with instant solutions",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-002",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "damaged-item request needs an order number",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-003",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "can't attach someone else's order (phone must match)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-004",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "request HELP-1001 raised (high priority)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-005",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "duplicate open request for the same order is refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-006",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "request is private without its token",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-007",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "customer sees request, linked order, auto-reply and solution",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-008",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "admin inbox shows it first, awaiting reply",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-009",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "admin replied (status: waiting for customer)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-010",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "customer reply reopens it for the team",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-011",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "admin marks resolved",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-012",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "customer rates the help 5★",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-013",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "satisfaction score shown to admin",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-014",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "bot honeypot blocks spam requests",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SUPPORT-015",
+  "module": "Regression · Support & payments",
+  "page": "e2e-support.mjs",
+  "name": "card payment refused politely until the gateway keys are set (no card data handled by us)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-001",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "admin adds dealer (diyas only, Delhi/Noida) — gets a one-time password",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-002",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "third dealer (Mumbai) added",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-003",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "same mobile number cannot be added twice",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-004",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "unpaid order is NOT sent to any dealer",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-005",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "payment confirmed → auto-sent to Verma Home Store",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-006",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "Mumbai dealer skipped (does not deliver to 201301)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-007",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "customer sees the 8-step dealer timeline: Sent to Dealer ✓",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-008",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "customer never sees the dealer's name",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-009",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "wrong dealer password refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-010",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "dealer signs in with mobile + one-time password",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-011",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "must set own password before seeing orders",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-012",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "weak password refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-013",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "dealer sets a strong password",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-014",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "dealer summary: 1 new order",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-015",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "new order shows in the dealer list",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-016",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "before accepting: products, qty & PIN visible — customer phone/address hidden",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-017",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "dealer never sees email or payment details",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-018",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "cannot pack before accepting",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-019",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "dealer 1 rejects (out of stock)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-020",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "order automatically moved to the next dealer",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-021",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "first dealer can no longer act on it",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-022",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "dealer 2 accepts → full delivery details now visible",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-023",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "customer order status: Processing",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-024",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "packing needs every item ticked",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-025",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "packed (all items ticked)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-026",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "ready for delivery",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-027",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "rider mobile must be valid",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-028",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "out for delivery with own delivery boy",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-029",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "customer sees rider + 4-digit delivery code",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-030",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "code is hidden from admin & dealer",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-031",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "wrong delivery code refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-032",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "delivered — confirmed with the customer's code",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-033",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "customer timeline complete: all 8 steps ✓",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-034",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "admin can hand-pick a dealer",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-035",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "handed to courier with AWB",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-036",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "customer sees courier + tracking number",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-037",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "courier handover = Shipped (Out for Delivery waits for the courier)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-038",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "dealer adds courier checkpoint: In transit (Delhi hub)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-039",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "tracking dashboard lists the shipment with courier & latest checkpoint",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-040",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "courier performance: Delhivery 1 in transit, own delivery 1 delivered",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-041",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "dealer performance & average stage times computed",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-042",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "admin marks courier Out for delivery → customer timeline updates",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-043",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "failed delivery attempt is flagged on the dashboard",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-044",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "courier webhook refuses a wrong token",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-045",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "customer: delivered, received by Amit — all steps ✓",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-046",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "shipment detail: full journey with every checkpoint and time taken",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-047",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "CSV export for Excel",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-048",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "store cancels → dealer sees Cancelled and cannot ship",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-049",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "admin dealers page shows stats per dealer",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-050",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "admin board lists dealer orders by status",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-051",
+  "module": "Regression · Dealer orders",
+  "page": "e2e-dealer.mjs",
+  "name": "password reset signs the dealer out everywhere",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-001",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "admin sets review email + default expenses (₹100 total) & profit (₹300)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-002",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dealer must set own password first",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-003",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "a product needs at least one photo",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-004",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "description must be meaningful",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-005",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "fake image (not really a PNG) is refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-006",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dealer submits product with ₹400 dealer price + 2 photos → Under review",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-007",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "only known detail fields are kept",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-008",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dealer can see own photos (private, not public)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-009",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "photos are not public before approval",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-010",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "internal team gets a review email with full product details",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-011",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "another dealer can't see this product",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-012",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dealer has no access to admin review or the price calculator",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-013",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "admin review queue shows it",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-014",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "admin sees details, photos, dealer price and default costs",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-015",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "calculator: ₹400 + ₹100 expenses + ₹300 profit = ₹800",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-016",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "admin asks for changes",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-017",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dealer sees \"Changes needed\" + the note",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-018",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dealer re-submits (new photo, price ₹420) → Under review again",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-019",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "cannot publish below dealer cost by mistake",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-020",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "admin publishes at ₹829 (calculator ₹829, MRP ₹1,199)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-021",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "customer sees only ₹829 + photos (no dealer price)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-022",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dealer sees Approved + Live + their own ₹420",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-023",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dealer responses contain NO selling price, MRP, margin, profit or internal note",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-024",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "internal note never reaches the dealer",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-025",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dealer updates availability → store stock = 7 at once",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-026",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "customer's order for this product goes to the dealer who supplied it",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-027",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dealer order screen shows no prices either",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-028",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "a live product cannot be deleted by the dealer (set quantity 0 instead)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-029",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "the same SKU cannot be used twice by one dealer",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-030",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "admin can reject with a reason",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-031",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dealer delivers the order",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-032",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dashboard: 1 sold, sales value ₹420 (dealer price × qty, not ₹829)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-033",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dashboard: stock 6 left, stock in/out counted",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-034",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dashboard: daily series for the graph",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-035",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dashboard: top product + recent orders at dealer value",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-036",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dashboard: notifications (product approved)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-037",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dashboard has NO selling price, MRP, margin or profit",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-038",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "low stock alert (3 left) + 12-month view",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-039",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "notifications marked as read",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-040",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dealer profile & business info",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-041",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "dealer updates own email",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-DEALER-PRODUCTS-042",
+  "module": "Regression · Dealer products & pricing",
+  "page": "e2e-dealer-products.mjs",
+  "name": "customer / admin cookies cannot open the dealer dashboard (role check on server)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-001",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "CSP blocks framing (clickjacking) and plugins",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-002",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "nosniff + strict referrer policy",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-003",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "HSTS for one year",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-004",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "Permissions-Policy: mic only for our own pages, camera off",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-005",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "server technology not advertised",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-006",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "security.txt published",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-007",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "POST without CSRF token is rejected",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-008",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "SQL injection in search is harmless: ' OR 1=1 --",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-009",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "SQL injection in search is harmless: diya'; DROP TABLE produc",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-010",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "SQL injection in search is harmless: %27%20UNION%20SELECT%20p",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-011",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "unknown sort value refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-012",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "injection in category filter matches nothing",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-013",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "script in URL is never echoed into the page",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-014",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "admin API needs admin sign-in",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-015",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "forged / unsigned admin token refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-016",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "weak password refused: \"This password is too common — choose something harder to guess\"",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-017",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "account created with a strong password",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-018",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "a customer session cannot open the admin API",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-019",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "signed in on a second device",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-020",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "password change needs the current password",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-021",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "password changed",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-022",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "this device stays signed in",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-023",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "the other device is signed out automatically",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-024",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "5 wrong passwords → account locked",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-025",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "even the right password waits until the lock ends",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-026",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "price sent by the browser is ignored; server price used",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-027",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "a stranger can't open someone's order by its number",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-028",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "a guessed order token is refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-029",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "oversized request body refused (413)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-030",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "path traversal blocked: /uploads/../.env",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-031",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "path traversal blocked: /uploads/..%2f..%2f.env",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-032",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "path traversal blocked: /uploads/%2e%2e/server/.env",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-033",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "bot honeypot field blocks automated sign-ups",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-034",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "first admin sign-in flags the default password",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-035",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "admin panel locked until the default password is changed",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-036",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "weak admin password refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-037",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "strong admin password set",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-038",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "admin panel unlocked",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-039",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "two-step login: authenticator secret issued",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-040",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "wrong authenticator code refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-041",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "two-step login switched on (10 backup codes)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-042",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "password alone is not enough — asks for the code",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-043",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "no admin access between the two steps",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-044",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "wrong 6-digit code refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-045",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "correct code → signed in",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-046",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "backup code works once",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-047",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "the same backup code cannot be used twice",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-048",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "security overview shows checks and failed sign-ins",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-049",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "admin \"sign out everywhere\"",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-050",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "other admin sessions ended",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-051",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "customer can download their data",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-052",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "delete needs typing DELETE",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-053",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "customer deleted their account",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-SECURITY-054",
+  "module": "Regression · Security",
+  "page": "e2e-security.mjs",
+  "name": "deleted account cannot sign in",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-001",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "delivery-by-PIN settings load (5 zones, rate card; Shiprocket not connected → rate card)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-002",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "admin sets pickup PIN (Pune), customer delivery charges and courier rate card",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-003",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "Pune → Pune: Local, delivery ₹39 (product 349)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-004",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "Pune → Mumbai: Metro, ₹59",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-005",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "Pune → Guwahati: Special area, ₹129",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-006",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "no PIN yet → shows Rest of India charge",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-007",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "product price is the same everywhere",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-008",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "free delivery above the local threshold",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-009",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "chargeable weight 1 kg (box size) → local courier ₹65",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-010",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "₹800 order is above ₹499 → free delivery; profit = 800 − 400 − 20 − 20 − 65",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-011",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "courier cost rises with distance; Rest of India customer pays ₹69 delivery on a ₹800 order",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-012",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "specific PIN codes priced (rate card until Shiprocket keys are set)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-013",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "price for ₹300 profit to Rest of India: ₹779",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-014",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "courier cost can be overridden by hand",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-015",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "GST (included in price) and 2% platform fee are taken out",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-016",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "all-products table: profit per zone for every product",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-017",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "admin sets the packed weight & box size of a product",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-018",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "heavier parcel → 4 kg chargeable",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-019",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "CSV export for Excel",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-020",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "order to Guwahati charged ₹129 delivery",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-021",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "order shows zone, courier estimate and profit",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-022",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "actual courier bill (₹95) replaces the estimate in the order profit",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-PRICING-023",
+  "module": "Regression · Pricing by PIN",
+  "page": "e2e-pricing.mjs",
+  "name": "customers cannot see costs or profit",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-001",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "sign-up page gets the Customer Agreement, Privacy and Refund policies (simple + full) and 4 boxes",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-002",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "customer can download the agreement PDF before signing up",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-003",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "every customer document has a PDF",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-004",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "registration refused until every mandatory box is ticked",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-005",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "passwords must match",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-006",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "customer account created with full address + all consents",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-007",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "acceptance record per document: version, reference, fingerprint",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-008",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "customer downloads a PDF copy",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-009",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "not visible without signing in",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-010",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "sign-up address saved as default delivery address",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-011",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "guest checkout is off: must sign in to order",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-012",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "signed-in customer with accepted terms can order",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-013",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "a published version cannot be edited",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-014",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "a published version cannot be deleted",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-015",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "new draft version 1.1 copied from 1.0",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-016",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "draft edited and renumbered 2.0",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-017",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "a draft cannot be published without legal approval",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-018",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "draft sent for internal review",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-019",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "legal approval only after internal review",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-020",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "internal review passed → legal review",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-021",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "cannot edit while in legal review",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-022",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "approval needs the reviewer and a confirmation",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-023",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "approved by legal review (reviewer recorded)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-024",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "an approved (not yet published) version is not shown to customers",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-025",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "version 2.0 published (material change)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-026",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "customer must accept the new privacy version",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-027",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "order blocked until the new version is accepted",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-028",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "accepting needs the box ticked",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-029",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "accepted 2.0 → ordering works again",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-030",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "history keeps both privacy versions",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-031",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "dealer registers → Draft, cannot receive orders",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-032",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "onboarding starts at step 1 of 7",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-033",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "cannot add products before approval",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-034",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "business details validated",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-035",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "company → certificate + authorisation letter required",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-036",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "GSTIN must carry the same PAN; CIN required for a company",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-037",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "KYC saved; bank account stored encrypted, shown masked",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-038",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "GSTIN given → GST certificate required",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-039",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "OTP can be requested",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-040",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "cannot sign before the required documents are uploaded",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-041",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "a file that is not really a PDF/JPG/PNG is refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-042",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "all 7 required documents uploaded (pending check)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-043",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "dealer can view its own uploaded file",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-044",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "agreement filled with dealer details + supply commercial schedule",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-045",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "agreement does not reveal selling price or margin",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-046",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "agreement preview PDF for download/print",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-047",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "OTP sent to the registered mobile (30 s between requests)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-048",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "wrong OTP refused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-049",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "all five boxes must be ticked",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-050",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "signed with name + drawn signature + OTP → Under review",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-051",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "dealer Legal & Agreements lists agreement, T&C, commercial terms, privacy and refund policy",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-052",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "dealer can download any of them as PDF",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-053",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "Legal & Compliance → My Agreements lists the signed versions",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-054",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "signed agreement PDF stored and downloadable",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-055",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "details locked while under review",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-056",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "cannot sign twice",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-057",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "admin queue: under review, KYC complete, agreement signed, docs to check",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-058",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "detail: documents, signed agreements, audit history",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-059",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "bank account masked for admins by default",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-060",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "owner can reveal the account (logged)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-061",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "admin opens a document",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-062",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "cannot approve before documents are verified",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-063",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "a rejection needs a reason",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-064",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "dealer sees: Documents rejected — Photo is blurred",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-065",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "re-uploaded → back to Under review",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-066",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "approval needs the delivery area set first",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-067",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "admin approves → Approved, can receive orders",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-068",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "dealer app now shows the account as active",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-069",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "changing signed commercial terms asks the dealer to sign again",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-070",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "dealer: Agreement pending, orders paused",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-071",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "new agreement shows the commission schedule",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-072",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "dealer re-signs → 4 signed records (old ones kept)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-073",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "suspend → no new orders",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-074",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "reinstate",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-075",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "audit trail records every step",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-076",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "acceptance statistics per version",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-077",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "customers and dealers cannot open admin legal screens",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-078",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "another session cannot download a dealer's agreement",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-079",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "policy library: customer, dealer and company policies",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-080",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "new policies start as drafts; core documents are live",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-081",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "launch checklist covers customer, dealer and company areas",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-082",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "acceptance rate across customers and dealers",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-083",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "a policy with a version in progress opens that version instead of a new one",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-084",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "simple explanation + owner + review date saved",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-085",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "payment policy published with a future date",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-086",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "future publication shows as Scheduled",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-087",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "scheduled policy is not public yet",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-088",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "wizard creates a custom policy and sends it for internal review",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-089",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "changes requested → editable again",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-090",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "version history with who did what",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-091",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "notifications: ready for publication + customer notice on publish",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-092",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "dealer legal profile: agreement, KYC, health",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-093",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "violation opened",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-094",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "open fraud flag → account health Restricted",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-095",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "dealer sees the violation and a notification",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-096",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "actions need a message",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-097",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "correction requested and logged",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-098",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "closing the violation clears the fraud flag",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-099",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "health rules saved (others keep defaults)",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-100",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "KYC & document compliance list",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-101",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "reminder sent to dealer",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-102",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "legal calendar: scheduled publication + agreement review",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-103",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "acceptance report for export",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-104",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "who accepted a document",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-105",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "public policy list: only published customer & company policies",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-106",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "dealer documents are not public",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-107",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "admin manual PDF is not public",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-108",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "signed-in admin can open the Admin User Manual PDF",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-109",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "admin manual screenshots load for admins",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "REG-LEGAL-110",
+  "module": "Regression · Legal, onboarding & compliance",
+  "page": "e2e-legal.mjs",
+  "name": "manual route only serves manual files",
+  "expected": "As stated",
+  "actual": "As stated",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-001",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "supply settlement: dealer value minus returns plus adjustments, no fees",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-002",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "commission settlement applies commission %, per-order fee and payment fee on net sales",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-003",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "settlement with only returns is negative (never paid)",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-004",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "return refund: goods paid + delivery only for damaged/wrong/missing, once",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-005",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "roles: owner everything, read-only never edits, finance pays, support cannot refund",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-006",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "areaFor maps admin API paths",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-007",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "acceptance kinds stay the same three customer + two dealer documents",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-008",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "every new policy has an original starter template in the simple + full format",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-009",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "workflow: internal review before legal review; only approved can publish",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-010",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "display states: scheduled, expired (review overdue), previous version, archived",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-011",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "acceptance stats: accepted, older non-material, pending after material change",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-012",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "legal center KPIs, custom policies and checklist",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-013",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "dealer account health levels",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-014",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "health rules are clamped and keep defaults",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-015",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "document expiry + calendar + helpers",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-016",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "phone numbers typed with spaces, dashes or +91 are accepted",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-017",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "festival alerts: 21/10/5 days before big festivals, 7 before others, bigger one wins a clash",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-018",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "daily / weekly / festivals-only timing, and never after unsubscribing",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-019",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "picks follow interests, skip last week's items and out-of-stock, max 2 per category",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-020",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "festival alerts are grouped by section (category-wise)",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-021",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "email & WhatsApp carry app/website links, unsubscribe, and no line breaks in template params",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-022",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "names are escaped in the email",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-023",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "earnings are dealer price × qty, counted when delivered",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-024",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "stock alerts and stock in/out",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-025",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "no % change when history does not cover the previous period",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-026",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "ranges: 12 monthly buckets, ~13 weekly buckets",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-027",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "guard rejects selling-price fields anywhere",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-028",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "PIN patterns: exact, prefix, star and range",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-029",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "order goes to one dealer who sells every item and serves the PIN; nearest/priority wins",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-030",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "customer identity hidden until the dealer accepts",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-031",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "selling price: cost + expenses + profit, platform fee and GST, nice rounding",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-032",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "KYC validation: PAN, GSTIN must contain PAN, IFSC, CIN for companies",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-033",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "required documents depend on business type and GSTIN",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-034",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "progress: a rejected document counts as missing; newest upload wins",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-035",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "templates fill known keys and keep unknown ones visible",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-036",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "agreement PDF is generated with the signature page",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-037",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "naive bayes learns labels and bm25 retrieves the right doc",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-038",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "intent model understands English and Hinglish",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-039",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "sentiment + review highlights with negation and mixed reviews",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-040",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "gift finder reads recipient, occasion and budget",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-041",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "assistant answers product questions from real specs only",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-042",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "holt forecast follows a trend; forecast flags low stock before festival",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-043",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "customer groups (RFM) put frequent recent big spenders in champions",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-044",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "order risk scores suspicious orders high and normal orders low",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-045",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "copywriter uses only given facts and fits SEO limits",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-046",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "spec example: 499 + 699 + 399 → 50% off = ₹798.50",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-047",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "2 eligible items → nudge to add 1 more",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-048",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "quantity counts as units",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-049",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "ineligible category items are not discounted and do not count",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-050",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "max discount cap",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-051",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "inactive / expired / future offers are ignored",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-052",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "coupon only applies when entered, best offer wins, no stacking",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-053",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "stock is enforced and unknown products dropped",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-054",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "client-supplied garbage cannot change prices",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-055",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "free delivery above threshold",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-056",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "tiered: 1 item → nudge to 10%",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-057",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "tiered: 2 → 10%, 3 → 20% with upsell to 30%, 5 → 30%",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-058",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "cheapest item 50% off for each group of 3",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-059",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "discount shares always add up to the discount",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-060",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "first-order coupon refused for returning customers",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-061",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "international: domestic-only products removed, per-item shipping added",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-062",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "typo distance",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-063",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "search matches synonyms, Hinglish and plurals",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-064",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "a title match beats a category-only match",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-065",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "did-you-mean fixes a misspelling that finds nothing",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-066",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "unmatched words are dropped when nothing matches all words",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-067",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "recent sales lift a product among equally relevant ones",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-068",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "old sales count less than recent ones",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-069",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "Bayesian rating: 5★ from 2 reviews ranks below 4.7★ from 500",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-070",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "Utsav's Choice: one well-rated, fairly priced, in-stock pick per category",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-071",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "bought-in-past-month label only from real volume",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-072",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "item-to-item CF: real affinity beats plain popularity",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-073",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "co-counts come from shared groups",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-074",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "bought together prefers real co-purchases and skips same category / out of stock",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-075",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "also viewed uses sessions, then same category",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-076",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "similar stays in the category and excludes itself",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-077",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "for you follows history and hides what was already seen",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-078",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "cart suggestions exclude cart items",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-079",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "deal of the day is an in-stock discounted product and changes by day",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-080",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "zones from origin & destination PIN",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-081",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "weight, box size and chargeable weight",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-082",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "profit per order: price + delivery − GST − cost − expenses − courier",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-083",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "chat understands English, Hinglish and Hindi problems",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-084",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "order numbers vs prices",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-085",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "every topic has an instant solution",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-086",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "only safe card details are recorded (network + last 4)",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-087",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "English, Hinglish and Hindi add-to-cart sentences",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-088",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "\"do\" as a verb is not the number two",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-089",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "price limits in words and numbers",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-090",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "commands",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UNIT-091",
+  "module": "Unit tests (shared logic)",
+  "page": "node --test",
+  "name": "spoken product summary",
+  "expected": "Passes",
+  "actual": "Passes",
+  "status": "PASS",
+  "severity": "-"
+ }
+]

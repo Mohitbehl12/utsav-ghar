@@ -1,0 +1,4732 @@
+[
+ {
+  "id": "UI-DES-home-ERR",
+  "module": "Customer",
+  "page": "/",
+  "name": "home (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2373 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-home-RWD",
+  "module": "Customer",
+  "page": "/",
+  "name": "home (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-home-IMG",
+  "module": "Customer",
+  "page": "/",
+  "name": "home (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-home-A11Y",
+  "module": "Customer",
+  "page": "/",
+  "name": "home: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-home-H1",
+  "module": "Customer",
+  "page": "/",
+  "name": "home: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-shop-ERR",
+  "module": "Customer",
+  "page": "/shop",
+  "name": "shop (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2189 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-shop-RWD",
+  "module": "Customer",
+  "page": "/shop",
+  "name": "shop (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-shop-IMG",
+  "module": "Customer",
+  "page": "/shop",
+  "name": "shop (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-shop-A11Y",
+  "module": "Customer",
+  "page": "/shop",
+  "name": "shop: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-shop-H1",
+  "module": "Customer",
+  "page": "/shop",
+  "name": "shop: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-category-ERR",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts",
+  "name": "category (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2191 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-category-RWD",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts",
+  "name": "category (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-category-IMG",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts",
+  "name": "category (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-category-A11Y",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts",
+  "name": "category: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-category-H1",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts",
+  "name": "category: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-product-ERR",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts/diwali-hamper-classic",
+  "name": "product (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2157 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-product-RWD",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts/diwali-hamper-classic",
+  "name": "product (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-product-IMG",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts/diwali-hamper-classic",
+  "name": "product (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-product-A11Y",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts/diwali-hamper-classic",
+  "name": "product: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-product-H1",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts/diwali-hamper-classic",
+  "name": "product: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-search-ERR",
+  "module": "Customer",
+  "page": "/shop?q=diya",
+  "name": "search (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2184 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-search-RWD",
+  "module": "Customer",
+  "page": "/shop?q=diya",
+  "name": "search (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-search-IMG",
+  "module": "Customer",
+  "page": "/shop?q=diya",
+  "name": "search (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-search-A11Y",
+  "module": "Customer",
+  "page": "/shop?q=diya",
+  "name": "search: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-search-H1",
+  "module": "Customer",
+  "page": "/shop?q=diya",
+  "name": "search: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-offers-ERR",
+  "module": "Customer",
+  "page": "/offers",
+  "name": "offers (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2235 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-offers-RWD",
+  "module": "Customer",
+  "page": "/offers",
+  "name": "offers (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-offers-IMG",
+  "module": "Customer",
+  "page": "/offers",
+  "name": "offers (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-offers-A11Y",
+  "module": "Customer",
+  "page": "/offers",
+  "name": "offers: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-offers-H1",
+  "module": "Customer",
+  "page": "/offers",
+  "name": "offers: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-login-ERR",
+  "module": "Customer",
+  "page": "/login",
+  "name": "login (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2233 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-login-RWD",
+  "module": "Customer",
+  "page": "/login",
+  "name": "login (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-login-IMG",
+  "module": "Customer",
+  "page": "/login",
+  "name": "login (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-login-A11Y",
+  "module": "Customer",
+  "page": "/login",
+  "name": "login: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-login-H1",
+  "module": "Customer",
+  "page": "/login",
+  "name": "login: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-register-ERR",
+  "module": "Customer",
+  "page": "/register",
+  "name": "register (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2222 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-register-RWD",
+  "module": "Customer",
+  "page": "/register",
+  "name": "register (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-register-IMG",
+  "module": "Customer",
+  "page": "/register",
+  "name": "register (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-register-A11Y",
+  "module": "Customer",
+  "page": "/register",
+  "name": "register: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-register-H1",
+  "module": "Customer",
+  "page": "/register",
+  "name": "register: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-forgot-ERR",
+  "module": "Customer",
+  "page": "/forgot-password",
+  "name": "forgot (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2208 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-forgot-RWD",
+  "module": "Customer",
+  "page": "/forgot-password",
+  "name": "forgot (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-forgot-IMG",
+  "module": "Customer",
+  "page": "/forgot-password",
+  "name": "forgot (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-forgot-A11Y",
+  "module": "Customer",
+  "page": "/forgot-password",
+  "name": "forgot: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-forgot-H1",
+  "module": "Customer",
+  "page": "/forgot-password",
+  "name": "forgot: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-track-ERR",
+  "module": "Customer",
+  "page": "/track",
+  "name": "track (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2210 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-track-RWD",
+  "module": "Customer",
+  "page": "/track",
+  "name": "track (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-track-IMG",
+  "module": "Customer",
+  "page": "/track",
+  "name": "track (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-track-A11Y",
+  "module": "Customer",
+  "page": "/track",
+  "name": "track: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-track-H1",
+  "module": "Customer",
+  "page": "/track",
+  "name": "track: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-help-ERR",
+  "module": "Customer",
+  "page": "/help",
+  "name": "help (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2195 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-help-RWD",
+  "module": "Customer",
+  "page": "/help",
+  "name": "help (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-help-IMG",
+  "module": "Customer",
+  "page": "/help",
+  "name": "help (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-help-A11Y",
+  "module": "Customer",
+  "page": "/help",
+  "name": "help: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-help-H1",
+  "module": "Customer",
+  "page": "/help",
+  "name": "help: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-manual-ERR",
+  "module": "Customer",
+  "page": "/help/manual",
+  "name": "manual (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2177 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-manual-RWD",
+  "module": "Customer",
+  "page": "/help/manual",
+  "name": "manual (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-manual-IMG",
+  "module": "Customer",
+  "page": "/help/manual",
+  "name": "manual (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-manual-A11Y",
+  "module": "Customer",
+  "page": "/help/manual",
+  "name": "manual: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-manual-H1",
+  "module": "Customer",
+  "page": "/help/manual",
+  "name": "manual: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-policies-ERR",
+  "module": "Customer",
+  "page": "/policies",
+  "name": "policies (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2183 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-policies-RWD",
+  "module": "Customer",
+  "page": "/policies",
+  "name": "policies (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-policies-IMG",
+  "module": "Customer",
+  "page": "/policies",
+  "name": "policies (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-policies-A11Y",
+  "module": "Customer",
+  "page": "/policies",
+  "name": "policies: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-policies-H1",
+  "module": "Customer",
+  "page": "/policies",
+  "name": "policies: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-privacy-ERR",
+  "module": "Customer",
+  "page": "/policies/privacy",
+  "name": "privacy (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2163 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-privacy-RWD",
+  "module": "Customer",
+  "page": "/policies/privacy",
+  "name": "privacy (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-privacy-IMG",
+  "module": "Customer",
+  "page": "/policies/privacy",
+  "name": "privacy (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-privacy-A11Y",
+  "module": "Customer",
+  "page": "/policies/privacy",
+  "name": "privacy: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-privacy-H1",
+  "module": "Customer",
+  "page": "/policies/privacy",
+  "name": "privacy: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-cart-ERR",
+  "module": "Customer",
+  "page": "/cart",
+  "name": "cart (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2143 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-cart-RWD",
+  "module": "Customer",
+  "page": "/cart",
+  "name": "cart (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-cart-IMG",
+  "module": "Customer",
+  "page": "/cart",
+  "name": "cart (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-cart-A11Y",
+  "module": "Customer",
+  "page": "/cart",
+  "name": "cart: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-cart-H1",
+  "module": "Customer",
+  "page": "/cart",
+  "name": "cart: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-account-ERR",
+  "module": "Customer",
+  "page": "/account",
+  "name": "account (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2545 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-account-RWD",
+  "module": "Customer",
+  "page": "/account",
+  "name": "account (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-account-IMG",
+  "module": "Customer",
+  "page": "/account",
+  "name": "account (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-account-A11Y",
+  "module": "Customer",
+  "page": "/account",
+  "name": "account: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-account-H1",
+  "module": "Customer",
+  "page": "/account",
+  "name": "account: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-orders-ERR",
+  "module": "Customer",
+  "page": "/account/orders",
+  "name": "orders (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2580 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-orders-RWD",
+  "module": "Customer",
+  "page": "/account/orders",
+  "name": "orders (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-orders-IMG",
+  "module": "Customer",
+  "page": "/account/orders",
+  "name": "orders (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-orders-A11Y",
+  "module": "Customer",
+  "page": "/account/orders",
+  "name": "orders: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-orders-H1",
+  "module": "Customer",
+  "page": "/account/orders",
+  "name": "orders: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-addresses-ERR",
+  "module": "Customer",
+  "page": "/account/addresses",
+  "name": "addresses (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2598 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-addresses-RWD",
+  "module": "Customer",
+  "page": "/account/addresses",
+  "name": "addresses (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-addresses-IMG",
+  "module": "Customer",
+  "page": "/account/addresses",
+  "name": "addresses (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-addresses-A11Y",
+  "module": "Customer",
+  "page": "/account/addresses",
+  "name": "addresses: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-addresses-H1",
+  "module": "Customer",
+  "page": "/account/addresses",
+  "name": "addresses: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-legal-ERR",
+  "module": "Customer",
+  "page": "/account/legal",
+  "name": "legal (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2578 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-legal-RWD",
+  "module": "Customer",
+  "page": "/account/legal",
+  "name": "legal (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-legal-IMG",
+  "module": "Customer",
+  "page": "/account/legal",
+  "name": "legal (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-legal-A11Y",
+  "module": "Customer",
+  "page": "/account/legal",
+  "name": "legal: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-legal-H1",
+  "module": "Customer",
+  "page": "/account/legal",
+  "name": "legal: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-security-ERR",
+  "module": "Customer",
+  "page": "/account/security",
+  "name": "security (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2538 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-security-RWD",
+  "module": "Customer",
+  "page": "/account/security",
+  "name": "security (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-security-IMG",
+  "module": "Customer",
+  "page": "/account/security",
+  "name": "security (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-security-A11Y",
+  "module": "Customer",
+  "page": "/account/security",
+  "name": "security: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-security-H1",
+  "module": "Customer",
+  "page": "/account/security",
+  "name": "security: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-order-ERR",
+  "module": "Customer",
+  "page": "/order/DIWALI10248",
+  "name": "order (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2650 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-order-RWD",
+  "module": "Customer",
+  "page": "/order/DIWALI10248",
+  "name": "order (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-order-IMG",
+  "module": "Customer",
+  "page": "/order/DIWALI10248",
+  "name": "order (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-order-A11Y",
+  "module": "Customer",
+  "page": "/order/DIWALI10248",
+  "name": "order: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-order-H1",
+  "module": "Customer",
+  "page": "/order/DIWALI10248",
+  "name": "order: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-checkout-ERR",
+  "module": "Customer",
+  "page": "/checkout",
+  "name": "checkout (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2512 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-checkout-RWD",
+  "module": "Customer",
+  "page": "/checkout",
+  "name": "checkout (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-checkout-IMG",
+  "module": "Customer",
+  "page": "/checkout",
+  "name": "checkout (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-checkout-A11Y",
+  "module": "Customer",
+  "page": "/checkout",
+  "name": "checkout: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-checkout-H1",
+  "module": "Customer",
+  "page": "/checkout",
+  "name": "checkout: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_login-ERR",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_login (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2089 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_login-RWD",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_login (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_login-IMG",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_login (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_login-A11Y",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_login: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_login-H1",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_login: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_forgot-ERR",
+  "module": "Dealer",
+  "page": "/dealer/forgot",
+  "name": "dealer_forgot (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2090 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_forgot-RWD",
+  "module": "Dealer",
+  "page": "/dealer/forgot",
+  "name": "dealer_forgot (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_forgot-IMG",
+  "module": "Dealer",
+  "page": "/dealer/forgot",
+  "name": "dealer_forgot (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_forgot-A11Y",
+  "module": "Dealer",
+  "page": "/dealer/forgot",
+  "name": "dealer_forgot: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_forgot-H1",
+  "module": "Dealer",
+  "page": "/dealer/forgot",
+  "name": "dealer_forgot: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_register-ERR",
+  "module": "Dealer",
+  "page": "/dealer/register",
+  "name": "dealer_register (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2062 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_register-RWD",
+  "module": "Dealer",
+  "page": "/dealer/register",
+  "name": "dealer_register (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_register-IMG",
+  "module": "Dealer",
+  "page": "/dealer/register",
+  "name": "dealer_register (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_register-A11Y",
+  "module": "Dealer",
+  "page": "/dealer/register",
+  "name": "dealer_register: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_register-H1",
+  "module": "Dealer",
+  "page": "/dealer/register",
+  "name": "dealer_register: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_dash-ERR",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_dash (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2080 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_dash-RWD",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_dash (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_dash-IMG",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_dash (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_dash-A11Y",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_dash: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_dash-H1",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_dash: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_orders-ERR",
+  "module": "Dealer",
+  "page": "/dealer/orders",
+  "name": "dealer_orders (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2039 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_orders-RWD",
+  "module": "Dealer",
+  "page": "/dealer/orders",
+  "name": "dealer_orders (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_orders-IMG",
+  "module": "Dealer",
+  "page": "/dealer/orders",
+  "name": "dealer_orders (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_orders-A11Y",
+  "module": "Dealer",
+  "page": "/dealer/orders",
+  "name": "dealer_orders: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_orders-H1",
+  "module": "Dealer",
+  "page": "/dealer/orders",
+  "name": "dealer_orders: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_products-ERR",
+  "module": "Dealer",
+  "page": "/dealer/products",
+  "name": "dealer_products (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 1999 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_products-RWD",
+  "module": "Dealer",
+  "page": "/dealer/products",
+  "name": "dealer_products (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_products-IMG",
+  "module": "Dealer",
+  "page": "/dealer/products",
+  "name": "dealer_products (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_products-A11Y",
+  "module": "Dealer",
+  "page": "/dealer/products",
+  "name": "dealer_products: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_products-H1",
+  "module": "Dealer",
+  "page": "/dealer/products",
+  "name": "dealer_products: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_payments-ERR",
+  "module": "Dealer",
+  "page": "/dealer/payments",
+  "name": "dealer_payments (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2055 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_payments-RWD",
+  "module": "Dealer",
+  "page": "/dealer/payments",
+  "name": "dealer_payments (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_payments-IMG",
+  "module": "Dealer",
+  "page": "/dealer/payments",
+  "name": "dealer_payments (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_payments-A11Y",
+  "module": "Dealer",
+  "page": "/dealer/payments",
+  "name": "dealer_payments: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_payments-H1",
+  "module": "Dealer",
+  "page": "/dealer/payments",
+  "name": "dealer_payments: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_profile-ERR",
+  "module": "Dealer",
+  "page": "/dealer/profile",
+  "name": "dealer_profile (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2047 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_profile-RWD",
+  "module": "Dealer",
+  "page": "/dealer/profile",
+  "name": "dealer_profile (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_profile-IMG",
+  "module": "Dealer",
+  "page": "/dealer/profile",
+  "name": "dealer_profile (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_profile-A11Y",
+  "module": "Dealer",
+  "page": "/dealer/profile",
+  "name": "dealer_profile: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_profile-H1",
+  "module": "Dealer",
+  "page": "/dealer/profile",
+  "name": "dealer_profile: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_legal-ERR",
+  "module": "Dealer",
+  "page": "/dealer/legal",
+  "name": "dealer_legal (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2001 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_legal-RWD",
+  "module": "Dealer",
+  "page": "/dealer/legal",
+  "name": "dealer_legal (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_legal-IMG",
+  "module": "Dealer",
+  "page": "/dealer/legal",
+  "name": "dealer_legal (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_legal-A11Y",
+  "module": "Dealer",
+  "page": "/dealer/legal",
+  "name": "dealer_legal: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_legal-H1",
+  "module": "Dealer",
+  "page": "/dealer/legal",
+  "name": "dealer_legal: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_manual-ERR",
+  "module": "Dealer",
+  "page": "/dealer/manual",
+  "name": "dealer_manual (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2048 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_manual-RWD",
+  "module": "Dealer",
+  "page": "/dealer/manual",
+  "name": "dealer_manual (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_manual-IMG",
+  "module": "Dealer",
+  "page": "/dealer/manual",
+  "name": "dealer_manual (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_manual-A11Y",
+  "module": "Dealer",
+  "page": "/dealer/manual",
+  "name": "dealer_manual: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-dealer_manual-H1",
+  "module": "Dealer",
+  "page": "/dealer/manual",
+  "name": "dealer_manual: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_dash-ERR",
+  "module": "Admin",
+  "page": "/admin",
+  "name": "admin_dash (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2137 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_dash-RWD",
+  "module": "Admin",
+  "page": "/admin",
+  "name": "admin_dash (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_dash-IMG",
+  "module": "Admin",
+  "page": "/admin",
+  "name": "admin_dash (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_dash-A11Y",
+  "module": "Admin",
+  "page": "/admin",
+  "name": "admin_dash: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_dash-H1",
+  "module": "Admin",
+  "page": "/admin",
+  "name": "admin_dash: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_orders-ERR",
+  "module": "Admin",
+  "page": "/admin/orders",
+  "name": "admin_orders (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2047 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_orders-RWD",
+  "module": "Admin",
+  "page": "/admin/orders",
+  "name": "admin_orders (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_orders-IMG",
+  "module": "Admin",
+  "page": "/admin/orders",
+  "name": "admin_orders (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_orders-A11Y",
+  "module": "Admin",
+  "page": "/admin/orders",
+  "name": "admin_orders: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_orders-H1",
+  "module": "Admin",
+  "page": "/admin/orders",
+  "name": "admin_orders: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_payments-ERR",
+  "module": "Admin",
+  "page": "/admin/payments",
+  "name": "admin_payments (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2093 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_payments-RWD",
+  "module": "Admin",
+  "page": "/admin/payments",
+  "name": "admin_payments (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_payments-IMG",
+  "module": "Admin",
+  "page": "/admin/payments",
+  "name": "admin_payments (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_payments-A11Y",
+  "module": "Admin",
+  "page": "/admin/payments",
+  "name": "admin_payments: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_payments-H1",
+  "module": "Admin",
+  "page": "/admin/payments",
+  "name": "admin_payments: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_returns-ERR",
+  "module": "Admin",
+  "page": "/admin/returns",
+  "name": "admin_returns (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2062 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_returns-RWD",
+  "module": "Admin",
+  "page": "/admin/returns",
+  "name": "admin_returns (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_returns-IMG",
+  "module": "Admin",
+  "page": "/admin/returns",
+  "name": "admin_returns (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_returns-A11Y",
+  "module": "Admin",
+  "page": "/admin/returns",
+  "name": "admin_returns: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_returns-H1",
+  "module": "Admin",
+  "page": "/admin/returns",
+  "name": "admin_returns: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_settle-ERR",
+  "module": "Admin",
+  "page": "/admin/settlements",
+  "name": "admin_settle (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2086 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_settle-RWD",
+  "module": "Admin",
+  "page": "/admin/settlements",
+  "name": "admin_settle (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_settle-IMG",
+  "module": "Admin",
+  "page": "/admin/settlements",
+  "name": "admin_settle (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_settle-A11Y",
+  "module": "Admin",
+  "page": "/admin/settlements",
+  "name": "admin_settle: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_settle-H1",
+  "module": "Admin",
+  "page": "/admin/settlements",
+  "name": "admin_settle: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_dealers-ERR",
+  "module": "Admin",
+  "page": "/admin/dealers",
+  "name": "admin_dealers (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2035 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_dealers-RWD",
+  "module": "Admin",
+  "page": "/admin/dealers",
+  "name": "admin_dealers (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_dealers-IMG",
+  "module": "Admin",
+  "page": "/admin/dealers",
+  "name": "admin_dealers (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_dealers-A11Y",
+  "module": "Admin",
+  "page": "/admin/dealers",
+  "name": "admin_dealers: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_dealers-H1",
+  "module": "Admin",
+  "page": "/admin/dealers",
+  "name": "admin_dealers: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_verify-ERR",
+  "module": "Admin",
+  "page": "/admin/dealer-verification",
+  "name": "admin_verify (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2014 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_verify-RWD",
+  "module": "Admin",
+  "page": "/admin/dealer-verification",
+  "name": "admin_verify (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_verify-IMG",
+  "module": "Admin",
+  "page": "/admin/dealer-verification",
+  "name": "admin_verify (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_verify-A11Y",
+  "module": "Admin",
+  "page": "/admin/dealer-verification",
+  "name": "admin_verify: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_verify-H1",
+  "module": "Admin",
+  "page": "/admin/dealer-verification",
+  "name": "admin_verify: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_products-ERR",
+  "module": "Admin",
+  "page": "/admin/products",
+  "name": "admin_products (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2130 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_products-RWD",
+  "module": "Admin",
+  "page": "/admin/products",
+  "name": "admin_products (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_products-IMG",
+  "module": "Admin",
+  "page": "/admin/products",
+  "name": "admin_products (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_products-A11Y",
+  "module": "Admin",
+  "page": "/admin/products",
+  "name": "admin_products: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_products-H1",
+  "module": "Admin",
+  "page": "/admin/products",
+  "name": "admin_products: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_legal-ERR",
+  "module": "Admin",
+  "page": "/admin/legal",
+  "name": "admin_legal (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2074 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_legal-RWD",
+  "module": "Admin",
+  "page": "/admin/legal",
+  "name": "admin_legal (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_legal-IMG",
+  "module": "Admin",
+  "page": "/admin/legal",
+  "name": "admin_legal (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_legal-A11Y",
+  "module": "Admin",
+  "page": "/admin/legal",
+  "name": "admin_legal: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_legal-H1",
+  "module": "Admin",
+  "page": "/admin/legal",
+  "name": "admin_legal: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_admins-ERR",
+  "module": "Admin",
+  "page": "/admin/admins",
+  "name": "admin_admins (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2036 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_admins-RWD",
+  "module": "Admin",
+  "page": "/admin/admins",
+  "name": "admin_admins (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_admins-IMG",
+  "module": "Admin",
+  "page": "/admin/admins",
+  "name": "admin_admins (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_admins-A11Y",
+  "module": "Admin",
+  "page": "/admin/admins",
+  "name": "admin_admins: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_admins-H1",
+  "module": "Admin",
+  "page": "/admin/admins",
+  "name": "admin_admins: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_security-ERR",
+  "module": "Admin",
+  "page": "/admin/security",
+  "name": "admin_security (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2337 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_security-RWD",
+  "module": "Admin",
+  "page": "/admin/security",
+  "name": "admin_security (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_security-IMG",
+  "module": "Admin",
+  "page": "/admin/security",
+  "name": "admin_security (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_security-A11Y",
+  "module": "Admin",
+  "page": "/admin/security",
+  "name": "admin_security: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_security-H1",
+  "module": "Admin",
+  "page": "/admin/security",
+  "name": "admin_security: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_settings-ERR",
+  "module": "Admin",
+  "page": "/admin/settings",
+  "name": "admin_settings (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2082 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_settings-RWD",
+  "module": "Admin",
+  "page": "/admin/settings",
+  "name": "admin_settings (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_settings-IMG",
+  "module": "Admin",
+  "page": "/admin/settings",
+  "name": "admin_settings (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_settings-A11Y",
+  "module": "Admin",
+  "page": "/admin/settings",
+  "name": "admin_settings: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_settings-H1",
+  "module": "Admin",
+  "page": "/admin/settings",
+  "name": "admin_settings: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_audit-ERR",
+  "module": "Admin",
+  "page": "/admin/audit",
+  "name": "admin_audit (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2049 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_audit-RWD",
+  "module": "Admin",
+  "page": "/admin/audit",
+  "name": "admin_audit (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_audit-IMG",
+  "module": "Admin",
+  "page": "/admin/audit",
+  "name": "admin_audit (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_audit-A11Y",
+  "module": "Admin",
+  "page": "/admin/audit",
+  "name": "admin_audit: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_audit-H1",
+  "module": "Admin",
+  "page": "/admin/audit",
+  "name": "admin_audit: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_manual-ERR",
+  "module": "Admin",
+  "page": "/admin/manual",
+  "name": "admin_manual (desktop): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2019 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_manual-RWD",
+  "module": "Admin",
+  "page": "/admin/manual",
+  "name": "admin_manual (desktop): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_manual-IMG",
+  "module": "Admin",
+  "page": "/admin/manual",
+  "name": "admin_manual (desktop): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_manual-A11Y",
+  "module": "Admin",
+  "page": "/admin/manual",
+  "name": "admin_manual: accessibility (axe WCAG 2 A/AA, serious+critical)",
+  "expected": "0 serious/critical issues",
+  "actual": "0 issues",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-DES-admin_manual-H1",
+  "module": "Admin",
+  "page": "/admin/manual",
+  "name": "admin_manual: page has a main heading",
+  "expected": "An <h1> exists",
+  "actual": "missing h1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-home-ERR",
+  "module": "Customer",
+  "page": "/",
+  "name": "home (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2351 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-home-RWD",
+  "module": "Customer",
+  "page": "/",
+  "name": "home (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-home-IMG",
+  "module": "Customer",
+  "page": "/",
+  "name": "home (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-shop-ERR",
+  "module": "Customer",
+  "page": "/shop",
+  "name": "shop (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2167 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-shop-RWD",
+  "module": "Customer",
+  "page": "/shop",
+  "name": "shop (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-shop-IMG",
+  "module": "Customer",
+  "page": "/shop",
+  "name": "shop (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-category-ERR",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts",
+  "name": "category (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2179 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-category-RWD",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts",
+  "name": "category (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-category-IMG",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts",
+  "name": "category (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-product-ERR",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts/diwali-hamper-classic",
+  "name": "product (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2159 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-product-RWD",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts/diwali-hamper-classic",
+  "name": "product (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-product-IMG",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts/diwali-hamper-classic",
+  "name": "product (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-search-ERR",
+  "module": "Customer",
+  "page": "/shop?q=diya",
+  "name": "search (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2171 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-search-RWD",
+  "module": "Customer",
+  "page": "/shop?q=diya",
+  "name": "search (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-search-IMG",
+  "module": "Customer",
+  "page": "/shop?q=diya",
+  "name": "search (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-offers-ERR",
+  "module": "Customer",
+  "page": "/offers",
+  "name": "offers (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2207 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-offers-RWD",
+  "module": "Customer",
+  "page": "/offers",
+  "name": "offers (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-offers-IMG",
+  "module": "Customer",
+  "page": "/offers",
+  "name": "offers (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-login-ERR",
+  "module": "Customer",
+  "page": "/login",
+  "name": "login (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2215 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-login-RWD",
+  "module": "Customer",
+  "page": "/login",
+  "name": "login (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-login-IMG",
+  "module": "Customer",
+  "page": "/login",
+  "name": "login (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-register-ERR",
+  "module": "Customer",
+  "page": "/register",
+  "name": "register (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2198 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-register-RWD",
+  "module": "Customer",
+  "page": "/register",
+  "name": "register (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-register-IMG",
+  "module": "Customer",
+  "page": "/register",
+  "name": "register (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-forgot-ERR",
+  "module": "Customer",
+  "page": "/forgot-password",
+  "name": "forgot (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2196 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-forgot-RWD",
+  "module": "Customer",
+  "page": "/forgot-password",
+  "name": "forgot (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-forgot-IMG",
+  "module": "Customer",
+  "page": "/forgot-password",
+  "name": "forgot (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-track-ERR",
+  "module": "Customer",
+  "page": "/track",
+  "name": "track (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2188 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-track-RWD",
+  "module": "Customer",
+  "page": "/track",
+  "name": "track (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-track-IMG",
+  "module": "Customer",
+  "page": "/track",
+  "name": "track (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-help-ERR",
+  "module": "Customer",
+  "page": "/help",
+  "name": "help (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2246 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-help-RWD",
+  "module": "Customer",
+  "page": "/help",
+  "name": "help (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-help-IMG",
+  "module": "Customer",
+  "page": "/help",
+  "name": "help (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-manual-ERR",
+  "module": "Customer",
+  "page": "/help/manual",
+  "name": "manual (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2189 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-manual-RWD",
+  "module": "Customer",
+  "page": "/help/manual",
+  "name": "manual (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-manual-IMG",
+  "module": "Customer",
+  "page": "/help/manual",
+  "name": "manual (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-policies-ERR",
+  "module": "Customer",
+  "page": "/policies",
+  "name": "policies (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2176 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-policies-RWD",
+  "module": "Customer",
+  "page": "/policies",
+  "name": "policies (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-policies-IMG",
+  "module": "Customer",
+  "page": "/policies",
+  "name": "policies (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-privacy-ERR",
+  "module": "Customer",
+  "page": "/policies/privacy",
+  "name": "privacy (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2210 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-privacy-RWD",
+  "module": "Customer",
+  "page": "/policies/privacy",
+  "name": "privacy (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-privacy-IMG",
+  "module": "Customer",
+  "page": "/policies/privacy",
+  "name": "privacy (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-cart-ERR",
+  "module": "Customer",
+  "page": "/cart",
+  "name": "cart (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2189 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-cart-RWD",
+  "module": "Customer",
+  "page": "/cart",
+  "name": "cart (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-cart-IMG",
+  "module": "Customer",
+  "page": "/cart",
+  "name": "cart (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-account-ERR",
+  "module": "Customer",
+  "page": "/account",
+  "name": "account (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2548 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-account-RWD",
+  "module": "Customer",
+  "page": "/account",
+  "name": "account (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-account-IMG",
+  "module": "Customer",
+  "page": "/account",
+  "name": "account (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-orders-ERR",
+  "module": "Customer",
+  "page": "/account/orders",
+  "name": "orders (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2550 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-orders-RWD",
+  "module": "Customer",
+  "page": "/account/orders",
+  "name": "orders (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-orders-IMG",
+  "module": "Customer",
+  "page": "/account/orders",
+  "name": "orders (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-addresses-ERR",
+  "module": "Customer",
+  "page": "/account/addresses",
+  "name": "addresses (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2624 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-addresses-RWD",
+  "module": "Customer",
+  "page": "/account/addresses",
+  "name": "addresses (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-addresses-IMG",
+  "module": "Customer",
+  "page": "/account/addresses",
+  "name": "addresses (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-legal-ERR",
+  "module": "Customer",
+  "page": "/account/legal",
+  "name": "legal (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2541 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-legal-RWD",
+  "module": "Customer",
+  "page": "/account/legal",
+  "name": "legal (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-legal-IMG",
+  "module": "Customer",
+  "page": "/account/legal",
+  "name": "legal (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-security-ERR",
+  "module": "Customer",
+  "page": "/account/security",
+  "name": "security (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2574 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-security-RWD",
+  "module": "Customer",
+  "page": "/account/security",
+  "name": "security (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-security-IMG",
+  "module": "Customer",
+  "page": "/account/security",
+  "name": "security (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-order-ERR",
+  "module": "Customer",
+  "page": "/order/DIWALI10248",
+  "name": "order (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2576 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-order-RWD",
+  "module": "Customer",
+  "page": "/order/DIWALI10248",
+  "name": "order (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-order-IMG",
+  "module": "Customer",
+  "page": "/order/DIWALI10248",
+  "name": "order (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-checkout-ERR",
+  "module": "Customer",
+  "page": "/checkout",
+  "name": "checkout (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2541 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-checkout-RWD",
+  "module": "Customer",
+  "page": "/checkout",
+  "name": "checkout (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-checkout-IMG",
+  "module": "Customer",
+  "page": "/checkout",
+  "name": "checkout (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_login-ERR",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_login (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2078 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_login-RWD",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_login (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_login-IMG",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_login (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_forgot-ERR",
+  "module": "Dealer",
+  "page": "/dealer/forgot",
+  "name": "dealer_forgot (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2073 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_forgot-RWD",
+  "module": "Dealer",
+  "page": "/dealer/forgot",
+  "name": "dealer_forgot (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_forgot-IMG",
+  "module": "Dealer",
+  "page": "/dealer/forgot",
+  "name": "dealer_forgot (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_register-ERR",
+  "module": "Dealer",
+  "page": "/dealer/register",
+  "name": "dealer_register (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2081 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_register-RWD",
+  "module": "Dealer",
+  "page": "/dealer/register",
+  "name": "dealer_register (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_register-IMG",
+  "module": "Dealer",
+  "page": "/dealer/register",
+  "name": "dealer_register (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_dash-ERR",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_dash (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2385 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_dash-RWD",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_dash (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_dash-IMG",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_dash (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_orders-ERR",
+  "module": "Dealer",
+  "page": "/dealer/orders",
+  "name": "dealer_orders (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2025 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_orders-RWD",
+  "module": "Dealer",
+  "page": "/dealer/orders",
+  "name": "dealer_orders (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_orders-IMG",
+  "module": "Dealer",
+  "page": "/dealer/orders",
+  "name": "dealer_orders (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_products-ERR",
+  "module": "Dealer",
+  "page": "/dealer/products",
+  "name": "dealer_products (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 1978 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_products-RWD",
+  "module": "Dealer",
+  "page": "/dealer/products",
+  "name": "dealer_products (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_products-IMG",
+  "module": "Dealer",
+  "page": "/dealer/products",
+  "name": "dealer_products (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_payments-ERR",
+  "module": "Dealer",
+  "page": "/dealer/payments",
+  "name": "dealer_payments (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 1984 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_payments-RWD",
+  "module": "Dealer",
+  "page": "/dealer/payments",
+  "name": "dealer_payments (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_payments-IMG",
+  "module": "Dealer",
+  "page": "/dealer/payments",
+  "name": "dealer_payments (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_profile-ERR",
+  "module": "Dealer",
+  "page": "/dealer/profile",
+  "name": "dealer_profile (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2112 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_profile-RWD",
+  "module": "Dealer",
+  "page": "/dealer/profile",
+  "name": "dealer_profile (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_profile-IMG",
+  "module": "Dealer",
+  "page": "/dealer/profile",
+  "name": "dealer_profile (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_legal-ERR",
+  "module": "Dealer",
+  "page": "/dealer/legal",
+  "name": "dealer_legal (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2067 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_legal-RWD",
+  "module": "Dealer",
+  "page": "/dealer/legal",
+  "name": "dealer_legal (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_legal-IMG",
+  "module": "Dealer",
+  "page": "/dealer/legal",
+  "name": "dealer_legal (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_manual-ERR",
+  "module": "Dealer",
+  "page": "/dealer/manual",
+  "name": "dealer_manual (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2032 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_manual-RWD",
+  "module": "Dealer",
+  "page": "/dealer/manual",
+  "name": "dealer_manual (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-dealer_manual-IMG",
+  "module": "Dealer",
+  "page": "/dealer/manual",
+  "name": "dealer_manual (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_dash-ERR",
+  "module": "Admin",
+  "page": "/admin",
+  "name": "admin_dash (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2058 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_dash-RWD",
+  "module": "Admin",
+  "page": "/admin",
+  "name": "admin_dash (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_dash-IMG",
+  "module": "Admin",
+  "page": "/admin",
+  "name": "admin_dash (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_orders-ERR",
+  "module": "Admin",
+  "page": "/admin/orders",
+  "name": "admin_orders (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2125 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_orders-RWD",
+  "module": "Admin",
+  "page": "/admin/orders",
+  "name": "admin_orders (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_orders-IMG",
+  "module": "Admin",
+  "page": "/admin/orders",
+  "name": "admin_orders (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_payments-ERR",
+  "module": "Admin",
+  "page": "/admin/payments",
+  "name": "admin_payments (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2087 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_payments-RWD",
+  "module": "Admin",
+  "page": "/admin/payments",
+  "name": "admin_payments (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_payments-IMG",
+  "module": "Admin",
+  "page": "/admin/payments",
+  "name": "admin_payments (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_returns-ERR",
+  "module": "Admin",
+  "page": "/admin/returns",
+  "name": "admin_returns (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2123 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_returns-RWD",
+  "module": "Admin",
+  "page": "/admin/returns",
+  "name": "admin_returns (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_returns-IMG",
+  "module": "Admin",
+  "page": "/admin/returns",
+  "name": "admin_returns (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_settle-ERR",
+  "module": "Admin",
+  "page": "/admin/settlements",
+  "name": "admin_settle (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2047 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_settle-RWD",
+  "module": "Admin",
+  "page": "/admin/settlements",
+  "name": "admin_settle (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_settle-IMG",
+  "module": "Admin",
+  "page": "/admin/settlements",
+  "name": "admin_settle (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_dealers-ERR",
+  "module": "Admin",
+  "page": "/admin/dealers",
+  "name": "admin_dealers (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2082 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_dealers-RWD",
+  "module": "Admin",
+  "page": "/admin/dealers",
+  "name": "admin_dealers (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_dealers-IMG",
+  "module": "Admin",
+  "page": "/admin/dealers",
+  "name": "admin_dealers (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_verify-ERR",
+  "module": "Admin",
+  "page": "/admin/dealer-verification",
+  "name": "admin_verify (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2176 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_verify-RWD",
+  "module": "Admin",
+  "page": "/admin/dealer-verification",
+  "name": "admin_verify (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_verify-IMG",
+  "module": "Admin",
+  "page": "/admin/dealer-verification",
+  "name": "admin_verify (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_products-ERR",
+  "module": "Admin",
+  "page": "/admin/products",
+  "name": "admin_products (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2137 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_products-RWD",
+  "module": "Admin",
+  "page": "/admin/products",
+  "name": "admin_products (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_products-IMG",
+  "module": "Admin",
+  "page": "/admin/products",
+  "name": "admin_products (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_legal-ERR",
+  "module": "Admin",
+  "page": "/admin/legal",
+  "name": "admin_legal (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2063 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_legal-RWD",
+  "module": "Admin",
+  "page": "/admin/legal",
+  "name": "admin_legal (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_legal-IMG",
+  "module": "Admin",
+  "page": "/admin/legal",
+  "name": "admin_legal (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_admins-ERR",
+  "module": "Admin",
+  "page": "/admin/admins",
+  "name": "admin_admins (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2085 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_admins-RWD",
+  "module": "Admin",
+  "page": "/admin/admins",
+  "name": "admin_admins (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_admins-IMG",
+  "module": "Admin",
+  "page": "/admin/admins",
+  "name": "admin_admins (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_security-ERR",
+  "module": "Admin",
+  "page": "/admin/security",
+  "name": "admin_security (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2275 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_security-RWD",
+  "module": "Admin",
+  "page": "/admin/security",
+  "name": "admin_security (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_security-IMG",
+  "module": "Admin",
+  "page": "/admin/security",
+  "name": "admin_security (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_settings-ERR",
+  "module": "Admin",
+  "page": "/admin/settings",
+  "name": "admin_settings (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2081 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_settings-RWD",
+  "module": "Admin",
+  "page": "/admin/settings",
+  "name": "admin_settings (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_settings-IMG",
+  "module": "Admin",
+  "page": "/admin/settings",
+  "name": "admin_settings (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_audit-ERR",
+  "module": "Admin",
+  "page": "/admin/audit",
+  "name": "admin_audit (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2074 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_audit-RWD",
+  "module": "Admin",
+  "page": "/admin/audit",
+  "name": "admin_audit (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_audit-IMG",
+  "module": "Admin",
+  "page": "/admin/audit",
+  "name": "admin_audit (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_manual-ERR",
+  "module": "Admin",
+  "page": "/admin/manual",
+  "name": "admin_manual (android): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2216 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_manual-RWD",
+  "module": "Admin",
+  "page": "/admin/manual",
+  "name": "admin_manual (android): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-AND-admin_manual-IMG",
+  "module": "Admin",
+  "page": "/admin/manual",
+  "name": "admin_manual (android): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-home-ERR",
+  "module": "Customer",
+  "page": "/",
+  "name": "home (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2260 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-home-RWD",
+  "module": "Customer",
+  "page": "/",
+  "name": "home (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-home-IMG",
+  "module": "Customer",
+  "page": "/",
+  "name": "home (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-shop-ERR",
+  "module": "Customer",
+  "page": "/shop",
+  "name": "shop (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2198 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-shop-RWD",
+  "module": "Customer",
+  "page": "/shop",
+  "name": "shop (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-shop-IMG",
+  "module": "Customer",
+  "page": "/shop",
+  "name": "shop (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-category-ERR",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts",
+  "name": "category (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2177 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-category-RWD",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts",
+  "name": "category (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-category-IMG",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts",
+  "name": "category (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-product-ERR",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts/diwali-hamper-classic",
+  "name": "product (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2169 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-product-RWD",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts/diwali-hamper-classic",
+  "name": "product (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-product-IMG",
+  "module": "Customer",
+  "page": "/shop/diwali-gifts/diwali-hamper-classic",
+  "name": "product (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-search-ERR",
+  "module": "Customer",
+  "page": "/shop?q=diya",
+  "name": "search (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2165 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-search-RWD",
+  "module": "Customer",
+  "page": "/shop?q=diya",
+  "name": "search (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-search-IMG",
+  "module": "Customer",
+  "page": "/shop?q=diya",
+  "name": "search (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-offers-ERR",
+  "module": "Customer",
+  "page": "/offers",
+  "name": "offers (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2206 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-offers-RWD",
+  "module": "Customer",
+  "page": "/offers",
+  "name": "offers (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-offers-IMG",
+  "module": "Customer",
+  "page": "/offers",
+  "name": "offers (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-login-ERR",
+  "module": "Customer",
+  "page": "/login",
+  "name": "login (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2187 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-login-RWD",
+  "module": "Customer",
+  "page": "/login",
+  "name": "login (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-login-IMG",
+  "module": "Customer",
+  "page": "/login",
+  "name": "login (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-register-ERR",
+  "module": "Customer",
+  "page": "/register",
+  "name": "register (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 4079 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-register-RWD",
+  "module": "Customer",
+  "page": "/register",
+  "name": "register (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-register-IMG",
+  "module": "Customer",
+  "page": "/register",
+  "name": "register (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-forgot-ERR",
+  "module": "Customer",
+  "page": "/forgot-password",
+  "name": "forgot (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2232 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-forgot-RWD",
+  "module": "Customer",
+  "page": "/forgot-password",
+  "name": "forgot (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-forgot-IMG",
+  "module": "Customer",
+  "page": "/forgot-password",
+  "name": "forgot (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-track-ERR",
+  "module": "Customer",
+  "page": "/track",
+  "name": "track (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2195 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-track-RWD",
+  "module": "Customer",
+  "page": "/track",
+  "name": "track (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-track-IMG",
+  "module": "Customer",
+  "page": "/track",
+  "name": "track (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-help-ERR",
+  "module": "Customer",
+  "page": "/help",
+  "name": "help (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2180 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-help-RWD",
+  "module": "Customer",
+  "page": "/help",
+  "name": "help (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-help-IMG",
+  "module": "Customer",
+  "page": "/help",
+  "name": "help (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-manual-ERR",
+  "module": "Customer",
+  "page": "/help/manual",
+  "name": "manual (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2165 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-manual-RWD",
+  "module": "Customer",
+  "page": "/help/manual",
+  "name": "manual (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-manual-IMG",
+  "module": "Customer",
+  "page": "/help/manual",
+  "name": "manual (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-policies-ERR",
+  "module": "Customer",
+  "page": "/policies",
+  "name": "policies (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2182 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-policies-RWD",
+  "module": "Customer",
+  "page": "/policies",
+  "name": "policies (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-policies-IMG",
+  "module": "Customer",
+  "page": "/policies",
+  "name": "policies (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-privacy-ERR",
+  "module": "Customer",
+  "page": "/policies/privacy",
+  "name": "privacy (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2191 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-privacy-RWD",
+  "module": "Customer",
+  "page": "/policies/privacy",
+  "name": "privacy (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-privacy-IMG",
+  "module": "Customer",
+  "page": "/policies/privacy",
+  "name": "privacy (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-cart-ERR",
+  "module": "Customer",
+  "page": "/cart",
+  "name": "cart (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2168 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-cart-RWD",
+  "module": "Customer",
+  "page": "/cart",
+  "name": "cart (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-cart-IMG",
+  "module": "Customer",
+  "page": "/cart",
+  "name": "cart (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-account-ERR",
+  "module": "Customer",
+  "page": "/account",
+  "name": "account (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2637 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-account-RWD",
+  "module": "Customer",
+  "page": "/account",
+  "name": "account (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-account-IMG",
+  "module": "Customer",
+  "page": "/account",
+  "name": "account (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-orders-ERR",
+  "module": "Customer",
+  "page": "/account/orders",
+  "name": "orders (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2547 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-orders-RWD",
+  "module": "Customer",
+  "page": "/account/orders",
+  "name": "orders (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-orders-IMG",
+  "module": "Customer",
+  "page": "/account/orders",
+  "name": "orders (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-addresses-ERR",
+  "module": "Customer",
+  "page": "/account/addresses",
+  "name": "addresses (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2597 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-addresses-RWD",
+  "module": "Customer",
+  "page": "/account/addresses",
+  "name": "addresses (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-addresses-IMG",
+  "module": "Customer",
+  "page": "/account/addresses",
+  "name": "addresses (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-legal-ERR",
+  "module": "Customer",
+  "page": "/account/legal",
+  "name": "legal (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2626 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-legal-RWD",
+  "module": "Customer",
+  "page": "/account/legal",
+  "name": "legal (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-legal-IMG",
+  "module": "Customer",
+  "page": "/account/legal",
+  "name": "legal (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-security-ERR",
+  "module": "Customer",
+  "page": "/account/security",
+  "name": "security (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2605 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-security-RWD",
+  "module": "Customer",
+  "page": "/account/security",
+  "name": "security (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-security-IMG",
+  "module": "Customer",
+  "page": "/account/security",
+  "name": "security (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-order-ERR",
+  "module": "Customer",
+  "page": "/order/DIWALI10248",
+  "name": "order (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2655 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-order-RWD",
+  "module": "Customer",
+  "page": "/order/DIWALI10248",
+  "name": "order (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-order-IMG",
+  "module": "Customer",
+  "page": "/order/DIWALI10248",
+  "name": "order (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-checkout-ERR",
+  "module": "Customer",
+  "page": "/checkout",
+  "name": "checkout (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2522 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-checkout-RWD",
+  "module": "Customer",
+  "page": "/checkout",
+  "name": "checkout (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-checkout-IMG",
+  "module": "Customer",
+  "page": "/checkout",
+  "name": "checkout (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_login-ERR",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_login (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2008 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_login-RWD",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_login (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_login-IMG",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_login (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_forgot-ERR",
+  "module": "Dealer",
+  "page": "/dealer/forgot",
+  "name": "dealer_forgot (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2099 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_forgot-RWD",
+  "module": "Dealer",
+  "page": "/dealer/forgot",
+  "name": "dealer_forgot (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_forgot-IMG",
+  "module": "Dealer",
+  "page": "/dealer/forgot",
+  "name": "dealer_forgot (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_register-ERR",
+  "module": "Dealer",
+  "page": "/dealer/register",
+  "name": "dealer_register (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2066 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_register-RWD",
+  "module": "Dealer",
+  "page": "/dealer/register",
+  "name": "dealer_register (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_register-IMG",
+  "module": "Dealer",
+  "page": "/dealer/register",
+  "name": "dealer_register (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_dash-ERR",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_dash (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2098 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_dash-RWD",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_dash (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_dash-IMG",
+  "module": "Dealer",
+  "page": "/dealer",
+  "name": "dealer_dash (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_orders-ERR",
+  "module": "Dealer",
+  "page": "/dealer/orders",
+  "name": "dealer_orders (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2059 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_orders-RWD",
+  "module": "Dealer",
+  "page": "/dealer/orders",
+  "name": "dealer_orders (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_orders-IMG",
+  "module": "Dealer",
+  "page": "/dealer/orders",
+  "name": "dealer_orders (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_products-ERR",
+  "module": "Dealer",
+  "page": "/dealer/products",
+  "name": "dealer_products (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2002 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_products-RWD",
+  "module": "Dealer",
+  "page": "/dealer/products",
+  "name": "dealer_products (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_products-IMG",
+  "module": "Dealer",
+  "page": "/dealer/products",
+  "name": "dealer_products (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_payments-ERR",
+  "module": "Dealer",
+  "page": "/dealer/payments",
+  "name": "dealer_payments (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2071 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_payments-RWD",
+  "module": "Dealer",
+  "page": "/dealer/payments",
+  "name": "dealer_payments (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_payments-IMG",
+  "module": "Dealer",
+  "page": "/dealer/payments",
+  "name": "dealer_payments (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_profile-ERR",
+  "module": "Dealer",
+  "page": "/dealer/profile",
+  "name": "dealer_profile (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2194 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_profile-RWD",
+  "module": "Dealer",
+  "page": "/dealer/profile",
+  "name": "dealer_profile (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_profile-IMG",
+  "module": "Dealer",
+  "page": "/dealer/profile",
+  "name": "dealer_profile (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_legal-ERR",
+  "module": "Dealer",
+  "page": "/dealer/legal",
+  "name": "dealer_legal (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2054 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_legal-RWD",
+  "module": "Dealer",
+  "page": "/dealer/legal",
+  "name": "dealer_legal (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_legal-IMG",
+  "module": "Dealer",
+  "page": "/dealer/legal",
+  "name": "dealer_legal (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_manual-ERR",
+  "module": "Dealer",
+  "page": "/dealer/manual",
+  "name": "dealer_manual (iphone): no JavaScript errors / server errors",
+  "expected": "No console or page errors, no 5xx",
+  "actual": "clean · loaded in 2021 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_manual-RWD",
+  "module": "Dealer",
+  "page": "/dealer/manual",
+  "name": "dealer_manual (iphone): no horizontal scrolling",
+  "expected": "Page width fits the screen",
+  "actual": "fits",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-IPH-dealer_manual-IMG",
+  "module": "Dealer",
+  "page": "/dealer/manual",
+  "name": "dealer_manual (iphone): no broken images",
+  "expected": "All images load",
+  "actual": "all loaded",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-KBD-001",
+  "module": "Accessibility",
+  "page": "/login",
+  "name": "Sign in using only the keyboard (Tab / Enter)",
+  "expected": "Signed in and taken to the account",
+  "actual": "http://localhost:4000/account",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-KBD-002",
+  "module": "Accessibility",
+  "page": "/account",
+  "name": "Visible focus ring on links and buttons",
+  "expected": "Focused element shows an outline",
+  "actual": "outline visible",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-JRN-001",
+  "module": "Customer journey",
+  "page": "/register",
+  "name": "Register in the browser with the mobile/email code",
+  "expected": "Account created, lands on My account",
+  "actual": "registered via UI with the test-mode code (not stored)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-JRN-007",
+  "module": "Customer journey",
+  "page": "/shop/diwali-gifts/diwali-hamper-classic",
+  "name": "Phone product page: deals card never covers \"Add to Cart\" (BUG-015)",
+  "expected": "Button is uncovered, no deals card",
+  "actual": "button uncovered=True, deals cards visible=0",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-JRN-002",
+  "module": "Customer journey",
+  "page": "/checkout",
+  "name": "Checkout through the UI",
+  "expected": "Order number shown",
+  "actual": "DIWALI10249",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-JRN-003",
+  "module": "Customer journey",
+  "page": "/order",
+  "name": "Submit UPI payment reference",
+  "expected": "\"Payment Verification Pending\" shown",
+  "actual": "\"Payment Verification Pending\" shown",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-JRN-004",
+  "module": "Customer journey",
+  "page": "/order",
+  "name": "Cancel the order from the order page",
+  "expected": "Order shows Cancelled",
+  "actual": "Order shows Cancelled",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-JRN-005",
+  "module": "Customer journey",
+  "page": "/account",
+  "name": "Sign out",
+  "expected": "Session ended",
+  "actual": "{\"user\": null}",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "UI-JRN-006",
+  "module": "Customer journey",
+  "page": "-",
+  "name": "No JavaScript errors during the journey",
+  "expected": "None",
+  "actual": "none",
+  "status": "PASS",
+  "severity": "-"
+ }
+]

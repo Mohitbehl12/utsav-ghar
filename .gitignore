@@ -1,0 +1,17 @@
+node_modules/
+dist/
+dist-demo/
+server/data/
+server/uploads/
+.env
+*.log
+server/backups/
+server/test/qa/ui-shots/
+*/www-preview/
+mobile*/android/app/build/
+mobile*/android/.gradle/
+mobile*/android/build/
+manuals/build/
+manuals/out/
+manuals/shots/
+__pycache__/

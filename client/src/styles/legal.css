@@ -1,0 +1,127 @@
+/* Legal documents, consents and the document viewer (store, dealer app, admin) */
+.lg-text { font-size: .95rem; line-height: 1.65; color: inherit; overflow-wrap: anywhere; }
+.lg-text h2 { font-size: 1.35rem; margin: 0 0 .6em; }
+.lg-text h3 { font-size: 1.05rem; margin: 1.4em 0 .4em; }
+.lg-text h4 { font-size: .98rem; margin: 1.1em 0 .3em; }
+.lg-text p { margin: 0 0 .7em; }
+.lg-text ul, .lg-text ol { margin: 0 0 .8em; padding-left: 1.4em; }
+.lg-text li { margin-bottom: .3em; }
+.lg-note { background: #FFF6DE; border: 1px solid #F0D58A; color: #5A4300; padding: 8px 12px; border-radius: 8px; font-size: .85rem; }
+.lg-meta { color: #6B5A60; font-size: .82rem; margin: 0 0 .8em; }
+
+.lg-viewer { position: fixed; inset: 0; z-index: 1000; background: #FBF8F3; color: #1E1219; display: flex; flex-direction: column; outline: none; }
+.lg-viewer__bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 16px; background: #2A0F1D; color: #FBEBD3; flex: none; }
+.lg-viewer__bar b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .95rem; }
+.lg-viewer__actions { display: flex; gap: 6px; flex: none; }
+.lg-viewer__actions button { min-height: 40px; min-width: 44px; padding: 0 12px; border-radius: 99px; border: 1px solid rgba(251, 235, 211, .45); background: transparent; color: inherit; font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer; }
+.lg-viewer__body { overflow-y: auto; padding: 20px 16px 48px; }
+.lg-viewer__doc { max-width: 760px; margin: 0 auto 32px; background: #fff; border: 1px solid #E8DED3; border-radius: 12px; padding: 20px; }
+@media (min-width: 700px) { .lg-viewer__doc { padding: 32px 40px; } }
+
+.lg-consents { border: 1px solid #E8DED3; border-radius: 12px; padding: 12px 14px; margin: 12px 0; display: grid; gap: 10px; min-width: 0; }
+.lg-consents legend { font-weight: 700; font-size: .9rem; padding: 0 6px; }
+.lg-consent label { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; font-size: .92rem; line-height: 1.4; }
+.lg-consent input[type=checkbox] { width: 22px; height: 22px; flex: none; margin: 0; accent-color: #6B1B3A; }
+.lg-consent.is-err label { color: #B3261E; }
+.lg-read { display: inline-block; margin: 4px 0 0 32px; padding: 6px 0; min-height: 32px; background: none; border: 0; color: #6B1B3A; font: inherit; font-size: .84rem; font-weight: 600; text-decoration: underline; cursor: pointer; text-align: left; }
+.lg-err { display: block; color: #B3261E; font-size: .82rem; margin: 2px 0 0 32px; }
+
+.lg-update { background: #FFF6DE; border: 1px solid #F0D58A; border-radius: 12px; padding: 14px 16px; margin: 0 0 16px; }
+.lg-update h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.lg-update p { margin: 0 0 6px; font-size: .9rem; }
+.lg-update .lg-consents { background: #fff; }
+
+.lg-table-wrap { overflow-x: auto; }
+.lg-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.lg-table th, .lg-table td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #EEE5DA; vertical-align: top; }
+.lg-table th { font-size: .78rem; color: #6B5A60; font-weight: 600; white-space: nowrap; }
+.lg-table code { font-size: .78rem; overflow-wrap: anywhere; }
+.lg-actions { white-space: nowrap; }
+.lg-actions .btn { margin-right: 4px; }
+
+/* signature pad */
+.lg-sign { display: grid; gap: 6px; }
+.lg-sign canvas { width: 100%; height: 160px; background: #fff; border: 1.5px dashed #B9A79A; border-radius: 12px; touch-action: none; cursor: crosshair; }
+.lg-sign__row { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: .82rem; color: #6B5A60; }
+.lg-sign__row button { background: none; border: 0; color: #6B1B3A; font: inherit; font-weight: 600; min-height: 36px; cursor: pointer; }
+
+/* progress stepper */
+.lg-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: s; }
+.lg-steps li { display: grid; grid-template-columns: 32px 1fr auto; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #EEE5DA; font-size: .92rem; }
+.lg-steps li:last-child { border-bottom: 0; }
+.lg-steps__dot { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #D8CCBF; background: #fff; font-size: .8rem; font-weight: 700; color: #6B5A60; }
+.lg-steps li.is-done .lg-steps__dot { background: #E3F3E8; border-color: #1F7A3E; color: #1F7A3E; }
+.lg-steps li.is-now .lg-steps__dot { background: #F8E6EC; border-color: #6B1B3A; color: #6B1B3A; box-shadow: 0 0 0 3px rgba(107, 27, 58, .15); }
+.lg-steps li.is-now { font-weight: 700; }
+.lg-steps small { color: #6B5A60; font-size: .78rem; }
+.account__grid > section { min-width: 0; }
+@media (max-width: 640px) {
+  .lg-table thead { display: none; }
+  .lg-table, .lg-table tbody, .lg-table tr, .lg-table td { display: block; width: auto; }
+  .lg-table tr { padding: 10px 0; border-bottom: 1px solid #EEE5DA; }
+  .lg-table td { border: 0; padding: 2px 0; }
+  .lg-table td:first-child { font-weight: 700; }
+  .lg-actions { margin-top: 6px; }
+}
+
+/* ---- simple explanation / full legal terms */
+.lg-doc { font-size: .95rem; line-height: 1.6; color: inherit; }
+.lg-doc__title { font-size: 1.3rem; margin: 0 0 6px; }
+.lg-doc__intro { font-size: 1rem; background: #F7F1FB; border-left: 4px solid #6B1B3A; padding: 10px 14px; border-radius: 0 10px 10px 0; margin: 0 0 10px; }
+.lg-mode { display: inline-flex; border: 1.5px solid #D8CCBF; border-radius: 99px; padding: 3px; margin: 4px 0 12px; background: #fff; }
+.lg-mode button { border: 0; background: transparent; border-radius: 99px; padding: 8px 14px; min-height: 38px; font: inherit; font-size: .86rem; font-weight: 700; color: #6B5A60; cursor: pointer; }
+.lg-mode button.is-on { background: #6B1B3A; color: #fff; }
+.lg-summary { background: #EEF7F0; border: 1px solid #B7DEC3; border-radius: 12px; padding: 12px 16px; margin: 0 0 14px; }
+.lg-summary h3 { margin: 0 0 6px; font-size: 1rem; color: #164F2A; }
+.lg-summary ul { margin: 0; padding-left: 1.2em; }
+.lg-summary li { margin-bottom: .25em; }
+.lg-summary__more { margin: 8px 0 0; font-size: .82rem; color: #3D6B4C; }
+.lg-sections { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.lg-sec { border: 1px solid #EADFD3; border-radius: 12px; padding: 10px 14px; background: #fff; }
+.lg-sec__h { margin: 0 0 4px; font-size: 1rem; }
+.lg-sec__simple { margin: 0; background: #FFF6DE; border-radius: 8px; padding: 8px 10px; font-size: .92rem; }
+.lg-sec__simple b { color: #6B1B3A; }
+.lg-sec__toggle { background: none; border: 0; padding: 8px 0 2px; min-height: 36px; color: #6B1B3A; font: inherit; font-size: .84rem; font-weight: 700; cursor: pointer; }
+.lg-sec__full { border-top: 1px dashed #E2D6C8; margin-top: 6px; padding-top: 8px; }
+.lg-sec__full .lg-text { font-size: .9rem; }
+.lg-doc--compact .lg-sec { padding: 8px 12px; }
+
+.lg-docactions { display: flex; flex-wrap: wrap; gap: 6px; }
+.lg-docactions button { min-height: 38px; padding: 0 12px; border-radius: 99px; border: 1.5px solid #D8CCBF; background: #fff; font: inherit; font-size: .84rem; font-weight: 600; color: #1E1219; cursor: pointer; }
+.lg-doclist { list-style: none; margin: 10px 0 18px; padding: 0; display: grid; gap: 10px; }
+.lg-doclist li { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; padding: 10px 12px; border: 1px solid #EADFD3; border-radius: 12px; }
+.lg-doclist li > div:first-child { display: grid; min-width: 0; }
+.lg-ver { font-size: .78rem; color: #6B5A60; }
+.lg-sub { font-size: 1rem; margin: 6px 0 8px; }
+
+/* sign-up panel */
+.lg-cust { border: 1px solid #E8DED3; border-radius: 14px; padding: 14px; background: #FFFCF7; display: grid; gap: 10px; }
+.lg-cust__head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.lg-cust__head h2 { margin: 0; font-size: 1.1rem; }
+.lg-cust__scroll { max-height: 420px; overflow-y: auto; border: 1px solid #EADFD3; border-radius: 12px; padding: 12px; background: #FBF8F3; }
+.lg-cust__scroll .lg-doc__title { display: none; }
+.lg-cust__others { display: flex; flex-wrap: wrap; gap: 6px; }
+.lg-chipbtn { border: 1.5px solid #D8CCBF; background: #fff; border-radius: 99px; padding: 6px 12px; min-height: 36px; font: inherit; font-size: .84rem; font-weight: 600; cursor: pointer; color: #1E1219; }
+.lg-cust__before { margin: 6px 0 0; font-size: 1rem; }
+.lg-cust .lg-consents { margin: 0; background: #fff; }
+.lg-pdfbtn { justify-self: start; border: 0; background: none; color: #6B1B3A; font: inherit; font-weight: 700; padding: 6px 0; min-height: 40px; cursor: pointer; text-decoration: underline; }
+.lg-missing { font-size: .84rem; color: #6B5A60; margin: 4px 0 0; text-align: center; }
+
+/* documents (shared legal renderer additions) */
+.lg-tablewrap { overflow-x: auto; margin: 8px 0; }
+.lg-doctable { border-collapse: collapse; width: 100%; font-size: .9rem; }
+.lg-doctable th, .lg-doctable td { border: 1px solid #E6D9CC; padding: 6px 10px; text-align: left; vertical-align: top; }
+.lg-doctable th { background: #F7F1EA; }
+.lg-notice { padding: 10px 12px; border-radius: 10px; background: #FFF6DE; border: 1px solid #F0D58A; }
+.lg-notice--warning { background: #FBE3E6; border-color: #F1C6CC; }
+.lg-def dfn { font-style: normal; font-weight: 700; }
+
+
+/* /policies */
+.lg-policies h2 { margin: 26px 0 10px; font-size: 1.2rem; }
+.lg-polgrid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 12px; }
+.lg-polgrid a { display: grid; gap: 4px; height: 100%; padding: 16px; border: 1px solid var(--line, #EAD8BB); border-radius: 14px; background: var(--card, #FFFDF8); color: inherit; text-decoration: none; transition: box-shadow .2s, transform .2s; }
+.lg-polgrid a:hover { box-shadow: 0 12px 26px -18px rgba(60, 20, 20, .5); transform: translateY(-1px); }
+.lg-polgrid__ic { font-size: 1.5rem; }
+.lg-polgrid small { font-size: .84rem; }
+.lg-policies > p.muted { margin-top: 22px; }

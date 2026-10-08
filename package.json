@@ -1,0 +1,16 @@
+{
+  "name": "shubh-aangan",
+  "private": true,
+  "description": "Utsav Ghar — Diwali, pooja & home décor e-commerce (React + Vite storefront/admin, Express + SQLite API)",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "seed": "npm --prefix server run seed",
+    "seed:demo": "npm --prefix server run seed -- --demo",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "build:demo": "npm --prefix client run build:demo",
+    "start": "npm --prefix server start",
+    "test": "npm --prefix server test"
+  }
+}

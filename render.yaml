@@ -1,0 +1,38 @@
+# Render Blueprint — free TEST deployment of Utsav Ghar (one web service: API + website).
+# Render → New → Blueprint → pick this repo. You will be asked for ADMIN_EMAIL and ADMIN_PASSWORD.
+#
+# FREE PLAN LIMITS (read before testing):
+#  - No persistent disk: the SQLite database and uploaded photos/documents are reset when the
+#    service restarts, redeploys or sleeps (after 15 minutes without visitors). Demo data is
+#    re-created on every start. Fine for a test session; NOT for real customers.
+#  - TEST_MODE=on shows one-time codes on screen and a "TEST MODE" banner on every page,
+#    because no SMS / WhatsApp / email provider is configured.
+services:
+  - type: web
+    name: utsav-ghar-test
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci --prefix server --omit=dev && npm ci --prefix client --include=dev && npm --prefix client run build
+    startCommand: npm --prefix server run seed -- --demo && npm --prefix server start
+    healthCheckPath: /api/health
+    autoDeploy: false
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: TEST_MODE
+        value: "on"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_JWT_SECRET
+        generateValue: true
+      - key: DATA_ENCRYPTION_KEY
+        generateValue: true
+      - key: COURIER_WEBHOOK_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false

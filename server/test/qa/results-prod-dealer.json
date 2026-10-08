@@ -1,0 +1,782 @@
+[
+ {
+  "id": "DLR-REG-001",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Invalid mobile",
+  "expected": "400 phone error",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-REG-002",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Weak password / mismatch",
+  "expected": "400 with both errors",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-REG-003",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Valid registration",
+  "expected": "201 Draft; cannot receive orders",
+  "actual": "Draft · orders off",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-REG-004",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Duplicate dealer mobile",
+  "expected": "409",
+  "actual": "409 This mobile number is already registered. Please sign in.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-REG-005",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Products before approval",
+  "expected": "403",
+  "actual": "POST 403",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-ONB-001",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Business details missing / bad PIN",
+  "expected": "400 with field errors",
+  "actual": "10 field errors",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-ONB-002",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Business details saved",
+  "expected": "Step done; required documents listed",
+  "actual": "required: pan_card, address_proof, signatory_id, bank_proof",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-KYC-001",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Invalid PAN format",
+  "expected": "400 pan error",
+  "actual": "Enter a valid PAN (e.g. ABCDE1234F)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-KYC-002",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "GSTIN that does not contain the PAN",
+  "expected": "400 gstin error",
+  "actual": "GSTIN must contain the same PAN",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-KYC-003",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Bank account confirmation mismatch / bad IFSC",
+  "expected": "400",
+  "actual": "bank_account_confirm, ifsc",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-KYC-004",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Valid KYC",
+  "expected": "Saved; bank shown masked, never in full",
+  "actual": "XXXX XXXX 4321",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-DOC-001",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Unsupported file type (.txt)",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-DOC-002",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Fake PDF (exe bytes named .pdf)",
+  "expected": "400",
+  "actual": "400 Upload a PDF, JPG or PNG file.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-DOC-003",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Empty file",
+  "expected": "400",
+  "actual": "400 Upload a PDF, JPG or PNG file.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-DOC-004",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "File over 5 MB",
+  "expected": "413/400 friendly error (no crash)",
+  "actual": "413 File is too large (max 5 MB).",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-DOC-005",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "No file attached",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-DOC-006",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Unknown document type",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-DOC-007",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Malicious file name (../../etc/passwd.pdf)",
+  "expected": "Accepted as data; stored under a random name",
+  "actual": "stored as (db blob) · original name kept only as text",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-DOC-008",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "JPG and PNG accepted",
+  "expected": "201 for both",
+  "actual": "201 / 201 (latest replaces earlier)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-DOC-009",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Replacement upload keeps history; latest is used",
+  "expected": "Two rows, only the newest marked latest",
+  "actual": "2 shown as current for address proof",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-DOC-010",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Dealer downloads own document",
+  "expected": "200",
+  "actual": "200 124 bytes",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-DOC-011",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Another dealer opens my document (IDOR)",
+  "expected": "404",
+  "actual": "404 Not found",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-DOC-012",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Signed out user opens a dealer document",
+  "expected": "401",
+  "actual": "401 Please sign in to the dealer app.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-AGR-001",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Sign before all documents are uploaded",
+  "expected": "409",
+  "actual": "409 Upload the required documents first: ID proof of owner / director / authorised signatory (PAN, passport, voter ID or driving licence), Cancelled cheque or bank statement page.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-AGR-002",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "View agreement (simple + full), version, PDF",
+  "expected": "Filled with dealer details; PDF downloads",
+  "actual": "Dealer Agreement v1.0 + Dealer Terms & Conditions v1.0 · PDF 18KB",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-AGR-003",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Agreement never shows selling price or margin",
+  "expected": "No customer price / profit text",
+  "actual": "none found",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SIG-001",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Signing OTP resend within 30 s",
+  "expected": "429",
+  "actual": "429 Please wait 30 seconds before asking for a new code.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SIG-002",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Wrong OTP",
+  "expected": "400 otp error",
+  "actual": "Wrong code. Please check and try again.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SIG-003",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Not all boxes ticked",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SIG-004",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "No signature drawn",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SIG-005",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Sign with OTP + name + signature",
+  "expected": "Under review; signed PDF with name, version, date, OTP ref",
+  "actual": "UGD-20261007-000002-7CF8 · PDF 8KB contains name, business, version 1.0, OTP reference",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-APR-001",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Admin approval before documents verified",
+  "expected": "409",
+  "actual": "409 Verify every required document before approving.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-APR-002",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Reject a document needs a reason; dealer sees it",
+  "expected": "400 without reason; then dealer status Documents rejected",
+  "actual": "400 · dealer status documents_rejected",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-APR-003",
+  "module": "Dealer",
+  "page": "Registration & onboarding",
+  "name": "Re-upload → review → verify all → approve",
+  "expected": "Approved; can receive orders",
+  "actual": "Approved · orders on",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-PRD-001",
+  "module": "Dealer",
+  "page": "Products & pricing",
+  "name": "Add product without a photo",
+  "expected": "400",
+  "actual": "400 Add at least one clear photo of the product.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-PRD-002",
+  "module": "Dealer",
+  "page": "Products & pricing",
+  "name": "Missing name / category",
+  "expected": "400 field errors",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-PRD-003",
+  "module": "Dealer",
+  "page": "Products & pricing",
+  "name": "Negative / zero / text price",
+  "expected": "400 each",
+  "actual": "400 / 400 / 400",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-PRD-004",
+  "module": "Dealer",
+  "page": "Products & pricing",
+  "name": "Negative quantity",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-PRD-005",
+  "module": "Dealer",
+  "page": "Products & pricing",
+  "name": "Photo that is not an image (script)",
+  "expected": "400",
+  "actual": "400 Only JPG, PNG, WebP or AVIF images are allowed.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-PRD-006",
+  "module": "Dealer",
+  "page": "Products & pricing",
+  "name": "Valid product",
+  "expected": "201 Under review; response has no customer price/margin",
+  "actual": "pending · keys clean",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-PRD-007",
+  "module": "Dealer",
+  "page": "Products & pricing",
+  "name": "Duplicate SKU for the same dealer",
+  "expected": "409 \"SKU already used\"",
+  "actual": "409 You already use this SKU for another product.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-PRD-008",
+  "module": "Dealer",
+  "page": "Products & pricing",
+  "name": "Edit another dealer's product (IDOR)",
+  "expected": "404",
+  "actual": "404 / 404",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-PRD-009",
+  "module": "Dealer",
+  "page": "Products & pricing",
+  "name": "Admin publishes with a selling price",
+  "expected": "Live; dealer still sees only dealer price",
+  "actual": "live at ₹349 for customers · dealer sees ₹120 only",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-PRD-010",
+  "module": "Dealer",
+  "page": "Products & pricing",
+  "name": "Dealer dashboard / products never contain FORBIDDEN keys",
+  "expected": "No price, mrp, margin, profit, pricing",
+  "actual": "clean",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "INV-001",
+  "module": "Dealer",
+  "page": "Stock & inventory",
+  "name": "Stock update to a negative number",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "INV-002",
+  "module": "Dealer",
+  "page": "Stock & inventory",
+  "name": "Stock update (dealer → store)",
+  "expected": "Store stock = new quantity; movement logged",
+  "actual": "store stock 3",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "INV-003",
+  "module": "Dealer",
+  "page": "Stock & inventory",
+  "name": "Concurrent orders for the last 3 pieces (6 buyers at once)",
+  "expected": "Exactly 3 succeed; stock 0, never negative",
+  "actual": "3 orders placed, 3 refused (409) · stock 0",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "INV-004",
+  "module": "Dealer",
+  "page": "Stock & inventory",
+  "name": "Reserved stock shown to the dealer",
+  "expected": "reserved = 3 (open orders), available 0",
+  "actual": "reserved 3 · available 0 · sold 0",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "INV-005",
+  "module": "Dealer",
+  "page": "Stock & inventory",
+  "name": "Out of stock product cannot be ordered",
+  "expected": "409",
+  "actual": "400 Your cart is empty or items are unavailable.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "INV-006",
+  "module": "Dealer",
+  "page": "Stock & inventory",
+  "name": "Cancellation releases stock",
+  "expected": "Stock +1",
+  "actual": "stock 1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-ORD-001",
+  "module": "Dealer",
+  "page": "Orders & shipping",
+  "name": "New order appears for the dealer",
+  "expected": "In \"new\" tab; customer phone/address hidden before accepting",
+  "actual": "listed · contact hidden",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-ORD-002",
+  "module": "Dealer",
+  "page": "Orders & shipping",
+  "name": "Another dealer opens / acts on this order",
+  "expected": "404 — or, if the order was moved away from them, a masked history row (no phone/address) and no actions",
+  "actual": "history row \"reassigned\" masked · action 409",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-ORD-003",
+  "module": "Dealer",
+  "page": "Orders & shipping",
+  "name": "Pack before accepting",
+  "expected": "409",
+  "actual": "409 Accept the order first.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-ORD-004",
+  "module": "Dealer",
+  "page": "Orders & shipping",
+  "name": "Accept",
+  "expected": "Accepted; full address & phone now visible",
+  "actual": "accepted",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-ORD-005",
+  "module": "Dealer",
+  "page": "Orders & shipping",
+  "name": "Pack without ticking every item",
+  "expected": "400",
+  "actual": "400 Tick every item as you pack it.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-ORD-006",
+  "module": "Dealer",
+  "page": "Orders & shipping",
+  "name": "Pack → Ready → Out for delivery (own rider)",
+  "expected": "Each step accepted in order",
+  "actual": "out_for_delivery",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-ORD-007",
+  "module": "Dealer",
+  "page": "Orders & shipping",
+  "name": "Customer cannot cancel once out for delivery",
+  "expected": "409",
+  "actual": "409 This order is already being packed or on its way, so it cannot be cancelled here. You can refuse the delivery or request a return.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-ORD-008",
+  "module": "Dealer",
+  "page": "Orders & shipping",
+  "name": "Deliver with wrong code, then right code",
+  "expected": "400, then Delivered",
+  "actual": "400 → delivered",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-ORD-009",
+  "module": "Dealer",
+  "page": "Orders & shipping",
+  "name": "Sold count after delivery",
+  "expected": "sold_stock ≥ 1",
+  "actual": "sold 1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SET-001",
+  "module": "Dealer",
+  "page": "Payments & settlement",
+  "name": "Amount due = dealer price × quantity delivered (supply model)",
+  "expected": "Preview gross = 2 × ₹120",
+  "actual": "2 orders · ₹240 · fees 0 · net ₹240",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SET-002",
+  "module": "Dealer",
+  "page": "Payments & settlement",
+  "name": "Dealer Payments page",
+  "expected": "Shows ₹240 due; no forbidden keys",
+  "actual": "due ₹240 · State Bank of India ••••4321",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SET-003",
+  "module": "Dealer",
+  "page": "Payments & settlement",
+  "name": "Dealer cannot see another dealer's payments",
+  "expected": "Other dealer's page shows ₹0 due",
+  "actual": "separate",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SET-004",
+  "module": "Dealer",
+  "page": "Payments & settlement",
+  "name": "Returned item is deducted",
+  "expected": "Net = 2×120 − 120",
+  "actual": "gross ₹240 − returns ₹120 = ₹120",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SET-005",
+  "module": "Dealer",
+  "page": "Payments & settlement",
+  "name": "Support role cannot create a settlement",
+  "expected": "403",
+  "actual": "403 Your role does not have access to this page.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SET-006",
+  "module": "Dealer",
+  "page": "Payments & settlement",
+  "name": "Create settlement with a penalty adjustment",
+  "expected": "Processing; net = 120 − 20",
+  "actual": "STL-1001 · net ₹100",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SET-007",
+  "module": "Dealer",
+  "page": "Payments & settlement",
+  "name": "Nothing paid twice",
+  "expected": "Second create → 409 nothing due",
+  "actual": "409 Nothing is due to this dealer right now.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SET-008",
+  "module": "Dealer",
+  "page": "Payments & settlement",
+  "name": "Mark paid without UTR",
+  "expected": "400",
+  "actual": "400 Enter the bank UTR / reference.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SET-009",
+  "module": "Dealer",
+  "page": "Payments & settlement",
+  "name": "Mark paid with UTR",
+  "expected": "Paid; dealer sees it with UTR",
+  "actual": "paid · dealer total paid ₹100",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SET-010",
+  "module": "Dealer",
+  "page": "Payments & settlement",
+  "name": "Pay or cancel an already paid batch",
+  "expected": "409 both",
+  "actual": "409 / 409",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SET-011",
+  "module": "Dealer",
+  "page": "Payments & settlement",
+  "name": "Negative net is never paid",
+  "expected": "Only a return pending → 409 \"zero or less\"",
+  "actual": "409 · dealer sees −₹120 carried forward",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SET-012",
+  "module": "Dealer",
+  "page": "Payments & settlement",
+  "name": "Cancel a processing batch releases its orders",
+  "expected": "Orders due again",
+  "actual": "STL-1002 cancelled → 1 order due again",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SET-013",
+  "module": "Dealer",
+  "page": "Payments & settlement",
+  "name": "Commission model: commission + fees deducted",
+  "expected": "net = gross − commission% − ₹fee/order − payment%",
+  "actual": "gross 1500 − returns 100 − comm 140 − fees 40 − pay 28 = ₹1192",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SEC-001",
+  "module": "Dealer",
+  "page": "Account security",
+  "name": "Forgot password (unknown number)",
+  "expected": "200 generic, no code",
+  "actual": "If this number is registered, we have sent a 6-digit code to it.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SEC-002",
+  "module": "Dealer",
+  "page": "Account security",
+  "name": "Forgot password (real number)",
+  "expected": "200, code sent",
+  "actual": "code sent",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SEC-003",
+  "module": "Dealer",
+  "page": "Account security",
+  "name": "Reset with the code",
+  "expected": "Old sessions end; new password works",
+  "actual": "reset · old session 401 · new login 200",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SEC-004",
+  "module": "Dealer",
+  "page": "Account security",
+  "name": "Customer session cannot open dealer API",
+  "expected": "401",
+  "actual": "401 Please sign in to the dealer app.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SEC-005",
+  "module": "Dealer",
+  "page": "Account security",
+  "name": "Dealer session cannot open admin API",
+  "expected": "401",
+  "actual": "401 Admin sign-in required.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DLR-SEC-006",
+  "module": "Dealer",
+  "page": "Account security",
+  "name": "Suspended dealer gets no new orders",
+  "expected": "can_receive_orders false",
+  "actual": "suspended",
+  "status": "PASS",
+  "severity": "-"
+ }
+]

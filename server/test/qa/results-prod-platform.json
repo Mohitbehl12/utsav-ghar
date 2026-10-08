@@ -1,0 +1,542 @@
+[
+ {
+  "id": "SEC-001",
+  "module": "Security",
+  "page": "",
+  "name": "State-changing request without CSRF token",
+  "expected": "403",
+  "actual": "403 Security check failed. Please refresh the page and try again.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-002",
+  "module": "Security",
+  "page": "",
+  "name": "CSRF header that does not match the cookie",
+  "expected": "403",
+  "actual": "403 Security check failed. Please refresh the page and try again.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-003",
+  "module": "Security",
+  "page": "",
+  "name": "Security headers",
+  "expected": "CSP, X-Frame-Options DENY, nosniff, Referrer-Policy; no X-Powered-By",
+  "actual": "CSP ✓ · XFO DENY · nosniff ✓ · strict-origin-when-cross-origin · HSTS ✓",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-004",
+  "module": "Security",
+  "page": "",
+  "name": "Customer session cookie flags",
+  "expected": "HttpOnly; SameSite=Lax",
+  "actual": "Max-Age=2592000; Path=/; Expires=Fri, 06 Nov 2026 08:08:56 GMT; HttpOnly; Secure; SameSite=Lax (Secure added in production)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-005",
+  "module": "Security",
+  "page": "",
+  "name": "SQL injection in sign-in email",
+  "expected": "400 / 401, never signs in",
+  "actual": "400 / 400",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-006",
+  "module": "Security",
+  "page": "",
+  "name": "SQL injection in admin order search",
+  "expected": "200, no error, no extra rows",
+  "actual": "0 rows (parameterised query)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-007",
+  "module": "Security",
+  "page": "",
+  "name": "Stored XSS text in a support request",
+  "expected": "Stored as plain text; the app never renders raw HTML (no dangerouslySetInnerHTML in the client)",
+  "actual": "400 · stored as text · 0 raw-HTML render points in the client",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-008",
+  "module": "Security",
+  "page": "",
+  "name": "Path traversal on files",
+  "expected": "Refused (403/404) for ../ in uploads, manual and image routes",
+  "actual": "403 / 404 / 404 / 401",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-009",
+  "module": "Security",
+  "page": "",
+  "name": "Payment screenshot and return photo are private",
+  "expected": "Customer 401; admin only",
+  "actual": "401 / 401",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-010",
+  "module": "Security",
+  "page": "",
+  "name": "Sign-in throttling per IP",
+  "expected": "429 after 20 failed tries from one address",
+  "actual": "429 Too many sign-in attempts. Try again in 15 minutes.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-011",
+  "module": "Security",
+  "page": "",
+  "name": "Forged admin token (alg none / wrong secret)",
+  "expected": "401",
+  "actual": "401 Admin session expired. Please sign in again.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-012",
+  "module": "Security",
+  "page": "",
+  "name": "Passwords and hashes never returned",
+  "expected": "No password_hash / token / otp hashes in API responses",
+  "actual": "5 responses checked — clean",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-013",
+  "module": "Security",
+  "page": "",
+  "name": "Secrets not in the website bundle",
+  "expected": "No server secret names or private keys in client/dist",
+  "actual": "29 files scanned — no keys, tokens, hashes or .env values (only setup text that names variables)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-014",
+  "module": "Security",
+  "page": "",
+  "name": "Mass assignment at sign-up / profile",
+  "expected": "Extra fields (is_active, role, email) ignored",
+  "actual": "ignored",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-015",
+  "module": "Security",
+  "page": "",
+  "name": "OTP and delivery codes are not stored in the message outbox",
+  "expected": "Stored copy shows •••••• instead of the code",
+  "actual": "2 stored messages — codes masked",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-016",
+  "module": "Security",
+  "page": "",
+  "name": "Admin APIs refuse customer cookies",
+  "expected": "401 on every admin router",
+  "actual": "11 routers → 401",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "SEC-017",
+  "module": "Security",
+  "page": "",
+  "name": "Dependency audit (npm audit, production deps)",
+  "expected": "No high/critical advisories",
+  "actual": "{\"info\":0,\"low\":0,\"moderate\":0,\"high\":0,\"critical\":0,\"total\":0}",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "API-001",
+  "module": "API",
+  "page": "",
+  "name": "Unknown API route",
+  "expected": "404 JSON",
+  "actual": "404 Not found",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "API-002",
+  "module": "API",
+  "page": "",
+  "name": "Malformed JSON body",
+  "expected": "400 friendly message (no parser internals)",
+  "actual": "400 We could not read that request. Please refresh the page and try again.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "API-003",
+  "module": "API",
+  "page": "",
+  "name": "Body larger than 200 KB",
+  "expected": "413 friendly message",
+  "actual": "413 This request is too large.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "API-004",
+  "module": "API",
+  "page": "",
+  "name": "Wrong data types",
+  "expected": "400 field errors",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "API-005",
+  "module": "API",
+  "page": "",
+  "name": "Missing required parameter",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "API-006",
+  "module": "API",
+  "page": "",
+  "name": "Boundary: 99 per line OK, 100 rejected",
+  "expected": "200 / 400",
+  "actual": "200 / 400",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "API-007",
+  "module": "API",
+  "page": "",
+  "name": "Double-click \"Place order\" (same Idempotency-Key, sent together)",
+  "expected": "ONE order; both answers return it",
+  "actual": "+1 order (#DIWALI10248) · statuses 201/200",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "API-008",
+  "module": "API",
+  "page": "",
+  "name": "Retry after a dropped connection (same key later)",
+  "expected": "Same order returned (200, replayed)",
+  "actual": "201 → 200 replayed",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "API-009",
+  "module": "API",
+  "page": "",
+  "name": "HEAD / OPTIONS on the API",
+  "expected": "No 500",
+  "actual": "200 / 204",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "API-010",
+  "module": "API",
+  "page": "",
+  "name": "General API rate limit",
+  "expected": "429 after 300 requests a minute from one address",
+  "actual": "429 Too many requests. Please slow down.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DB-001",
+  "module": "Database",
+  "page": "",
+  "name": "Integrity check",
+  "expected": "PRAGMA integrity_check = ok; no foreign key violations",
+  "actual": "integrity ok · FK violations 0",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DB-002",
+  "module": "Database",
+  "page": "",
+  "name": "Foreign keys enforced by the server connection",
+  "expected": "Deleting a product used in orders keeps the order lines (SET NULL)",
+  "actual": "products:SET NULL, orders:CASCADE",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DB-003",
+  "module": "Database",
+  "page": "",
+  "name": "Unique keys",
+  "expected": "order_number, users.email, dealers.phone, refunds per return, settlement items",
+  "actual": "orders:1 · users:1 · dealers:1 · refunds:2 · dealer_settlement_items:1 · otp_codes:1",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DB-004",
+  "module": "Database",
+  "page": "",
+  "name": "No negative stock anywhere",
+  "expected": "MIN(stock) ≥ 0",
+  "actual": "min stock 30",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DB-005",
+  "module": "Database",
+  "page": "",
+  "name": "Money columns are whole paise (no floats)",
+  "expected": "All totals integers; order total = subtotal − discount + delivery",
+  "actual": "5 orders consistent",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DB-006",
+  "module": "Database",
+  "page": "",
+  "name": "Refunds never exceed what was paid",
+  "expected": "For every order: SUM(refunds) ≤ total",
+  "actual": "all within total",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DB-007",
+  "module": "Database",
+  "page": "",
+  "name": "Account deletion keeps orders (tax records) but removes personal data",
+  "expected": "User anonymised; orders kept, unlinked",
+  "actual": "anonymised · order kept · unlinked",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DB-008",
+  "module": "Database",
+  "page": "",
+  "name": "Backup script produces a usable copy",
+  "expected": "Backup file opens; same number of orders",
+  "actual": "utsav-ghar-2026-10-07T08-09-06-625Z.db · integrity ok · 6 orders",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "DB-009",
+  "module": "Database",
+  "page": "",
+  "name": "Audit records for admin actions",
+  "expected": "audit_logs rows written with admin id and time",
+  "actual": "2 rows",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "NOT-001",
+  "module": "Notifications",
+  "page": "",
+  "name": "Order placed → customer email + WhatsApp queued to the right recipient",
+  "expected": "2 rows, recipient = order email / phone",
+  "actual": "email→qa.2635a4@example.com (skipped) · whatsapp→9753546700 (skipped)",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "NOT-002",
+  "module": "Notifications",
+  "page": "",
+  "name": "No duplicate message for one event",
+  "expected": "Exactly one per channel",
+  "actual": "[{\"channel\":\"email\",\"n\":1},{\"channel\":\"whatsapp\",\"n\":1}]",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "NOT-003",
+  "module": "Notifications",
+  "page": "",
+  "name": "Unconfigured channel is recorded, not lost",
+  "expected": "status \"skipped\" with reason",
+  "actual": "skipped: SMTP not configured",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "NOT-004",
+  "module": "Notifications",
+  "page": "",
+  "name": "Payment confirmed / shipped / delivered messages",
+  "expected": "One per step",
+  "actual": "order_placed, payment_confirmed",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "NOT-005",
+  "module": "Notifications",
+  "page": "",
+  "name": "Real email / WhatsApp / SMS delivery and provider retry",
+  "expected": "Messages arrive on a phone and inbox",
+  "actual": "No SMTP, WhatsApp or SMS provider credentials in this test environment — messages are recorded as \"skipped\". Test again after keys are added (see Known limitations).",
+  "status": "BLOCKED",
+  "severity": "-"
+ },
+ {
+  "id": "PERF-001",
+  "module": "Performance",
+  "page": "",
+  "name": "Product search (80 products)",
+  "expected": "Median < 300 ms",
+  "actual": "26 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "PERF-002",
+  "module": "Performance",
+  "page": "",
+  "name": "Home page data (products list, cached)",
+  "expected": "Median < 150 ms",
+  "actual": "3 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "PERF-003",
+  "module": "Performance",
+  "page": "",
+  "name": "Admin orders list with 3007 orders",
+  "expected": "Median < 1500 ms and paginated",
+  "actual": "90 ms · 100 rows per page · 3007 total",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "PERF-004",
+  "module": "Performance",
+  "page": "",
+  "name": "Admin orders page 2",
+  "expected": "Different rows, same speed",
+  "actual": "50 + 50, no overlap",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "PERF-005",
+  "module": "Performance",
+  "page": "",
+  "name": "Admin dashboard with large data",
+  "expected": "Median < 800 ms",
+  "actual": "14 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "PERF-006",
+  "module": "Performance",
+  "page": "",
+  "name": "Customer \"My orders\"",
+  "expected": "Median < 300 ms",
+  "actual": "19 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "PERF-007",
+  "module": "Performance",
+  "page": "",
+  "name": "Policy PDF generation",
+  "expected": "< 2 s",
+  "actual": "128 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "PERF-008",
+  "module": "Performance",
+  "page": "",
+  "name": "20 shoppers browsing at the same time",
+  "expected": "All 200; p95 < 800 ms",
+  "actual": "p95 207 ms · wall 219 ms",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "EDGE-001",
+  "module": "Edge cases",
+  "page": "",
+  "name": "Unicode and emoji in address",
+  "expected": "Order placed; text kept",
+  "actual": "फ्लैट 4, शांति नगर 🪔",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "EDGE-002",
+  "module": "Edge cases",
+  "page": "",
+  "name": "Address longer than 200 characters",
+  "expected": "400",
+  "actual": "400 Please check the highlighted fields.",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "EDGE-003",
+  "module": "Edge cases",
+  "page": "",
+  "name": "Two browser tabs change the cart",
+  "expected": "Last save wins; no error",
+  "actual": "qty 3 kept",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "EDGE-004",
+  "module": "Edge cases",
+  "page": "",
+  "name": "Two admins confirm the same payment at once",
+  "expected": "Exactly one succeeds",
+  "actual": "200 / 409 · 1 transaction",
+  "status": "PASS",
+  "severity": "-"
+ },
+ {
+  "id": "EDGE-005",
+  "module": "Edge cases",
+  "page": "",
+  "name": "Empty catalogue search / empty lists",
+  "expected": "200 with empty arrays (no crash)",
+  "actual": "200 / 200",
+  "status": "PASS",
+  "severity": "-"
+ }
+]
