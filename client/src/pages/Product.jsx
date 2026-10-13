@@ -9,6 +9,7 @@ import { track } from '../lib/track.js';
 import { recordView } from '../lib/history.js';
 import { FrequentlyBought, CompareTable, ItemsRow } from '../components/Recs.jsx';
 import { shareLink } from '../lib/native.js';
+import { useIsApp } from '../components/AppShell.jsx';
 import { useAddToCart, stockLabel, ProductGrid } from '../components/ProductCard.jsx';
 import { Media, Price, Stars, Qty, SectionHead, Empty, Spinner, useSeo, Field, RankBadge, BoughtLine } from '../components/ui.jsx';
 import { HeartIcon, TruckIcon, ShieldIcon, StarIcon, ShareIcon } from '../components/Icons.jsx';
@@ -113,6 +114,7 @@ export default function Product() {
   const buyRef = useRef(null);
   const live = useLiveStock([data?.product?.id]);
   const showBar = useOffscreen(buyRef);
+  const app = useIsApp();
   const cart = useCart();
   const wish = useWishlist();
   const { user } = useAuth();
@@ -141,7 +143,13 @@ export default function Product() {
   });
 
   if (err) return <div className="container"><Empty icon="🪔" title="We couldn't find that product" action={<Link to="/shop" className="btn btn--primary">Browse the shop</Link>}>It may have been moved or is no longer available.</Empty></div>;
-  if (!p) return <div className="container center pad"><Spinner /></div>;
+  if (!p) {
+    return (
+      <div className="container pdp pdp--loading" aria-busy="true" aria-label="Loading product">
+        <div className="pdp__sk"><div className="sk sk--media" /><div className="sk sk--short" /><div className="sk" /><div className="sk sk--price" /><div className="sk" /><div className="sk sk--short" /></div>
+      </div>
+    );
+  }
 
   if (live[p.id] && (live[p.id].stock_status !== p.stock_status || live[p.id].stock_left !== (p.stock_left ?? null))) {
     p = { ...p, stock_status: live[p.id].stock_status, stock_left: live[p.id].stock_left ?? undefined };
@@ -233,7 +241,17 @@ export default function Product() {
         </div>
       </div>
 
-      {showBar && !out && (
+      {app ? (
+        <div className="pdpbar pdpbar--app" role="region" aria-label="Buy this product">
+          <button type="button" className={`pdpbar__wish ${wish.has(p.id) ? 'is-on' : ''}`} onClick={() => wish.toggle(p.id, p.name)} aria-pressed={wish.has(p.id)} aria-label={wish.has(p.id) ? 'Remove from wishlist' : 'Add to wishlist'}><HeartIcon /></button>
+          {out ? <button type="button" className="btn btn--primary" disabled>Out of stock</button> : (
+            <>
+              <button type="button" className="btn pdpbar__add" onClick={() => add(p, qty)}>Add to Cart</button>
+              <button type="button" className="btn btn--primary pdpbar__buy" onClick={() => { add(p, qty); nav('/checkout'); }}>Buy Now</button>
+            </>
+          )}
+        </div>
+      ) : showBar && !out && (
         <div className="pdpbar" role="region" aria-label="Quick buy">
           <div className="pdpbar__info"><b>{fmt(p.price)}</b>{p.discount_pct > 0 && <span className="pdpbar__off">{p.discount_pct}% off</span>}<span className="pdpbar__name">{p.name}</span></div>
           <button className="btn btn--primary" onClick={() => add(p, qty)}>Add to Cart</button>

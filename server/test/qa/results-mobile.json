@@ -1,0 +1,232 @@
+[
+ {
+  "id": "MOB-001",
+  "module": "Mobile UI",
+  "page": "/",
+  "name": "Phone browser gets the app layout (bottom tabs, compact header)",
+  "expected": "html.is-app + .atabs",
+  "actual": "{'cls': 'is-app is-mweb', 'tabs': True, 'hdr': 114}",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "MOB-002",
+  "module": "Mobile UI",
+  "page": "/",
+  "name": "Header uses under 15% of the screen height",
+  "expected": "≤ 127 px on an 844 px screen",
+  "actual": "114 px",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "MOB-003",
+  "module": "Mobile UI",
+  "page": "/",
+  "name": "Bottom tabs are at least 44×44 px each",
+  "expected": "5 tabs ≥ 44 px",
+  "actual": "[[78, 61], [78, 61], [78, 61], [78, 61], [78, 61]]",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "MOB-004",
+  "module": "Mobile UI",
+  "page": "/",
+  "name": "Home shows swipeable category cards",
+  "expected": "≥ 6 category cards",
+  "actual": "21",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "MOB-005",
+  "module": "Mobile UI",
+  "page": "/shop",
+  "name": "Product list is a 2-column grid with large images",
+  "expected": "2 cards per row, image ≥ 150 px wide",
+  "actual": "{'sameRow': True, 'btnH': 40, 'imgW': 173, 'lines': 3}",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "MOB-006",
+  "module": "Mobile UI",
+  "page": "/shop",
+  "name": "\"Add to Cart\" on cards fits one line and is ≥ 40 px tall",
+  "expected": "one line, ≥ 40 px",
+  "actual": "{'sameRow': True, 'btnH': 40, 'imgW': 173, 'lines': 3}",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "MOB-007",
+  "module": "Mobile UI",
+  "page": "/shop",
+  "name": "Help bubble does not cover product buttons on list pages",
+  "expected": "hidden on list pages",
+  "actual": "none",
+  "status": "PASS",
+  "severity": "Low"
+ },
+ {
+  "id": "MOB-008",
+  "module": "Mobile UI",
+  "page": "/shop",
+  "name": "Filters open as a bottom sheet above the tab bar",
+  "expected": "full width, anchored to bottom, z above tabs",
+  "actual": "{'bottom': 844, 'left': 0, 'w': 390, 'vh': 844, 'z': '80'}",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "MOB-009",
+  "module": "Mobile UI",
+  "page": "/product",
+  "name": "Product page: Add to Cart + Buy Now always in a bottom bar",
+  "expected": "bar at screen bottom, 3 controls ≥ 44 px",
+  "actual": "{'bottom': 844, 'vh': 844, 'btns': [50, 44, 44], 'galleryFirst': True}",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "MOB-010",
+  "module": "Mobile UI",
+  "page": "/product",
+  "name": "Product page shows the image gallery before the title",
+  "expected": "gallery above title",
+  "actual": "{'bottom': 844, 'vh': 844, 'btns': [50, 44, 44], 'galleryFirst': True}",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "MOB-011",
+  "module": "Mobile UI",
+  "page": "/cart",
+  "name": "Cart: total + Checkout bar sits just above the tab bar",
+  "expected": "sticky bar with total and ≥ 44 px button",
+  "actual": "{'above': True, 'total': '₹478', 'btn': 50}",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "MOB-012",
+  "module": "Mobile UI",
+  "page": "/register",
+  "name": "Form fields use 16 px text (no zoom-in on iPhone)",
+  "expected": "≥ 16 px",
+  "actual": "16px",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "MOB-013",
+  "module": "Mobile UI",
+  "page": "/account",
+  "name": "Account screen is a menu of icon rows ≥ 44 px",
+  "expected": "≥ 10 rows, each ≥ 44 px",
+  "actual": "[60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60]",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "MOB-014",
+  "module": "Mobile UI",
+  "page": "/account/orders",
+  "name": "Account sub-screens are titled by section with a back link",
+  "expected": "h1 \"My Orders\" + back link",
+  "actual": "My Orders",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "MOB-015",
+  "module": "Mobile UI",
+  "page": "/admin/orders",
+  "name": "Admin tables read as labelled cards on a phone",
+  "expected": "is-cards tables with labelled cells, no zoom-out",
+  "actual": "{'cards': 1, 'labelled': 104, 'iw': 390}",
+  "status": "PASS",
+  "severity": "Medium"
+ },
+ {
+  "id": "MOB-W320",
+  "module": "Mobile UI",
+  "page": "13 screens",
+  "name": "No sideways scrolling or zoom-out at 320 px",
+  "expected": "innerWidth = 320 on every screen",
+  "actual": "all 13 OK",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "MOB-W360",
+  "module": "Mobile UI",
+  "page": "13 screens",
+  "name": "No sideways scrolling or zoom-out at 360 px",
+  "expected": "innerWidth = 360 on every screen",
+  "actual": "all 13 OK",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "MOB-W375",
+  "module": "Mobile UI",
+  "page": "13 screens",
+  "name": "No sideways scrolling or zoom-out at 375 px",
+  "expected": "innerWidth = 375 on every screen",
+  "actual": "all 13 OK",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "MOB-W390",
+  "module": "Mobile UI",
+  "page": "13 screens",
+  "name": "No sideways scrolling or zoom-out at 390 px",
+  "expected": "innerWidth = 390 on every screen",
+  "actual": "all 13 OK",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "MOB-W393",
+  "module": "Mobile UI",
+  "page": "13 screens",
+  "name": "No sideways scrolling or zoom-out at 393 px",
+  "expected": "innerWidth = 393 on every screen",
+  "actual": "all 13 OK",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "MOB-W412",
+  "module": "Mobile UI",
+  "page": "13 screens",
+  "name": "No sideways scrolling or zoom-out at 412 px",
+  "expected": "innerWidth = 412 on every screen",
+  "actual": "all 13 OK",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "MOB-W430",
+  "module": "Mobile UI",
+  "page": "13 screens",
+  "name": "No sideways scrolling or zoom-out at 430 px",
+  "expected": "innerWidth = 430 on every screen",
+  "actual": "all 13 OK",
+  "status": "PASS",
+  "severity": "High"
+ },
+ {
+  "id": "MOB-LAND",
+  "module": "Mobile UI",
+  "page": "/",
+  "name": "Phone in landscape keeps the app layout",
+  "expected": "is-app at 844×390",
+  "actual": "{'app': True, 'iw': 844}",
+  "status": "PASS",
+  "severity": "Low"
+ }
+]

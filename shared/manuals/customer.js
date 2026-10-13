@@ -30,6 +30,32 @@ export default {
         ['सभी ऑर्डर प्रीपेड हैं। अभी कैश ऑन डिलीवरी उपलब्ध नहीं है।', 'ऑर्डर करने के लिए अकाउंट ज़रूरी है।', 'इस मैनुअल की स्क्रीन वेबसाइट की असली स्क्रीन हैं (डेमो डेटा)। फ़ोन ऐप में भी यही स्क्रीन दिखती हैं।']),
     },
     {
+      id: 'phone', title: t('Shopping on Your Phone', 'फ़ोन पर खरीदारी'), shot: 'm_phone_home',
+      callouts: [
+        ['css:.ahdr__search', t('Search — tap to type, or tap 🎤 to speak', 'सर्च — लिखने के लिए दबाएँ, या 🎤 दबाकर बोलें')],
+        ['css:.abans', t('Swipe the banners for festival deals and collections', 'त्योहार के ऑफ़र और कलेक्शन के लिए बैनर स्वाइप करें')],
+        ['css:.acircles', t('Categories — swipe left and tap one', 'कैटेगरी — बाएँ स्वाइप करें और एक चुनें')],
+        ['css:.atabs', t('Bottom tabs: Home, Categories, Offers, Cart, Account', 'नीचे के टैब: Home, Categories, Offers, Cart, Account')],
+      ],
+      shot2: 'm_phone_buy',
+      callouts2: [
+        ['css:.gallery__main', t('Large photos — tap the small pictures to change', 'बड़ी फ़ोटो — बदलने के लिए छोटी तस्वीरें दबाएँ')],
+        ['css:.pdpbar__wish', t('Save to wishlist', 'विशलिस्ट में सेव करें')],
+        ['css:.pdpbar__add', t('Add to Cart — always at the bottom of the screen', 'Add to Cart — हमेशा स्क्रीन के नीचे')],
+        ['css:.pdpbar__buy', t('Buy Now — adds the item and opens checkout', 'Buy Now — सामान जोड़कर सीधे चेकआउट खोलता है')],
+      ],
+      what: t('On a phone, Utsav Ghar opens like a shopping app: a compact header with search, swipeable banners and categories, and tabs at the bottom of the screen. Tablets and computers show the full website.',
+        'फ़ोन पर Utsav Ghar एक शॉपिंग ऐप की तरह खुलता है: ऊपर छोटा हेडर और सर्च, स्वाइप होने वाले बैनर और कैटेगरी, और स्क्रीन के नीचे टैब। टैबलेट और कंप्यूटर पर पूरी वेबसाइट दिखती है।'),
+      why: t('So you can shop with one hand: the most used buttons are always within reach of your thumb.',
+        'ताकि आप एक हाथ से खरीदारी कर सकें: सबसे ज़्यादा इस्तेमाल होने वाले बटन हमेशा अंगूठे की पहुँच में रहते हैं।'),
+      can: t(['Move between Home, Categories, Offers, Cart and Account with the bottom tabs', 'Add to Cart or Buy Now from the bar at the bottom of a product', 'See your cart total and tap "Checkout" from the bar above the tabs', 'Open "Filters" as a sheet from the bottom of the screen', 'Use Account for orders, wishlist, addresses, payments, help and sign out', 'Add Utsav Ghar to your home screen from the browser menu ("Add to Home screen")'],
+        ['नीचे के टैब से Home, Categories, Offers, Cart और Account के बीच जाएँ', 'प्रोडक्ट के नीचे की पट्टी से Add to Cart या Buy Now करें', 'टैब के ऊपर की पट्टी में कार्ट का कुल देखें और "Checkout" दबाएँ', '"Filters" स्क्रीन के नीचे से खुलने वाली शीट में खोलें', 'Account में ऑर्डर, विशलिस्ट, पते, भुगतान, मदद और साइन आउट', 'ब्राउज़र मेन्यू से Utsav Ghar को होम स्क्रीन पर जोड़ें ("Add to Home screen")']),
+      steps: t(['Open the website on your phone.', 'Search or tap a category.', 'Open a product and tap "Add to Cart" at the bottom.', 'Tap the Cart tab, check the total and tap "Checkout".', 'Follow the 3 checkout steps: your details, review, payment.'],
+        ['फ़ोन पर वेबसाइट खोलें।', 'सर्च करें या कोई कैटेगरी दबाएँ।', 'प्रोडक्ट खोलें और नीचे "Add to Cart" दबाएँ।', 'Cart टैब दबाएँ, कुल रकम देखें और "Checkout" दबाएँ।', 'चेकआउट के 3 चरण पूरे करें: आपकी जानकारी, समीक्षा, भुगतान।']),
+      important: t(['The screens are the same as on a computer, only arranged for a phone. Everything in this manual works on both.', 'The 💬 Help button shows on the Home and Help screens; elsewhere use Account → Help & support.'],
+        ['स्क्रीन वही हैं जो कंप्यूटर पर हैं, बस फ़ोन के हिसाब से सजी हैं। इस मैनुअल की हर चीज़ दोनों पर काम करती है।', '💬 Help बटन Home और Help स्क्रीन पर दिखता है; बाकी जगह Account → Help & support का उपयोग करें।']),
+    },
+    {
       id: 'register', title: t('Customer Registration', 'ग्राहक रजिस्ट्रेशन'), shot: 'c_register',
       callouts: [
         ['label:Full name', t('Your details: name, mobile, email, date of birth (optional)', 'आपकी जानकारी: नाम, मोबाइल, ईमेल, जन्मतिथि (वैकल्पिक)')],

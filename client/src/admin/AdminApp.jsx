@@ -93,12 +93,40 @@ function Login({ onIn }) {
   );
 }
 
+/**
+ * Phones: admin data tables read as stacked cards. Each cell gets its column name as a label
+ * (data-label), so CSS can show "Customer: Kiran Desai" instead of a sideways-scrolling table.
+ * Tables marked data-cards="off" (editable grids) keep the scrolling table.
+ */
+function useCardTables() {
+  useEffect(() => {
+    let raf = 0;
+    const run = () => {
+      raf = 0;
+      document.querySelectorAll('.adm table').forEach((t) => {
+        if (t.dataset.cards === 'off') return;
+        const heads = [...t.querySelectorAll(':scope > thead th')].map((x) => x.textContent.trim());
+        if (heads.length < 3) return;
+        if (!t.classList.contains('is-cards')) t.classList.add('is-cards');
+        t.querySelectorAll(':scope > tbody > tr').forEach((tr) => [...tr.children].forEach((td, i) => {
+          if (heads[i] && td.dataset.label !== heads[i]) td.dataset.label = heads[i];
+        }));
+      });
+    };
+    const mo = new MutationObserver(() => { if (!raf) raf = requestAnimationFrame(run); });
+    mo.observe(document.body, { childList: true, subtree: true });
+    run();
+    return () => { mo.disconnect(); if (raf) cancelAnimationFrame(raf); };
+  }, []);
+}
+
 export default function AdminApp() {
   const [admin, setAdmin] = useState(undefined);
   const [menu, setMenu] = useState(false);
   const nav = useNavigate();
   useSeo({ title: 'Admin | Utsav Ghar' });
   useEffect(() => { api.get('/admin/me').then((r) => setAdmin(r.admin)).catch(() => setAdmin(null)); }, []);
+  useCardTables();
   if (admin === undefined) return <div className="center pad"><Spinner /></div>;
   if (!admin) return <Login onIn={setAdmin} />;
   if (admin.must_change_password) {

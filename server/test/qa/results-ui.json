@@ -5,7 +5,7 @@
   "page": "/",
   "name": "home (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2373 ms",
+  "actual": "clean · loaded in 2331 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -55,7 +55,7 @@
   "page": "/shop",
   "name": "shop (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2189 ms",
+  "actual": "clean · loaded in 2214 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -105,7 +105,7 @@
   "page": "/shop/diwali-gifts",
   "name": "category (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2191 ms",
+  "actual": "clean · loaded in 2195 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -155,7 +155,7 @@
   "page": "/shop/diwali-gifts/diwali-hamper-classic",
   "name": "product (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2157 ms",
+  "actual": "clean · loaded in 2164 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -205,7 +205,7 @@
   "page": "/shop?q=diya",
   "name": "search (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2184 ms",
+  "actual": "clean · loaded in 2196 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -255,7 +255,7 @@
   "page": "/offers",
   "name": "offers (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2235 ms",
+  "actual": "clean · loaded in 2248 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -305,7 +305,7 @@
   "page": "/login",
   "name": "login (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2233 ms",
+  "actual": "clean · loaded in 2212 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -355,7 +355,7 @@
   "page": "/register",
   "name": "register (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2222 ms",
+  "actual": "clean · loaded in 2238 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -405,7 +405,7 @@
   "page": "/forgot-password",
   "name": "forgot (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2208 ms",
+  "actual": "clean · loaded in 2250 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -455,7 +455,7 @@
   "page": "/track",
   "name": "track (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2210 ms",
+  "actual": "clean · loaded in 2289 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -505,7 +505,7 @@
   "page": "/help",
   "name": "help (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2195 ms",
+  "actual": "clean · loaded in 2188 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -555,7 +555,7 @@
   "page": "/help/manual",
   "name": "manual (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2177 ms",
+  "actual": "clean · loaded in 2145 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -655,7 +655,7 @@
   "page": "/policies/privacy",
   "name": "privacy (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2163 ms",
+  "actual": "clean · loaded in 2182 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -705,7 +705,7 @@
   "page": "/cart",
   "name": "cart (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2143 ms",
+  "actual": "clean · loaded in 2174 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -755,7 +755,7 @@
   "page": "/account",
   "name": "account (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2545 ms",
+  "actual": "clean · loaded in 2526 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -805,7 +805,7 @@
   "page": "/account/orders",
   "name": "orders (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2580 ms",
+  "actual": "clean · loaded in 2565 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -855,7 +855,7 @@
   "page": "/account/addresses",
   "name": "addresses (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2598 ms",
+  "actual": "clean · loaded in 2525 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -905,7 +905,7 @@
   "page": "/account/legal",
   "name": "legal (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2578 ms",
+  "actual": "clean · loaded in 2552 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -955,7 +955,7 @@
   "page": "/account/security",
   "name": "security (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2538 ms",
+  "actual": "clean · loaded in 2541 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1005,7 +1005,7 @@
   "page": "/order/DIWALI10248",
   "name": "order (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2650 ms",
+  "actual": "clean · loaded in 2608 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1055,7 +1055,7 @@
   "page": "/checkout",
   "name": "checkout (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2512 ms",
+  "actual": "clean · loaded in 2582 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1105,7 +1105,7 @@
   "page": "/dealer",
   "name": "dealer_login (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2089 ms",
+  "actual": "clean · loaded in 2056 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1155,7 +1155,7 @@
   "page": "/dealer/forgot",
   "name": "dealer_forgot (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2090 ms",
+  "actual": "clean · loaded in 2041 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1205,7 +1205,7 @@
   "page": "/dealer/register",
   "name": "dealer_register (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2062 ms",
+  "actual": "clean · loaded in 1982 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1255,7 +1255,7 @@
   "page": "/dealer",
   "name": "dealer_dash (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2080 ms",
+  "actual": "clean · loaded in 2040 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1305,7 +1305,7 @@
   "page": "/dealer/orders",
   "name": "dealer_orders (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2039 ms",
+  "actual": "clean · loaded in 2046 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1355,7 +1355,7 @@
   "page": "/dealer/products",
   "name": "dealer_products (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 1999 ms",
+  "actual": "clean · loaded in 2043 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1405,7 +1405,7 @@
   "page": "/dealer/payments",
   "name": "dealer_payments (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2055 ms",
+  "actual": "clean · loaded in 2054 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1455,7 +1455,7 @@
   "page": "/dealer/profile",
   "name": "dealer_profile (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2047 ms",
+  "actual": "clean · loaded in 2072 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1505,7 +1505,7 @@
   "page": "/dealer/legal",
   "name": "dealer_legal (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2001 ms",
+  "actual": "clean · loaded in 2104 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1555,7 +1555,7 @@
   "page": "/dealer/manual",
   "name": "dealer_manual (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2048 ms",
+  "actual": "clean · loaded in 2007 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1605,7 +1605,7 @@
   "page": "/admin",
   "name": "admin_dash (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2137 ms",
+  "actual": "clean · loaded in 2053 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1655,7 +1655,7 @@
   "page": "/admin/orders",
   "name": "admin_orders (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2047 ms",
+  "actual": "clean · loaded in 1986 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1705,7 +1705,7 @@
   "page": "/admin/payments",
   "name": "admin_payments (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2093 ms",
+  "actual": "clean · loaded in 2042 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1755,7 +1755,7 @@
   "page": "/admin/returns",
   "name": "admin_returns (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2062 ms",
+  "actual": "clean · loaded in 2015 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1805,7 +1805,7 @@
   "page": "/admin/settlements",
   "name": "admin_settle (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2086 ms",
+  "actual": "clean · loaded in 1990 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1855,7 +1855,7 @@
   "page": "/admin/dealers",
   "name": "admin_dealers (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2035 ms",
+  "actual": "clean · loaded in 2000 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1905,7 +1905,7 @@
   "page": "/admin/dealer-verification",
   "name": "admin_verify (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2014 ms",
+  "actual": "clean · loaded in 2023 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -1955,7 +1955,7 @@
   "page": "/admin/products",
   "name": "admin_products (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2130 ms",
+  "actual": "clean · loaded in 2114 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2005,7 +2005,7 @@
   "page": "/admin/legal",
   "name": "admin_legal (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2074 ms",
+  "actual": "clean · loaded in 2009 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2055,7 +2055,7 @@
   "page": "/admin/admins",
   "name": "admin_admins (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2036 ms",
+  "actual": "clean · loaded in 2085 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2105,7 +2105,7 @@
   "page": "/admin/security",
   "name": "admin_security (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2337 ms",
+  "actual": "clean · loaded in 2259 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2155,7 +2155,7 @@
   "page": "/admin/settings",
   "name": "admin_settings (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2082 ms",
+  "actual": "clean · loaded in 2019 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2205,7 +2205,7 @@
   "page": "/admin/audit",
   "name": "admin_audit (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2049 ms",
+  "actual": "clean · loaded in 2028 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2255,7 +2255,7 @@
   "page": "/admin/manual",
   "name": "admin_manual (desktop): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2019 ms",
+  "actual": "clean · loaded in 1995 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2305,7 +2305,7 @@
   "page": "/",
   "name": "home (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2351 ms",
+  "actual": "clean · loaded in 2338 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2335,7 +2335,7 @@
   "page": "/shop",
   "name": "shop (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2167 ms",
+  "actual": "clean · loaded in 2149 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2365,7 +2365,7 @@
   "page": "/shop/diwali-gifts",
   "name": "category (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2179 ms",
+  "actual": "clean · loaded in 2151 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2395,7 +2395,7 @@
   "page": "/shop/diwali-gifts/diwali-hamper-classic",
   "name": "product (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2159 ms",
+  "actual": "clean · loaded in 2139 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2425,7 +2425,7 @@
   "page": "/shop?q=diya",
   "name": "search (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2171 ms",
+  "actual": "clean · loaded in 2146 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2455,7 +2455,7 @@
   "page": "/offers",
   "name": "offers (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2207 ms",
+  "actual": "clean · loaded in 2202 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2485,7 +2485,7 @@
   "page": "/login",
   "name": "login (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2215 ms",
+  "actual": "clean · loaded in 2176 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2515,7 +2515,7 @@
   "page": "/register",
   "name": "register (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2198 ms",
+  "actual": "clean · loaded in 2203 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2545,7 +2545,7 @@
   "page": "/forgot-password",
   "name": "forgot (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2196 ms",
+  "actual": "clean · loaded in 2182 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2575,7 +2575,7 @@
   "page": "/track",
   "name": "track (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2188 ms",
+  "actual": "clean · loaded in 2158 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2605,7 +2605,7 @@
   "page": "/help",
   "name": "help (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2246 ms",
+  "actual": "clean · loaded in 2153 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2635,7 +2635,7 @@
   "page": "/help/manual",
   "name": "manual (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2189 ms",
+  "actual": "clean · loaded in 2169 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2665,7 +2665,7 @@
   "page": "/policies",
   "name": "policies (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2176 ms",
+  "actual": "clean · loaded in 2167 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2695,7 +2695,7 @@
   "page": "/policies/privacy",
   "name": "privacy (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2210 ms",
+  "actual": "clean · loaded in 4059 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2725,7 +2725,7 @@
   "page": "/cart",
   "name": "cart (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2189 ms",
+  "actual": "clean · loaded in 2138 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2755,7 +2755,7 @@
   "page": "/account",
   "name": "account (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2548 ms",
+  "actual": "clean · loaded in 2569 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2785,7 +2785,7 @@
   "page": "/account/orders",
   "name": "orders (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2550 ms",
+  "actual": "clean · loaded in 2495 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2815,7 +2815,7 @@
   "page": "/account/addresses",
   "name": "addresses (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2624 ms",
+  "actual": "clean · loaded in 2493 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2845,7 +2845,7 @@
   "page": "/account/legal",
   "name": "legal (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2541 ms",
+  "actual": "clean · loaded in 2500 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2875,7 +2875,7 @@
   "page": "/account/security",
   "name": "security (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2574 ms",
+  "actual": "clean · loaded in 2519 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2905,7 +2905,7 @@
   "page": "/order/DIWALI10248",
   "name": "order (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2576 ms",
+  "actual": "clean · loaded in 2527 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2935,7 +2935,7 @@
   "page": "/checkout",
   "name": "checkout (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2541 ms",
+  "actual": "clean · loaded in 2474 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2965,7 +2965,7 @@
   "page": "/dealer",
   "name": "dealer_login (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2078 ms",
+  "actual": "clean · loaded in 2049 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -2995,7 +2995,7 @@
   "page": "/dealer/forgot",
   "name": "dealer_forgot (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2073 ms",
+  "actual": "clean · loaded in 2057 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3025,7 +3025,7 @@
   "page": "/dealer/register",
   "name": "dealer_register (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2081 ms",
+  "actual": "clean · loaded in 2047 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3055,7 +3055,7 @@
   "page": "/dealer",
   "name": "dealer_dash (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2385 ms",
+  "actual": "clean · loaded in 2042 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3085,7 +3085,7 @@
   "page": "/dealer/orders",
   "name": "dealer_orders (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2025 ms",
+  "actual": "clean · loaded in 2092 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3115,7 +3115,7 @@
   "page": "/dealer/products",
   "name": "dealer_products (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 1978 ms",
+  "actual": "clean · loaded in 2067 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3145,7 +3145,7 @@
   "page": "/dealer/payments",
   "name": "dealer_payments (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 1984 ms",
+  "actual": "clean · loaded in 2086 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3175,7 +3175,7 @@
   "page": "/dealer/profile",
   "name": "dealer_profile (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2112 ms",
+  "actual": "clean · loaded in 1972 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3205,7 +3205,7 @@
   "page": "/dealer/legal",
   "name": "dealer_legal (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2067 ms",
+  "actual": "clean · loaded in 2031 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3235,7 +3235,7 @@
   "page": "/dealer/manual",
   "name": "dealer_manual (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2032 ms",
+  "actual": "clean · loaded in 2028 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3265,7 +3265,7 @@
   "page": "/admin",
   "name": "admin_dash (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2058 ms",
+  "actual": "clean · loaded in 2063 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3295,7 +3295,7 @@
   "page": "/admin/orders",
   "name": "admin_orders (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2125 ms",
+  "actual": "clean · loaded in 2049 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3325,7 +3325,7 @@
   "page": "/admin/payments",
   "name": "admin_payments (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2087 ms",
+  "actual": "clean · loaded in 2048 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3355,7 +3355,7 @@
   "page": "/admin/returns",
   "name": "admin_returns (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2123 ms",
+  "actual": "clean · loaded in 2071 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3385,7 +3385,7 @@
   "page": "/admin/settlements",
   "name": "admin_settle (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2047 ms",
+  "actual": "clean · loaded in 2067 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3415,7 +3415,7 @@
   "page": "/admin/dealers",
   "name": "admin_dealers (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2082 ms",
+  "actual": "clean · loaded in 1983 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3445,7 +3445,7 @@
   "page": "/admin/dealer-verification",
   "name": "admin_verify (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2176 ms",
+  "actual": "clean · loaded in 2008 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3475,7 +3475,7 @@
   "page": "/admin/products",
   "name": "admin_products (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2137 ms",
+  "actual": "clean · loaded in 2156 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3505,7 +3505,7 @@
   "page": "/admin/legal",
   "name": "admin_legal (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2063 ms",
+  "actual": "clean · loaded in 2005 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3535,7 +3535,7 @@
   "page": "/admin/admins",
   "name": "admin_admins (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2085 ms",
+  "actual": "clean · loaded in 2039 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3565,7 +3565,7 @@
   "page": "/admin/security",
   "name": "admin_security (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2275 ms",
+  "actual": "clean · loaded in 2222 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3595,7 +3595,7 @@
   "page": "/admin/settings",
   "name": "admin_settings (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2081 ms",
+  "actual": "clean · loaded in 2030 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3625,7 +3625,7 @@
   "page": "/admin/audit",
   "name": "admin_audit (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2074 ms",
+  "actual": "clean · loaded in 2027 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3655,7 +3655,7 @@
   "page": "/admin/manual",
   "name": "admin_manual (android): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2216 ms",
+  "actual": "clean · loaded in 2039 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3685,7 +3685,7 @@
   "page": "/",
   "name": "home (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2260 ms",
+  "actual": "clean · loaded in 2348 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3715,7 +3715,7 @@
   "page": "/shop",
   "name": "shop (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2198 ms",
+  "actual": "clean · loaded in 2151 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3745,7 +3745,7 @@
   "page": "/shop/diwali-gifts",
   "name": "category (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2177 ms",
+  "actual": "clean · loaded in 2122 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3775,7 +3775,7 @@
   "page": "/shop/diwali-gifts/diwali-hamper-classic",
   "name": "product (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2169 ms",
+  "actual": "clean · loaded in 2138 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3805,7 +3805,7 @@
   "page": "/shop?q=diya",
   "name": "search (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2165 ms",
+  "actual": "clean · loaded in 2146 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3835,7 +3835,7 @@
   "page": "/offers",
   "name": "offers (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2206 ms",
+  "actual": "clean · loaded in 2241 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3865,7 +3865,7 @@
   "page": "/login",
   "name": "login (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2187 ms",
+  "actual": "clean · loaded in 2202 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3895,7 +3895,7 @@
   "page": "/register",
   "name": "register (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 4079 ms",
+  "actual": "clean · loaded in 2205 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3925,7 +3925,7 @@
   "page": "/forgot-password",
   "name": "forgot (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2232 ms",
+  "actual": "clean · loaded in 2164 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3955,7 +3955,7 @@
   "page": "/track",
   "name": "track (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2195 ms",
+  "actual": "clean · loaded in 2148 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -3985,7 +3985,7 @@
   "page": "/help",
   "name": "help (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2180 ms",
+  "actual": "clean · loaded in 2143 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4015,7 +4015,7 @@
   "page": "/help/manual",
   "name": "manual (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2165 ms",
+  "actual": "clean · loaded in 2141 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4045,7 +4045,7 @@
   "page": "/policies",
   "name": "policies (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2182 ms",
+  "actual": "clean · loaded in 2148 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4075,7 +4075,7 @@
   "page": "/policies/privacy",
   "name": "privacy (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2191 ms",
+  "actual": "clean · loaded in 2154 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4105,7 +4105,7 @@
   "page": "/cart",
   "name": "cart (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2168 ms",
+  "actual": "clean · loaded in 2132 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4135,7 +4135,7 @@
   "page": "/account",
   "name": "account (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2637 ms",
+  "actual": "clean · loaded in 2487 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4165,7 +4165,7 @@
   "page": "/account/orders",
   "name": "orders (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2547 ms",
+  "actual": "clean · loaded in 2491 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4195,7 +4195,7 @@
   "page": "/account/addresses",
   "name": "addresses (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2597 ms",
+  "actual": "clean · loaded in 2492 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4225,7 +4225,7 @@
   "page": "/account/legal",
   "name": "legal (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2626 ms",
+  "actual": "clean · loaded in 2504 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4255,7 +4255,7 @@
   "page": "/account/security",
   "name": "security (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2605 ms",
+  "actual": "clean · loaded in 2502 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4285,7 +4285,7 @@
   "page": "/order/DIWALI10248",
   "name": "order (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2655 ms",
+  "actual": "clean · loaded in 2539 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4315,7 +4315,7 @@
   "page": "/checkout",
   "name": "checkout (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2522 ms",
+  "actual": "clean · loaded in 2510 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4345,7 +4345,7 @@
   "page": "/dealer",
   "name": "dealer_login (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2008 ms",
+  "actual": "clean · loaded in 2002 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4375,7 +4375,7 @@
   "page": "/dealer/forgot",
   "name": "dealer_forgot (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2099 ms",
+  "actual": "clean · loaded in 2054 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4405,7 +4405,7 @@
   "page": "/dealer/register",
   "name": "dealer_register (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2066 ms",
+  "actual": "clean · loaded in 1989 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4435,7 +4435,7 @@
   "page": "/dealer",
   "name": "dealer_dash (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2098 ms",
+  "actual": "clean · loaded in 2020 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4465,7 +4465,7 @@
   "page": "/dealer/orders",
   "name": "dealer_orders (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2059 ms",
+  "actual": "clean · loaded in 2018 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4495,7 +4495,7 @@
   "page": "/dealer/products",
   "name": "dealer_products (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2002 ms",
+  "actual": "clean · loaded in 1990 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4525,7 +4525,7 @@
   "page": "/dealer/payments",
   "name": "dealer_payments (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2071 ms",
+  "actual": "clean · loaded in 2027 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4555,7 +4555,7 @@
   "page": "/dealer/profile",
   "name": "dealer_profile (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2194 ms",
+  "actual": "clean · loaded in 2067 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4585,7 +4585,7 @@
   "page": "/dealer/legal",
   "name": "dealer_legal (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2054 ms",
+  "actual": "clean · loaded in 2089 ms",
   "status": "PASS",
   "severity": "-"
  },
@@ -4615,7 +4615,7 @@
   "page": "/dealer/manual",
   "name": "dealer_manual (iphone): no JavaScript errors / server errors",
   "expected": "No console or page errors, no 5xx",
-  "actual": "clean · loaded in 2021 ms",
+  "actual": "clean · loaded in 2003 ms",
   "status": "PASS",
   "severity": "-"
  },

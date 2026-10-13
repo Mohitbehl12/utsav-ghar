@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
 import './styles/app.css';
+import './styles/mobile.css';
 
 // Web fonts load without blocking the first paint (system fonts show until they arrive).
 if (!document.querySelector('link[data-fonts]')) {

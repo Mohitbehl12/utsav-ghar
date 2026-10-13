@@ -1,0 +1,346 @@
+/* ==========================================================================
+   Utsav Ghar — mobile design system
+   Applies on phone-width browsers (html.is-mweb, set in AppShell.jsx) and inside the
+   native app (html.is-app). Tablets and laptops keep the full website styles.
+   Everything here is presentation only: no business logic lives in CSS.
+   ========================================================================== */
+
+html.is-app {
+  /* spacing scale (4-pt) */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 20px; --s6: 24px; --s8: 32px;
+  /* radius */
+  --r-sm: 10px; --r-md: 14px; --r-lg: 18px; --r-xl: 24px;
+  /* type scale (rem, 16px base) */
+  --t-cap: .75rem;     /* 12 – captions, badges */
+  --t-small: .8125rem; /* 13 – meta, helper text */
+  --t-body: .9375rem;  /* 15 – body */
+  --t-lead: 1rem;      /* 16 – inputs, buttons */
+  --t-h3: 1.0625rem;   /* 17 – card / section titles */
+  --t-h2: 1.1875rem;   /* 19 – section headings */
+  --t-h1: 1.375rem;    /* 22 – page titles */
+  --t-price: 1.0625rem;
+  /* surfaces */
+  --m-bg: #F7F1E8;
+  --m-surface: #FFFFFF;
+  --m-sunk: #F1E7D9;
+  --m-line: #ECE0CF;
+  --m-ink: var(--ink);
+  --m-ink-2: #6B5459;
+  --m-sale: #1F7A4D;
+  --m-act: var(--primary);
+  --m-shadow: 0 1px 2px rgba(60, 20, 20, .05), 0 10px 24px -18px rgba(60, 20, 20, .45);
+  --m-ease: cubic-bezier(.2, .8, .2, 1);
+  --tabbar: calc(62px + env(safe-area-inset-bottom, 0px));
+}
+@media (prefers-color-scheme: dark) {
+  html.is-app:not([data-theme="light"]) { --m-act: #F0CF7C; --m-bg: #140C10; --m-surface: #1F1418; --m-sunk: #2A1C21; --m-line: #3A2A30; --m-ink-2: #C9B3B8; --m-sale: #6BD39A; }
+}
+html.is-app[data-theme="dark"] { --m-act: #F0CF7C; --m-bg: #140C10; --m-surface: #1F1418; --m-sunk: #2A1C21; --m-line: #3A2A30; --m-ink-2: #C9B3B8; --m-sale: #6BD39A; }
+
+html.is-app body { background: var(--m-bg); font-size: var(--t-body); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+html.is-mweb body::before { display: none; }
+
+/* ---------- typography ---------- */
+html.is-app h1 { font-size: var(--t-h1); line-height: 1.2; letter-spacing: -.01em; }
+html.is-app h2 { font-size: var(--t-h2); line-height: 1.25; }
+html.is-app h3 { font-size: var(--t-h3); }
+html.is-app .eyebrow { font-size: var(--t-cap); letter-spacing: .1em; }
+html.is-app .small { font-size: var(--t-small); }
+html.is-app .lede { font-size: var(--t-body); }
+
+/* ---------- buttons & touch targets (44px minimum) ---------- */
+html.is-app .btn { min-height: 44px; border-radius: 12px; font-size: var(--t-lead); font-weight: 700; touch-action: manipulation; transition: transform .12s var(--m-ease), filter .12s; }
+html.is-app .btn--sm { min-height: 40px; font-size: var(--t-small); }
+html.is-app .btn--lg { min-height: 50px; }
+html.is-app .btn:active:not(:disabled) { transform: scale(.97); filter: brightness(.96); }
+html.is-app .icon-btn { min-width: 44px; min-height: 44px; }
+html.is-app .link-btn { min-height: 40px; }
+html.is-app a, html.is-app button { -webkit-tap-highlight-color: transparent; }
+
+/* ---------- forms: 16px text stops iOS zoom, 48px fields, clear labels ---------- */
+html.is-app input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="color"]),
+html.is-app select, html.is-app textarea { font-size: 16px; min-height: 48px; border-radius: 12px; }
+html.is-app textarea { min-height: 96px; }
+html.is-app .field { gap: 6px; }
+html.is-app .field > span:first-child, html.is-app .field label { font-size: var(--t-small); font-weight: 700; }
+html.is-app .field__err, html.is-app .err { font-size: var(--t-small); }
+html.is-app input[type="checkbox"], html.is-app input[type="radio"] { width: 22px; height: 22px; }
+html.is-app .check { min-height: 44px; align-items: center; }
+html.is-app .card { border-radius: var(--r-lg); }
+
+/* ---------- header ---------- */
+html.is-app .ahdr { padding: 6px 12px 10px; background: linear-gradient(180deg, #3A0715, #551026); }
+html.is-app .ahdr__row { min-height: 44px; }
+html.is-app .ahdr__icon, html.is-app .ahdr__back { width: 40px; height: 40px; }
+html.is-app .ahdr__search { margin-top: 6px; }
+html.is-app .ahdr__search .search input { padding-right: 52px; text-overflow: ellipsis; height: 44px; min-height: 44px; border-radius: 12px; font-size: 16px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.04); }
+html.is-app .ahdr__search .search__panel { border-radius: 0 0 var(--r-lg) var(--r-lg); max-height: 70vh; }
+
+/* ---------- bottom tabs ---------- */
+html.is-app .atabs { background: color-mix(in srgb, var(--m-surface) 94%, transparent); border-top: 1px solid var(--m-line); }
+html.is-app .atabs__tab { font-size: .6875rem; min-height: 48px; }
+html.is-app .atabs__tab.is-on { font-weight: 800; }
+html.is-app .amain { padding-bottom: calc(var(--tabbar) + 16px); }
+
+/* help bubble: small, above the tab bar, out of the way on buy / checkout screens */
+html.is-app .chatfab { width: 48px; height: 48px; padding: 0; justify-content: center; right: 12px; bottom: calc(var(--tabbar) + 12px); box-shadow: 0 8px 20px -8px rgba(0,0,0,.45); }
+html.is-app .chatfab span:first-child { font-size: 1.25rem; }
+html.is-app .chatfab__txt { display: none; }
+html.is-app body:has(.pdpbar--app) .chatfab, html.is-app body:has(.mcheckout) .chatfab { bottom: calc(92px + env(safe-area-inset-bottom, 0px)); }
+/* on a phone the help bubble only floats on Home and Help; everywhere else Help is in Account / Categories */
+html.is-app .chatfab { display: none; }
+html.is-app body:has(.ahome) .chatfab, html.is-app body:has(.help) .chatfab, html.is-app body:has(.chat) .chatfab { display: flex; }
+
+/* ---------- home ---------- */
+html.is-app .ahome { gap: var(--s5); padding-top: var(--s3); }
+html.is-app .aban { min-height: 184px; }
+html.is-app .aban::before { border-radius: var(--r-xl); }
+html.is-app .aban__copy h2 { font-size: 1.3rem; letter-spacing: -.01em; }
+html.is-app .aban__cta { min-height: 36px; display: inline-flex; align-items: center; padding: 8px 16px; }
+html.is-app .acircle { flex-basis: 74px; font-size: var(--t-cap); }
+html.is-app .acircle__img { width: 64px; height: 64px; border-radius: 20px; border: 0; background: var(--m-surface); box-shadow: var(--m-shadow); }
+html.is-app .acircle--fest .acircle__img { background: radial-gradient(circle at 50% 35%, #FFE7A6, #E7792B); }
+html.is-app .arail__head { padding-inline: 16px; }
+html.is-app .arail__head h2, html.is-app .asegs h2 { font-size: var(--t-h2); letter-spacing: -.01em; }
+html.is-app .arail__all { min-height: 36px; display: inline-flex; align-items: center; padding: 0 4px; }
+html.is-app .arail__row { padding-inline: 16px; gap: 12px; scroll-padding-inline: 16px; }
+html.is-app .asegs, html.is-app .ameter, html.is-app .atrust { margin-inline: 16px; }
+html.is-app .asegs { padding: 0; }
+html.is-app .aseg { border-radius: var(--r-lg); min-height: 112px; }
+html.is-app .atrust { background: var(--m-surface); box-shadow: var(--m-shadow); }
+html.is-app .ahome .vbanner { width: auto; margin-inline: 16px; border-radius: var(--r-lg); padding: 12px 14px; gap: 12px; }
+html.is-app .vbanner__mic { width: 44px; height: 44px; font-size: 1.25rem; }
+html.is-app .vbanner__txt b { font-size: var(--t-body); }
+html.is-app .vbanner__txt small { font-size: var(--t-cap); }
+
+/* rail card */
+html.is-app .acard { flex-basis: 152px; border-radius: var(--r-lg); background: var(--m-surface); box-shadow: var(--m-shadow); }
+html.is-app .acard__media { aspect-ratio: 4 / 5; }
+html.is-app .acard__off { background: var(--m-sale); border-radius: 8px; font-size: var(--t-cap); padding: 3px 8px; }
+html.is-app .acard__body { padding: 10px 12px 4px; gap: 4px; }
+html.is-app .acard__name { font-size: var(--t-small); font-weight: 600; }
+html.is-app .acard__price b { font-size: var(--t-price); }
+html.is-app .acard .rb, html.is-app .acard .bought { display: none; }
+html.is-app .acard__add { margin: 8px 12px 12px; height: 40px; border-radius: 12px; }
+
+/* ---------- product grid card (2 columns) ---------- */
+html.is-app .pgrid { --cols: 2 !important; gap: 12px; }
+html.is-app .pcard { border: 0; border-radius: var(--r-lg); background: var(--m-surface); box-shadow: var(--m-shadow); }
+html.is-app .pcard:hover { transform: none; box-shadow: var(--m-shadow); }
+html.is-app .pcard__media { aspect-ratio: 4 / 5; }
+html.is-app .pcard__media::after { display: none; }
+html.is-app .pcard__wish { top: 8px; right: 8px; width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 50%; box-shadow: 0 4px 12px -6px rgba(0,0,0,.4); }
+html.is-app .pcard__wish::before { content: ''; position: absolute; inset: -4px; } /* 44px tap area */
+html.is-app .pcard__badges { top: 8px; left: 8px; }
+html.is-app .pcard__badges > * { font-size: .6875rem; }
+html.is-app .pcard__body { padding: 10px 12px 12px; gap: 4px; }
+html.is-app .pcard__name { font-size: var(--t-small); font-weight: 600; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.6em; max-height: 2.6em; }
+html.is-app .pcard__offer { display: block; font-size: .6875rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+html.is-app .pcard .bought, html.is-app .pcard__cat, html.is-app .pcard__desc, html.is-app .pcard .stock, html.is-app .pcard__quick { display: none; }
+html.is-app .pcard .stars { font-size: var(--t-cap); }
+html.is-app .pcard .price { gap: 4px 6px; flex-wrap: wrap; }
+html.is-app .pcard .price__now { font-size: var(--t-price); }
+html.is-app .pcard__add { min-height: 40px; height: 40px; font-size: var(--t-small); border-radius: 12px; margin-top: 8px; background: transparent; color: var(--m-act); border: 1.5px solid var(--m-act); box-shadow: none; }
+html.is-app .pcard__add { white-space: nowrap; padding-inline: 8px; gap: 6px; }
+html.is-app .pcard__add svg { width: 16px; height: 16px; flex: none; }
+html.is-app .pcard__add:active:not(:disabled) { background: var(--primary); color: var(--on-primary); }
+html.is-app .pcard--skeleton { border-radius: var(--r-lg); }
+
+/* ---------- listing: title, filter + sort bar, filter bottom sheet ---------- */
+html.is-app .shop { padding-top: var(--s3); }
+html.is-app .shop h1, html.is-app .shop__title { font-size: var(--t-h1); }
+html.is-app .shop__bar { top: calc(env(safe-area-inset-top, 0px) + 108px); display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-items: center; background: color-mix(in srgb, var(--m-bg) 96%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--m-line); }
+html.is-app .shop__bar > * { min-width: 0; }
+html.is-app .shop__bar .btn, html.is-app .shop__bar select { width: 100%; min-height: 44px; height: 44px; border-radius: 12px; background-color: var(--m-surface); border: 1px solid var(--m-line); font-weight: 700; font-size: 15px; }
+html.is-app .shop__bar .shop__count, html.is-app .shop__count { grid-column: 1 / -1; margin: 0; font-size: var(--t-small); color: var(--m-ink-2); }
+
+/* any left / right drawer becomes a bottom sheet on a phone */
+html.is-app .drawer { z-index: 80; }
+html.is-app .modal { z-index: 80; }
+html.is-app .drawer--right .drawer__panel { inset: auto 0 0 0; width: auto; max-height: 86vh; border-radius: var(--r-xl) var(--r-xl) 0 0; padding: 8px 16px calc(16px + env(safe-area-inset-bottom, 0px)); animation: sheetup .28s var(--m-ease); box-shadow: 0 -20px 40px -20px rgba(0,0,0,.5); }
+html.is-app .drawer--right .drawer__panel::before { content: ''; justify-self: center; width: 40px; height: 4px; border-radius: 99px; background: var(--line-2); margin: 2px 0 6px; }
+html.is-app .drawer__head { position: sticky; top: -8px; z-index: 1; background: inherit; padding-block: 6px; }
+html.is-app .drawer__head b { font-size: var(--t-h3); }
+@keyframes sheetup { from { transform: translateY(100%); } to { transform: none; } }
+
+/* modals become bottom sheets */
+html.is-app .modal { align-items: end; padding: 0; }
+html.is-app .modal__panel, html.is-app .modal__box, html.is-app .modal > [role="dialog"] { width: 100%; max-width: none; max-height: 90vh; margin: 0; border-radius: var(--r-xl) var(--r-xl) 0 0; padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px)); animation: sheetup .28s var(--m-ease); overflow: auto; }
+
+/* ---------- product details ---------- */
+html.is-app .pdp { padding-inline: 0; }
+html.is-app .pdp__grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "gal" "info" "buy" "more"; gap: 0; padding: 0; margin: 0; background: transparent; }
+html.is-app .gallery { position: static; gap: 8px; background: var(--m-surface); padding-bottom: 10px; }
+html.is-app .gallery__main { border-radius: 0; border: 0; aspect-ratio: 1; margin: 0; width: 100%; }
+html.is-app .gallery__thumbs { display: flex; gap: 8px; overflow-x: auto; padding: 0 16px; scrollbar-width: none; }
+html.is-app .gallery__thumbs::-webkit-scrollbar { display: none; }
+html.is-app .gallery__thumbs button { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 12px; }
+html.is-app .pdp__info { background: var(--m-surface); padding: 4px 16px 16px; gap: 8px; }
+html.is-app .pdp__info .eyebrow { margin: 0; }
+html.is-app .pdp__info h1 { font-family: var(--font-body); font-weight: 700; font-size: 1.25rem; line-height: 1.3; }
+html.is-app .pdp__short { font-size: var(--t-body); color: var(--m-ink-2); margin: 0; }
+html.is-app .pdp__dealtag { border-radius: 8px; font-size: var(--t-cap); }
+html.is-app .offer-box, html.is-app .combo-box { border-radius: var(--r-md); padding: 12px 14px; font-size: var(--t-small); }
+html.is-app .buybox { position: static; margin-top: 8px; border: 0; border-radius: 0; padding: 16px; background: var(--m-surface); gap: 8px; }
+html.is-app .buybox .price__now { font-size: 1.6rem; }
+html.is-app .buybox .pdp__buy > .btn, html.is-app .buybox .pdp__buy > .icon-btn { display: none; } /* the sticky bar has these */
+html.is-app .buybox .pdp__buy { display: flex; padding: 4px 0; }
+html.is-app .buybox__meta { display: none; }
+html.is-app .pdp__assure { border: 0; padding: 4px 0 0; font-size: var(--t-small); }
+html.is-app .pdp__more { margin-top: 8px; background: var(--m-surface); padding: 4px 16px 8px; }
+html.is-app .pdp__more .acc summary { min-height: 52px; display: flex; align-items: center; font-size: var(--t-h3); }
+html.is-app .specs th, html.is-app .specs td { font-size: var(--t-small); padding: 10px 8px 10px 0; }
+html.is-app .pdp__recs, html.is-app .pdp > .section { padding-inline: 16px; margin-inline: 0; }
+html.is-app .amain { overflow-x: clip; } /* nothing may widen the page on a phone */
+html.is-app .pdp__reviews { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+html.is-app .pdp .section-head h2, html.is-app .pdp .section h2 { font-size: var(--t-h2); }
+html.is-app .pdp { padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+
+/* sticky buy bar: wishlist + Add to Cart + Buy Now, always in thumb reach */
+.pdpbar--app { position: fixed; left: 0; right: 0; bottom: 0; z-index: 55; display: grid; grid-template-columns: 48px 1fr 1fr; gap: 8px; align-items: center;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); background: color-mix(in srgb, var(--m-surface, #fff) 96%, transparent); backdrop-filter: blur(14px);
+  border-top: 1px solid var(--m-line, #ECE0CF); box-shadow: 0 -10px 30px -20px rgba(40, 10, 20, .5); animation: sheetup .3s var(--m-ease, ease); }
+.pdpbar--app .btn { min-height: 50px; border-radius: 14px; font-size: 1rem; width: 100%; }
+.pdpbar--app .btn:only-of-type { grid-column: 2 / -1; }
+.pdpbar__add { background: var(--m-surface, #fff); color: var(--m-act, var(--primary)); border: 1.5px solid var(--m-act, var(--primary)); }
+.pdpbar__buy { background: linear-gradient(180deg, #7A1630, var(--primary)); }
+.pdpbar__wish { width: 48px; height: 50px; border-radius: 14px; border: 1px solid var(--m-line, #ECE0CF); background: var(--m-surface, #fff); color: var(--ink); display: grid; place-items: center; }
+.pdpbar__wish.is-on { color: #C2253C; }
+.pdpbar__wish.is-on svg { fill: currentColor; animation: pop .35s ease; }
+
+/* ---------- cart ---------- */
+html.is-app .cart h1 { font-size: var(--t-h1); }
+html.is-app .cart__grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+html.is-app .cart__lines { gap: 10px; }
+html.is-app .line { background: var(--m-surface); border: 0; border-radius: var(--r-lg); padding: 12px; box-shadow: var(--m-shadow); grid-template-columns: 84px minmax(0, 1fr) auto; grid-template-areas: 'img info del' 'img qty total' 'img save save'; gap: 6px 12px; }
+html.is-app .line__img { width: 84px; height: 84px; border-radius: 12px; overflow: hidden; }
+html.is-app .line__name { font-size: var(--t-body); font-weight: 700; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+html.is-app .line__total { font-size: var(--t-price); }
+html.is-app .nudge { border-radius: var(--r-lg); }
+html.is-app .summary { border-radius: var(--r-lg); }
+html.is-app .cart { padding-bottom: calc(92px + var(--tabbar)); }
+.mcheckout { display: none; }
+html.is-app .mcheckout { position: fixed; left: 0; right: 0; bottom: var(--tabbar); z-index: 50; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center;
+  padding: 10px 16px; background: color-mix(in srgb, var(--m-surface) 96%, transparent); backdrop-filter: blur(14px); border-top: 1px solid var(--m-line); box-shadow: 0 -10px 30px -22px rgba(40, 10, 20, .5); }
+html.is-app .mcheckout__sum { display: grid; line-height: 1.15; }
+html.is-app .mcheckout__sum small { font-size: var(--t-cap); color: var(--m-ink-2); }
+html.is-app .mcheckout__sum b { font-size: 1.25rem; }
+html.is-app .mcheckout__sum em { font-style: normal; font-size: var(--t-cap); font-weight: 700; color: var(--m-sale); }
+html.is-app .mcheckout .btn { min-width: 150px; border-radius: 14px; }
+html.is-app .mcartbar, html.is-app .mobile-cart-bar { display: none !important; }
+
+/* ---------- checkout ---------- */
+html.is-app .checkout h1 { font-size: var(--t-h1); }
+html.is-app .steps { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 56px); z-index: 20; background: var(--m-bg); padding: 10px 0; margin: 0 0 8px; gap: 4px; font-size: var(--t-cap); }
+html.is-app .steps li span { width: 26px; height: 26px; }
+html.is-app .checkout .card, html.is-app .checkout fieldset { border-radius: var(--r-lg); border: 0; box-shadow: var(--m-shadow); background: var(--m-surface); padding: 16px; }
+html.is-app .checkout__grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+html.is-app .checkout .grid-2, html.is-app .checkout .form-grid { grid-template-columns: minmax(0, 1fr); }
+html.is-app .checkout { padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)); }
+html.is-app .checkout .btn--primary.btn--lg, html.is-app .checkout .btn--block.btn--primary { min-height: 52px; border-radius: 14px; }
+html.is-app .payment, html.is-app .pay { border-radius: var(--r-lg); }
+
+/* ---------- auth ---------- */
+html.is-app .auth { padding: 16px 0 24px; }
+html.is-app .auth__card, html.is-app .auth .card { border: 0; box-shadow: none; background: transparent; padding: 8px 0; }
+html.is-app .auth h1 { font-family: var(--font-display); font-size: 1.75rem; }
+html.is-app .auth .btn--primary { min-height: 52px; border-radius: 14px; }
+
+/* ---------- account ---------- */
+html.is-app .account--app { padding-top: 12px; }
+html.is-app .account__back { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: var(--m-act); text-decoration: none; }
+html.is-app .account--sub .account__head { padding-top: 0; }
+html.is-app .account--sub .account__head h1 { font-size: var(--t-h1); }
+html.is-app .account--sub .account__head .btn { display: none; }
+html.is-app .account--sub .account__nav { display: none; }
+html.is-app .account--sub .account__grid { grid-template-columns: minmax(0, 1fr); }
+.macct { display: grid; gap: 14px; }
+.macct__card { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 16px; border-radius: var(--r-xl, 24px);
+  background: linear-gradient(135deg, #5C0F22, #2A0A16); color: #FFF3DD; box-shadow: 0 16px 30px -20px rgba(40, 10, 20, .8); }
+.macct__card h1 { margin: 0; font-family: var(--font-body); font-weight: 800; font-size: 1.15rem; color: #FFF3DD; overflow-wrap: anywhere; }
+.macct__card p { margin: 2px 0 0; font-size: .8125rem; color: #E8CFC0; overflow-wrap: anywhere; }
+.macct__avatar { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 1.4rem; background: linear-gradient(180deg, #F0CF7C, #C8943A); color: #2B1519; }
+.macct__edit { min-height: 40px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 99px; background: rgba(255, 243, 221, .14); color: #FFE7A6; font-weight: 700; font-size: .8125rem; text-decoration: none; }
+.macct__quick { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.macct__quick a { display: grid; justify-items: center; gap: 6px; padding: 12px 4px; border-radius: var(--r-lg, 18px); background: var(--m-surface, #fff); box-shadow: var(--m-shadow); color: var(--ink); text-decoration: none; font-size: .75rem; font-weight: 700; }
+.macct__quick svg { color: var(--m-act, var(--primary)); }
+.mrows { list-style: none; margin: 0; padding: 0; border-radius: var(--r-lg, 18px); background: var(--m-surface, #fff); box-shadow: var(--m-shadow); overflow: hidden; }
+.mrows li + li { border-top: 1px solid var(--m-line, #ECE0CF); }
+.mrows a, .mrows button { width: 100%; display: grid; grid-template-columns: 40px minmax(0, 1fr) 20px; gap: 12px; align-items: center; min-height: 60px; padding: 8px 14px; border: 0; background: none; color: var(--ink); text-decoration: none; text-align: left; font: inherit; }
+.mrows__ic { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--m-sunk, #F1E7D9); color: var(--m-act, var(--primary)); }
+.mrows__t b { display: block; font-size: .9375rem; }
+.mrows__t small { display: block; font-size: .75rem; color: var(--m-ink-2, #6B5459); margin-top: 1px; }
+.mrows__go { color: #B9A5A0; }
+.macct__out { min-height: 48px; }
+
+/* ---------- section pages, info pages, empty states ---------- */
+html.is-app .container { padding-inline: 16px; }
+html.is-app .pdp.container { padding-inline: 0; }
+html.is-app .section { padding-block: 16px; }
+html.is-app .empty { padding: 40px 16px; }
+html.is-app .empty__icon { font-size: 3rem; }
+html.is-app .empty h1, html.is-app .empty h2, html.is-app .empty h3 { font-size: var(--t-h2); }
+html.is-app .empty .btn { min-height: 48px; border-radius: 14px; }
+html.is-app .notice { border-radius: var(--r-md); font-size: var(--t-small); }
+html.is-app table { font-size: var(--t-small); }
+html.is-app .table-wrap { -webkit-overflow-scrolling: touch; border-radius: var(--r-md); }
+html.is-app .toast { border-radius: 14px; bottom: calc(var(--tabbar) + 16px); }
+
+/* ---------- skeleton shimmer ---------- */
+.pdp__sk { display: grid; gap: 12px; padding: 16px; max-width: 1100px; margin: 0 auto; }
+.pdp__sk .sk { height: 18px; border-radius: 8px; background: var(--paper-2); }
+.pdp__sk .sk--media { height: auto; aspect-ratio: 1; max-height: 520px; border-radius: 18px; }
+.pdp__sk .sk--short { width: 55%; }
+.pdp__sk .sk--price { width: 35%; height: 28px; }
+html.is-app .pdp__sk { padding: 0 0 16px; }
+html.is-app .pdp__sk .sk { margin-inline: 16px; }
+html.is-app .pdp__sk .sk--media { margin: 0; border-radius: 0; }
+html.is-app .sk, html.is-app .acard--sk { background: linear-gradient(90deg, var(--m-sunk), color-mix(in srgb, var(--m-sunk) 40%, var(--m-surface)), var(--m-sunk)); background-size: 200% 100%; animation: sk 1.2s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.is-app *, .pdpbar--app, .mcheckout { animation: none !important; transition: none !important; }
+}
+
+/* very small phones (320px) */
+@media (max-width: 359px) {
+  html.is-app .pgrid { gap: 8px; }
+  html.is-app .pcard__body { padding: 8px 10px 10px; }
+  html.is-app .acircle { flex-basis: 66px; }
+  html.is-app .acircle__img { width: 58px; height: 58px; }
+  .pdpbar--app { grid-template-columns: 44px 1fr 1fr; gap: 6px; padding-inline: 8px; }
+  .pdpbar--app .btn { font-size: .875rem; padding-inline: 6px; }
+  html.is-app .mcheckout .btn { min-width: 120px; }
+  .macct__quick a { font-size: .6875rem; }
+}
+
+/* ---------- admin on a phone: data tables become stacked cards ---------- */
+@media (max-width: 767px) {
+  .adm .table-wrap:has(> table.is-cards) { overflow: visible; border: 0; background: transparent; }
+  .adm table.is-cards, .adm table.is-cards tbody { display: block; width: 100%; min-width: 0 !important; }
+  .adm table.is-cards thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .adm table.is-cards tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; padding: 14px; margin-bottom: 10px; border: 1px solid var(--line); border-radius: 16px; background: var(--card); box-shadow: 0 6px 18px -16px rgba(60, 20, 20, .5); }
+  .adm table.is-cards td { display: block; min-width: 0; padding: 0; border: 0; background: none !important; font-size: .875rem; overflow-wrap: anywhere; text-align: left !important; }
+  .adm table.is-cards td[data-label]::before { content: attr(data-label); display: block; margin-bottom: 2px; font-size: .6875rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); }
+  .adm table.is-cards td:first-child { grid-column: 1 / -1; font-weight: 700; }
+  .adm table.is-cards td:first-child::before { display: none; }
+  .adm table.is-cards td:last-child:has(button, a.btn, select) { grid-column: 1 / -1; }
+  .adm table.is-cards td:empty { display: none; }
+  .adm table.is-cards td, .adm table.is-cards td * { white-space: normal !important; max-width: 100%; }
+  .adm table.is-cards td .pill, .adm table.is-cards td .lc-chip { white-space: nowrap !important; }
+  .adm:has(table.is-cards) .adm__main { overflow-x: clip; }
+  .adm table.is-cards td .btn, .adm table.is-cards td button { min-height: 40px; }
+}
+
+/* ---------- dark theme fixes for phone surfaces ---------- */
+@media (prefers-color-scheme: dark) {
+  html.is-app:not([data-theme="light"]) .ameter { background: var(--m-surface); border-color: #5A4320; color: var(--night-ink, #F8ECD8); }
+  html.is-app:not([data-theme="light"]) .ameter__tiers span { background: var(--m-sunk); border-color: #6B5226; color: var(--night-ink, #F8ECD8); }
+  html.is-app:not([data-theme="light"]) .ameter__tiers span.is-on { background: #F0CF7C; color: #2B1519; }
+  html.is-app:not([data-theme="light"]) .bought, html.is-app:not([data-theme="light"]) .pdp__rank, html.is-app:not([data-theme="light"]) .bought * { color: var(--m-ink-2); }
+  html.is-app:not([data-theme="light"]) .atabs__tab.is-on { color: #F0CF7C; }
+}
+html.is-app[data-theme="dark"] .ameter { background: var(--m-surface); border-color: #5A4320; color: var(--night-ink, #F8ECD8); }
+html.is-app[data-theme="dark"] .ameter__tiers span { background: var(--m-sunk); border-color: #6B5226; color: var(--night-ink, #F8ECD8); }
+html.is-app[data-theme="dark"] .ameter__tiers span.is-on { background: #F0CF7C; color: #2B1519; }
+html.is-app[data-theme="dark"] .bought, html.is-app[data-theme="dark"] .pdp__rank { color: var(--m-ink-2); }
+html.is-app[data-theme="dark"] .atabs__tab.is-on { color: #F0CF7C; }

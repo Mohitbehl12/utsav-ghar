@@ -4,7 +4,7 @@
  * icons and swipeable product rows. The website keeps its normal layout.
  */
 import { VoiceBanner } from './VoiceShop.jsx';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { SEGMENTS } from '@shared/festivals.js';
 import { BRAND } from '@shared/brand.js';
@@ -20,7 +20,23 @@ import { SearchBox } from './Layout.jsx';
 import { PersonalRows } from './Recs.jsx';
 import { HomeIcon, GridIcon, TagIcon, BagIcon, UserIcon, HeartIcon, BackIcon, LogoMark, PlusIcon } from './Icons.jsx';
 
-export const useIsApp = () => isApp();
+/**
+ * The app layout is used inside the native app AND on phone-size browsers, so the website feels like
+ * a shopping app on a phone (compact header, bottom tabs, swipe rails, sticky buy bars). Tablets and
+ * laptops keep the full website. Native-only features still check isApp() directly.
+ */
+const PHONE = '(max-width: 767px), (max-height: 500px) and (pointer: coarse)'; // phones, portrait or landscape
+const phoneMq = typeof window !== 'undefined' && window.matchMedia ? window.matchMedia(PHONE) : null;
+const subscribe = (cb) => { phoneMq?.addEventListener?.('change', cb); return () => phoneMq?.removeEventListener?.('change', cb); };
+const snapshot = () => isApp() || !!phoneMq?.matches;
+function syncHtml() {
+  if (typeof document === 'undefined' || isApp()) return;
+  document.documentElement.classList.toggle('is-app', !!phoneMq?.matches);
+  document.documentElement.classList.toggle('is-mweb', !!phoneMq?.matches);
+}
+syncHtml();
+phoneMq?.addEventListener?.('change', syncHtml);
+export const useIsApp = () => useSyncExternalStore(subscribe, snapshot, () => false);
 
 const TAB_ROOTS = ['/', '/categories', '/offers', '/cart', '/account', '/login'];
 // Screens where the bottom tabs make way for their own sticky action bar.

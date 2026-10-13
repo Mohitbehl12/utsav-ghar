@@ -576,6 +576,25 @@ node test/qa/run-all.mjs --no-ui  # skip the browser suite
 
 Results go to `test/qa/results-*.json`; the bug register is `test/qa/bugs.json`. Firefox/Safari, real SMS/WhatsApp/email delivery and Razorpay live mode were **not** tested (no browsers / keys in the test environment).
 
+## 6c-20. Phone layout (mobile-first)
+
+On phones (≤ 767 px wide, or a phone held sideways) the website opens in the same **app layout** as the iPhone / Android app — `useIsApp()` in `client/src/components/AppShell.jsx` sets `html.is-app is-mweb`. Tablets and computers keep the full website. Native-only features (share sheet, haptics, UPI app hand-off) still check `isApp()` from `lib/native.js`.
+
+| Area | On a phone |
+|---|---|
+| Header | Logo + wishlist + search only (≈ 110 px, under 15 % of the screen) |
+| Navigation | Bottom tabs: Home · Categories · Offers · Cart · Account (44 px+ targets, safe-area aware) |
+| Home | Swipe banners, category tiles, offer meter, swipe product rails |
+| Listing | 2-column cards (4:5 images), Filters as a bottom sheet, native Sort picker |
+| Product | Gallery first; sticky bar with ♡ · Add to Cart · Buy Now; skeleton while loading |
+| Cart | Card lines; sticky "total + Checkout" bar above the tabs |
+| Checkout | 3 steps, 48 px fields with 16 px text (no iPhone zoom) |
+| Account | Profile card, quick tiles, icon rows; each section has its own title and back link |
+| Admin | Data tables turn into labelled cards (`useCardTables` in `AdminApp.jsx`); `data-cards="off"` keeps a table |
+| Dark mode | Same tokens, gold action colour on dark |
+
+Design tokens (spacing, radius, type scale, surfaces) are at the top of `client/src/styles/mobile.css`. Checks: `python3 server/test/qa/qa_mobile.py` (23 checks: shell, tap targets, sticky bars, bottom sheet, account menu, admin cards, 320–430 px and landscape).
+
 ## 6d. iPhone & Android app
 
 The `mobile/` folder is a Capacitor app for the App Store and Google Play that opens your live store, with native UPI hand-off, share, haptics and an offline screen. See **mobile/README.md** for the step-by-step build and publishing guide.

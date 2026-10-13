@@ -405,10 +405,19 @@ async def admin(b, order_no):
     await go(p, '/admin/admins', 1600); await shot(p, 'a_admins', h=1300)
     await p.close()
 
+async def phone_shots(b):
+    """Customer screens at phone width (the website opens in its app layout on phones)."""
+    p = await b.new_page(); await p.set_viewport_size({'width': 390, 'height': 844}); await p.add_init_script(INIT)
+    await p.goto(DEMO); await p.wait_for_timeout(1000)
+    await go(p, '/', 1800); await shot(p, 'm_phone_home')
+    await go(p, '/shop/diyas-candles/premium-brass-diya', 1800); await shot(p, 'm_phone_buy')
+    await p.close()
+
 async def main():
     async with async_playwright() as pw:
         br = await pw.chromium.launch()
         b = await br.new_context(device_scale_factor=2)
+        if not ONLY or ONLY.startswith('m'): await phone_shots(b)
         order_no = await customer(b) if not ONLY or ONLY.startswith('c') or ONLY.startswith('a') else ''
         if not ONLY or ONLY.startswith('d') or ONLY.startswith('a'): await dealer_onboarding(b)
         if not ONLY or ONLY.startswith('d'): await dealer_main(b, 1)

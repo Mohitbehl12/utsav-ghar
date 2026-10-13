@@ -5,7 +5,8 @@ import { rupees, fmtDate, PAYMENT_LABEL, STATUS_LABEL, tone } from '../lib/forma
 import { useAuth, useWishlist, useStore } from '../state/store.jsx';
 import { Field, Pill, Empty, Spinner, useSeo, Media } from '../components/ui.jsx';
 import { ProductGrid } from '../components/ProductCard.jsx';
-import { LogoutIcon, TrashIcon } from '../components/Icons.jsx';
+import { LogoutIcon, TrashIcon, UserIcon, BagIcon, HeartIcon, HomeIcon, TagIcon, ShieldIcon, GiftIcon, MailIcon, PhoneIcon, ChevronIcon } from '../components/Icons.jsx';
+import { useIsApp } from '../components/AppShell.jsx';
 import { STATES } from './Checkout.jsx';
 import { Timeline } from './Order.jsx';
 import { openSubscribe, subscription } from '../components/Subscribe.jsx';
@@ -460,21 +461,70 @@ export function OffersList() {
   );
 }
 
+/** Phone "Account" tab: profile card + icon rows, like a shopping app's account screen. */
+function AccountMenu({ user, logout }) {
+  const nav = useNavigate();
+  const rows = [
+    ['profile', UserIcon, 'My Profile', 'Name, mobile and email'],
+    ['orders', BagIcon, 'My Orders', 'Track, cancel or return'],
+    ['wishlist', HeartIcon, 'Wishlist', 'Things you saved'],
+    ['addresses', HomeIcon, 'Addresses', 'Delivery addresses'],
+    ['payments', TagIcon, 'Payments & refunds', 'UPI payments and refunds'],
+    ['offers', GiftIcon, 'Offers', 'Festival deals and coupons'],
+    ['requests', MailIcon, 'Help requests', 'Your questions to us'],
+    ['legal', ShieldIcon, 'Legal documents', 'Terms you accepted'],
+    ['security', ShieldIcon, 'Login & security', 'Password and devices'],
+  ];
+  const more = [['/help', PhoneIcon, 'Help & support'], ['/terms', ShieldIcon, 'Terms & conditions'], ['/privacy', ShieldIcon, 'Privacy policy']];
+  return (
+    <div className="macct">
+      <section className="macct__card">
+        <span className="macct__avatar" aria-hidden="true">{user.name.trim().charAt(0).toUpperCase()}</span>
+        <div><h1>{user.name}</h1><p>{user.email}{user.phone ? ` · ${user.phone}` : ''}</p></div>
+        <Link to="/account/profile" className="macct__edit">Edit</Link>
+      </section>
+      <div className="macct__quick">
+        <Link to="/account/orders"><BagIcon /><span>Orders</span></Link>
+        <Link to="/account/wishlist"><HeartIcon /><span>Wishlist</span></Link>
+        <Link to="/account/addresses"><HomeIcon /><span>Addresses</span></Link>
+        <Link to="/help"><PhoneIcon /><span>Help</span></Link>
+      </div>
+      <TermsUpdate compact />
+      <ul className="mrows" aria-label="My account">
+        {rows.map(([k, Icon, label, sub]) => (
+          <li key={k}><Link to={`/account/${k}`}><span className="mrows__ic"><Icon width={20} height={20} /></span><span className="mrows__t"><b>{label}</b><small>{sub}</small></span><ChevronIcon className="mrows__go" width={18} height={18} /></Link></li>
+        ))}
+        <li><button type="button" onClick={() => (subscription()?.token ? nav(`/preferences/${subscription().token}`) : openSubscribe())}><span className="mrows__ic">🔔</span><span className="mrows__t"><b>Notifications</b><small>Deals & festival alerts</small></span><ChevronIcon className="mrows__go" width={18} height={18} /></button></li>
+      </ul>
+      <ul className="mrows" aria-label="More">
+        {more.map(([to, Icon, label]) => (
+          <li key={to}><Link to={to}><span className="mrows__ic"><Icon width={20} height={20} /></span><span className="mrows__t"><b>{label}</b></span><ChevronIcon className="mrows__go" width={18} height={18} /></Link></li>
+        ))}
+      </ul>
+      <button type="button" className="btn btn--ghost btn--block macct__out" onClick={logout}><LogoutIcon width={18} height={18} /> Sign out</button>
+    </div>
+  );
+}
+
 export default function Account() {
   const { tab = '' } = useParams();
   const { user, logout } = useAuth();
   const nav = useNavigate();
+  const app = useIsApp();
   useSeo({ title: 'My Account | Utsav Ghar' });
   if (user === undefined) return <div className="container center pad"><Spinner /></div>;
   if (!user) {
     if (tab === 'wishlist') return <GuestWishlist />;
     return <Navigate to={`/login?next=/account/${tab}`} replace />;
   }
-  const View = { '': Profile, orders: Orders, wishlist: Wishlist, addresses: Addresses, payments: Payments, security: SecurityTab, requests: RequestsTab, legal: MyLegalDocuments, offers: () => <><h2>Available Offers</h2><OffersList /></> }[tab] || Profile;
+  if (app && tab === '') return <div className="container account account--app"><AccountMenu user={user} logout={logout} /></div>;
+  const View = { '': Profile, profile: Profile, orders: Orders, wishlist: Wishlist, addresses: Addresses, payments: Payments, security: SecurityTab, requests: RequestsTab, legal: MyLegalDocuments, offers: () => <><h2>Available Offers</h2><OffersList /></> }[tab] || Profile;
   return (
-    <div className="container account">
+    <div className={`container account ${app ? 'account--app account--sub' : ''}`}>
+      {app && <Link to="/account" className="account__back">‹ My account</Link>}
       <header className="account__head">
-        <div><p className="eyebrow">My account</p><h1>Namaste, {user.name.split(' ')[0]} 🙏</h1></div>
+        {app ? <h1>{(TABS.find(([k]) => k === tab) || [null, tab === 'profile' ? 'My Profile' : 'My account'])[1]}</h1>
+          : <div><p className="eyebrow">My account</p><h1>Namaste, {user.name.split(' ')[0]} 🙏</h1></div>}
         <button className="btn btn--ghost btn--sm" onClick={logout}><LogoutIcon width={16} height={16} /> Sign out</button>
       </header>
       {tab !== 'legal' && <TermsUpdate compact />}

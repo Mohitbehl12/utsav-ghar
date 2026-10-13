@@ -128,7 +128,7 @@ export default function Cart() {
     return (
       <div className="container">
         <Empty heading="h1" icon="🛒" title="Your cart is empty" action={<Link to="/shop?collection=festival" className="btn btn--primary">🪔 Shop the festive collection</Link>}>
-          {offer ? `${offer.headline}.` : 'Find something beautiful for your home.'}
+          Your cart is waiting for something beautiful.{offer ? ` ${offer.headline}.` : ''}
         </Empty>
         <SavedList saved={saved} update={update} cart={cart} />
       </div>
@@ -189,6 +189,12 @@ export default function Cart() {
           </Summary>
         </aside>
       </div>
+      {q && (
+        <div className="mcheckout" role="region" aria-label="Cart total">
+          <div className="mcheckout__sum"><small>{q.itemCount} item{q.itemCount === 1 ? '' : 's'} · total</small><b>{rupees(q.total)}</b>{q.discount > 0 && <em>You save {rupees(q.discount)}</em>}</div>
+          <button type="button" className="btn btn--primary btn--lg" onClick={() => nav('/checkout')} disabled={!q.lines.length || q.errors?.some((e) => e.code === 'DOMESTIC_ONLY')}>Checkout</button>
+        </div>
+      )}
       <SavedList saved={saved} update={update} cart={cart} />
       {recs?.unlock?.items?.length > 0 && <ItemsRow title={`🎁 ${recs.unlock.message}`} sub="Easy add-ons that count toward the offer" items={recs.unlock.items} deal />}
       <ItemsRow title="Customers who bought items in your cart also bought" items={recs?.alsoBought} />
