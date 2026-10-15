@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/hind": "^5.3.0",
+    "@fontsource/jost": "^5.3.0",
+    "@fontsource/rozha-one": "^5.3.0",
     "pdf-lib": "^1.17.1",
     "qrcode": "^1.5.4",
     "react": "^18.3.1",

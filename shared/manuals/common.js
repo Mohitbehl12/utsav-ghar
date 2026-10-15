@@ -52,8 +52,8 @@ export const UI = {
 /** Shown in every "Need help?" box. */
 export const HELP = {
   customer: t(
-    'Open Help Center (Customer Service in the top menu) or tap the 💬 Help button on any page. You can chat, raise a request, WhatsApp or call us. Our phone, WhatsApp and email are shown at the bottom of every page.',
-    'ऊपर के मेन्यू में Customer Service (Help Center) खोलें या किसी भी पेज पर 💬 Help बटन दबाएँ। आप चैट कर सकते हैं, रिक्वेस्ट बना सकते हैं, WhatsApp या कॉल कर सकते हैं। हमारा फ़ोन, WhatsApp और ईमेल हर पेज के सबसे नीचे दिया है।'),
+    'Open Help Center (Help in the top menu) or tap the 💬 Help button on any page. You can chat, raise a request, WhatsApp or call us. Our phone, WhatsApp and email are shown at the bottom of every page.',
+    'ऊपर के मेन्यू में Help (Help Center) खोलें या किसी भी पेज पर 💬 Help बटन दबाएँ। आप चैट कर सकते हैं, रिक्वेस्ट बना सकते हैं, WhatsApp या कॉल कर सकते हैं। हमारा फ़ोन, WhatsApp और ईमेल हर पेज के सबसे नीचे दिया है।'),
   dealer: t(
     'Call or WhatsApp the Utsav Ghar dealer team, or reply to any email we sent you. Your account manager can also reset your password and update your delivery area.',
     'Utsav Ghar डीलर टीम को कॉल या WhatsApp करें, या हमारे भेजे किसी भी ईमेल का जवाब दें। आपका अकाउंट मैनेजर पासवर्ड रीसेट और डिलीवरी एरिया अपडेट भी कर सकता है।'),

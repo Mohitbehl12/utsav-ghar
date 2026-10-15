@@ -21,7 +21,7 @@ import { FestivalChip } from './Festive.jsx';
 import { CountryModal } from './Locale.jsx';
 import { SearchBox, useNav } from './Layout.jsx';
 import { PersonalRows } from './Recs.jsx';
-import { BagIcon, CloseIcon, LogoMark, MenuIcon, UserIcon, HeartIcon, ChevronIcon } from './Icons.jsx';
+import { BagIcon, BoxIcon, CloseIcon, LogoMark, MenuIcon, UserIcon, HeartIcon, ChevronIcon, ShieldIcon, TruckIcon, SparkIcon } from './Icons.jsx';
 import FireworksVideo from './FireworksVideo.jsx';
 
 /* ------------------------------------------------------------------ header */
@@ -59,10 +59,10 @@ export function ZHeader() {
           <SearchBox category={cat} />
         </div>
         <Link to={user ? '/account' : '/login'} className="zh__box zh__acct">
-          <small>Hello, {first || 'sign in'}</small><b>Account &amp; Lists</b>
+          <UserIcon /><span><small>{first ? `Hello, ${first}` : 'Sign in'}</small><b>Account</b></span>
         </Link>
         <Link to={user ? '/account/orders' : '/track'} className="zh__box zh__orders">
-          <small>Returns</small><b>&amp; Orders</b>
+          <BoxIcon /><span><small>Track &amp; return</small><b>Orders</b></span>
         </Link>
         <Link to="/account/wishlist" className="zh__box zh__wish" aria-label={`Wishlist, ${wish.ids.length} items`}>
           <HeartIcon /><span className="zh__count">{wish.ids.length || ''}</span>
@@ -77,12 +77,12 @@ export function ZHeader() {
         </button>
       </div>
       <nav className="zh__nav" aria-label="Main">
-        <button className="zh__all" onClick={() => setMenu(true)}><MenuIcon width={18} height={18} /> All</button>
+        <button className="zh__all" onClick={() => setMenu(true)}><MenuIcon width={18} height={18} /> All categories</button>
         {NAV.filter((n) => n.to !== '/').map((n) => (
           <Link key={n.to} to={n.to} className={n.festive ? 'is-fest' : ''}>{n.festive ? `${n.icon} ` : ''}{n.label}</Link>
         ))}
         <Link to="/track">Track Order</Link>
-        <Link to="/help">Customer Service</Link>
+        <Link to="/help">Help</Link>
       </nav>
       {offer && (
         <Link to="/offers" className="zh__promo">
@@ -207,67 +207,77 @@ function HeroCarousel() {
   );
 }
 
-/** One white card with a title, 4 small tiles and a "See more" link. */
-function Quad({ title, tiles, more, moreTo }) {
+/** Section heading used across the home page: small gold eyebrow, serif title, quiet "view all" link. */
+function LuxHead({ eyebrow, title, to, more = 'View all', id }) {
   return (
-    <div className="zq">
-      <h2>{title}</h2>
-      <div className="zq__grid">
-        {tiles.slice(0, 4).map((t) => (
-          <Link key={t.key} to={t.to} className="zq__tile">
-            <span className="zq__img">{t.img}</span>
-            <span className="zq__label">{t.label}</span>
+    <div className="lhead">
+      <div>
+        {eyebrow && <p className="lhead__eyebrow">{eyebrow}</p>}
+        <h2 id={id}>{title}</h2>
+      </div>
+      {to && <Link to={to} className="lhead__more">{more} <span aria-hidden="true">→</span></Link>}
+    </div>
+  );
+}
+
+/** Round category medallions — the quickest way into the store. */
+function CategoryMedallions() {
+  const { categories } = useStore();
+  if (!categories.length) return null;
+  return (
+    <section className="lcats" aria-labelledby="lcats-h">
+      <LuxHead eyebrow="Explore the store" title="Shop by category" to="/categories" more="All categories" id="lcats-h" />
+      <div className="lcats__row">
+        {categories.slice(0, 12).map((c) => (
+          <Link key={c.slug} to={`/shop/${c.slug}`} className="lcat">
+            <span className="lcat__img">{c.image_url ? <img src={c.image_url} alt="" loading="lazy" /> : <ProductArt art={c.art} bare />}</span>
+            <span className="lcat__name">{c.name}</span>
           </Link>
         ))}
       </div>
-      <Link to={moreTo} className="zq__more">{more}</Link>
-    </div>
+    </section>
   );
 }
-function Single({ title, to, img, more, sub }) {
-  return (
-    <div className="zq">
-      <h2>{title}</h2>
-      <Link to={to} className="zq__single">{img}{sub && <span className="zq__sub">{sub}</span>}</Link>
-      <Link to={to} className="zq__more">{more}</Link>
-    </div>
-  );
-}
-const prodTiles = (items) => items.map((p) => ({ key: p.id, to: p.url, img: <Media product={p} />, label: p.name }));
 
-function CardGrid() {
-  const { settings, categories, offer } = useStore();
-  const { user } = useAuth();
-  const fest = useProducts('flag=diwali&sort=popular&limit=4');
-  const kitchen = useProducts('segment=kitchen&sort=popular&limit=4');
-  const pooja = useProducts('segment=pooja&sort=popular&limit=4');
-  const gifts = useProducts('segment=gifts&sort=rating&limit=4');
-  const name = settings?.festival_name || 'Diwali';
-  const catTiles = (seg) => categories.filter((c) => c.segment === seg).map((c) => ({ key: c.slug, to: `/shop/${c.slug}`, img: c.image_url ? <img src={c.image_url} alt="" /> : <ProductArt art={c.art} bare />, label: c.name }));
+const COLLECTIONS = [
+  { key: 'pooja', to: '/s/pooja', eyebrow: 'The pooja room', title: 'Rituals, beautifully kept', text: 'Brass thalis, kalash, bells and temple incense for the evening aarti.', art: [{ type: 'thali', tone: 'gold' }, { type: 'kalash', tone: 'orange' }], tone: 'maroon' },
+  { key: 'dining', to: '/s/dining', eyebrow: 'The festive table', title: 'Set a table to remember', text: 'Dinner sets, serveware and glassware for guests.', art: [{ type: 'dinner-set', tone: 'cream' }], tone: 'teal' },
+  { key: 'gifts', to: '/s/gifts', eyebrow: 'The art of gifting', title: 'Hampers made to impress', text: 'Ready-to-give sets, dry-fruit boxes and combos.', art: [{ type: 'hamper', tone: 'orange' }], tone: 'plum' },
+];
+
+/** Three editorial collection tiles (one large, two stacked). */
+function Collections() {
   return (
-    <div className="zcards">
-      <Quad title={`${settings?.festival_emoji || '🪔'} ${name} must-haves`} tiles={prodTiles(fest.items)} more={`Shop the ${name} collection`} moreTo="/shop?collection=festival" />
-      <Quad title="Shop by department" tiles={SEGMENTS.slice(0, 4).map((s) => ({ key: s.slug, to: `/s/${s.slug}`, img: <ProductArt art={s.art[0]} bare />, label: s.name }))} more="See all departments" moreTo="/categories" />
-      {offer ? (
-        <Single title={offer.discount_type === 'tiered' ? `Up to ${offer.discount_value}% off | Buy more, save more` : offer.label} to="/shop?offer=1" sub={offer.headline}
-          img={<div className="zq__art"><ProductArt art={{ type: 'giftbox', tone: 'maroon' }} bare /><ProductArt art={{ type: 'diya', tone: 'orange' }} bare /></div>} more="See all offers" />
-      ) : <Single title="Gift hampers" to="/s/gifts" img={<div className="zq__art"><ProductArt art={{ type: 'hamper', tone: 'purple' }} bare /></div>} more="Shop gifts" />}
-      {user ? (
-        <Single title={`Welcome back, ${user.name.split(' ')[0]}`} to="/account/orders" img={<div className="zq__art"><ProductArt art={{ type: 'hamper', tone: 'orange' }} bare /></div>} sub="Your orders, wishlist and saved addresses" more="Go to your account" />
-      ) : (
-        <div className="zq zq--signin">
-          <h2>Sign in for the best experience</h2>
-          <Link to="/login" className="btn btn--gold btn--block">Sign in securely</Link>
-          <p className="small">New here? <Link to="/register" className="link">Create an account</Link></p>
-          <div className="zq__art zq__art--sm"><ProductArt art={{ type: 'toran', tone: 'orange' }} bare /></div>
-          <p className="small muted">🎁 Use <b>WELCOME10</b> for 10% off your first order.</p>
-        </div>
-      )}
-      <Quad title="🍽️ Crockery & dining" tiles={catTiles('dining').concat(catTiles('home-decor'))} more="Explore crockery" moreTo="/s/dining" />
-      <Quad title="🍳 Kitchen essentials" tiles={prodTiles(kitchen.items)} more="Shop kitchen" moreTo="/s/kitchen" />
-      <Quad title="🛕 Pooja room" tiles={prodTiles(pooja.items)} more="See all pooja" moreTo="/s/pooja" />
-      <Quad title="🎁 Gifts & combos" tiles={prodTiles(gifts.items)} more="Shop gifts" moreTo="/s/gifts" />
-    </div>
+    <section className="lcoll" aria-labelledby="lcoll-h">
+      <LuxHead eyebrow="Curated collections" title="Made for the moments that matter" id="lcoll-h" />
+      <div className="lcoll__grid">
+        {COLLECTIONS.map((c, k) => (
+          <Link key={c.key} to={c.to} className={`lcol lcol--${c.tone} ${k === 0 ? 'lcol--big' : ''}`}>
+            <span className="lcol__art" aria-hidden="true">{c.art.map((a, i) => <ProductArt key={i} art={a} bare />)}</span>
+            <span className="lcol__copy">
+              <span className="lcol__eyebrow">{c.eyebrow}</span>
+              <span className="lcol__title">{c.title}</span>
+              <span className="lcol__text">{c.text}</span>
+              <span className="lcol__cta">Explore <span aria-hidden="true">→</span></span>
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/** Slim row of promises right under the hero. */
+function Promises() {
+  const { settings } = useStore();
+  const free = (settings?.free_delivery_above || 0) / 100;
+  return (
+    <ul className="ztrust" aria-label="Why shop with us">
+      <li><ShieldIcon /><b>Secure UPI payment</b><small>GPay, PhonePe, Paytm</small></li>
+      <li><TruckIcon /><b>Delivery in 3–6 days</b><small>{free ? `Free above ₹${free.toLocaleString('en-IN')}` : 'Tracked across India'}</small></li>
+      <li><BoxIcon /><b>7-day returns</b><small>Damaged or wrong item? We fix it</small></li>
+      <li><SparkIcon /><b>Artisan-made</b><small>Brass, copper and clay from across India</small></li>
+    </ul>
   );
 }
 
@@ -289,14 +299,14 @@ export function RowCard({ p, deal }) {
   );
 }
 
-function Row({ title, query, to, deal, more = 'See all' }) {
+function Row({ eyebrow, title, query, to, deal, more = 'View all' }) {
   const { items, loading } = useProducts(query);
   const ref = useRef(null);
   const scroll = (d) => ref.current?.scrollBy({ left: d * ref.current.clientWidth * 0.85, behavior: 'smooth' });
   if (!loading && !items.length) return null;
   return (
     <section className="zrow">
-      <div className="zrow__head"><h2>{title}</h2><Link to={to} className="link">{more}</Link></div>
+      <LuxHead eyebrow={eyebrow} title={title} to={to} more={more} />
       <div className="zrow__wrap">
         <button className="zrow__arrow zrow__arrow--prev" onClick={() => scroll(-1)} aria-label="Scroll left"><ChevronIcon /></button>
         <div className="zrow__track" ref={ref}>
@@ -317,7 +327,7 @@ function HomeReviews() {
   return (
     <section className="zrev" aria-labelledby="zrev-h">
       <div className="zrev__head">
-        <h2 id="zrev-h">💬 What our customers say</h2>
+        <p className="lhead__eyebrow">Loved by our customers</p><h2 id="zrev-h">Homes we have helped celebrate</h2>
         <p className="zrev__sum"><Stars value={avg} size={14} /> <b>{avg.toFixed(1)} out of 5</b> from verified buyers</p>
       </div>
       <div className="zrev__track">
@@ -325,7 +335,7 @@ function HomeReviews() {
           <figure key={r.id} className="zrev__card">
             <Stars value={r.rating} size={13} />
             <blockquote>“{r.body}”</blockquote>
-            <figcaption><b>{r.author}</b>{r.city ? `, ${r.city}` : ''}{r.is_verified_purchase ? <span className="zrev__ver">✔ Verified purchase</span> : null}
+            <figcaption><span><b>{r.author}</b>{r.city ? `, ${r.city}` : ''}</span>{r.is_verified_purchase ? <span className="zrev__ver">✔ Verified purchase</span> : null}
               <Link to={`/shop/${r.category_slug}/${r.product_slug}`} className="link small">{r.product_name}</Link></figcaption>
           </figure>
         ))}
@@ -339,11 +349,11 @@ function FestNight({ name }) {
     <section className="zfest" aria-label={`${name} night`}>
       <FireworksVideo title={`${name} night`} />
       <div>
-        <h2>🎆 Roshni se bhar do iss {name}</h2>
+        <p className="lhead__eyebrow">The {name} night</p><h2>Roshni se bhar do iss {name}</h2>
         <p>Diyas, string lights, rangoli and lanterns: everything to make your home sparkle on the big night.</p>
         <div className="zfest__ctas">
-          <Link to="/shop/diwali-lights" className="btn btn--gold">💡 Shop festive lights</Link>
-          <Link to="/shop/diyas-candles" className="btn btn--ghost-light">🪔 Diyas &amp; candles</Link>
+          <Link to="/shop/diwali-lights" className="btn btn--gold">Shop festive lights</Link>
+          <Link to="/shop/diyas-candles" className="btn btn--ghost-light">Diyas &amp; candles</Link>
         </div>
         <p className="zfest__note">Celebrate safely: keep water nearby and choose green crackers where allowed.</p>
       </div>
@@ -362,25 +372,20 @@ export function ZHome() {
   return (
     <div className="zhome">
       <HeroCarousel />
+      <Promises />
       <div className="zhome__body">
-        <FestNight name={name} />
-        <CardGrid />
-        <VoiceBanner />
+        <CategoryMedallions />
+        <Collections />
         <PersonalRows withDeal />
-        <LazyMount minHeight={380}><Row title="🔥 Today's festive deals" query="sort=discount&inStock=1&limit=16" to="/shop?sort=discount" deal more="See all deals" /></LazyMount>
-        <LazyMount minHeight={380}><Row title={`${settings?.festival_emoji || '🪔'} Best sellers for ${name}`} query="flag=diwali&sort=bestsellers&limit=16" to="/shop?collection=festival" /></LazyMount>
-        <LazyMount minHeight={380}><Row title="🧺 Combos: more for less" query="category=combos&limit=12" to="/shop/combos" deal /></LazyMount>
-        <LazyMount minHeight={380}><Row title="🍽️ Top picks in Crockery & Dining" query="segment=dining&sort=rating&limit=16" to="/s/dining" /></LazyMount>
-        <LazyMount minHeight={380}><Row title="🍳 Kitchen best sellers" query="segment=kitchen&sort=bestsellers&limit=16" to="/s/kitchen" /></LazyMount>
-        <LazyMount minHeight={380}><Row title="✨ New arrivals" query="flag=new&sort=newest&limit=16" to="/shop?sort=newest" /></LazyMount>
-        <LazyMount minHeight={380}><Row title="⭐ Highest rated by customers" query="sort=rating&limit=16" to="/shop?sort=rating" /></LazyMount>
+        <FestNight name={name} />
+        <LazyMount minHeight={380}><Row eyebrow="Limited time" title="Today's festive deals" query="sort=discount&inStock=1&limit=16" to="/shop?sort=discount" deal more="All deals" /></LazyMount>
+        <LazyMount minHeight={380}><Row eyebrow={`The ${name} edit`} title={`Best sellers for ${name}`} query="flag=diwali&sort=bestsellers&limit=16" to="/shop?collection=festival" /></LazyMount>
+        <VoiceBanner />
+        <LazyMount minHeight={380}><Row eyebrow="More for less" title="Combos & ready sets" query="category=combos&limit=12" to="/shop/combos" deal /></LazyMount>
+        <LazyMount minHeight={380}><Row eyebrow="Crockery & dining" title="For the festive table" query="segment=dining&sort=rating&limit=16" to="/s/dining" /></LazyMount>
+        <LazyMount minHeight={380}><Row eyebrow="Kitchen" title="Kitchen best sellers" query="segment=kitchen&sort=bestsellers&limit=16" to="/s/kitchen" /></LazyMount>
+        <LazyMount minHeight={380}><Row eyebrow="Just arrived" title="New arrivals" query="flag=new&sort=newest&limit=16" to="/shop?sort=newest" /></LazyMount>
         <LazyMount minHeight={360}><HomeReviews /></LazyMount>
-        <ul className="ztrust">
-          <li><span>🔒</span><b>Secure UPI payment</b><small>Pay with GPay, PhonePe, Paytm</small></li>
-          <li><span>🚚</span><b>Delivery in 3–6 days</b><small>Free above ₹{((settings?.free_delivery_above || 0) / 100).toLocaleString('en-IN')}</small></li>
-          <li><span>↩️</span><b>7-day returns</b><small>Damaged or wrong item? We fix it</small></li>
-          <li><span>🙏</span><b>Artisan-made</b><small>Brass, copper, clay from across India</small></li>
-        </ul>
       </div>
     </div>
   );

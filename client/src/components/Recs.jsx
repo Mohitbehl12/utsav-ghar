@@ -52,7 +52,7 @@ export function ItemsRow({ title, sub, items, to, more = 'See all', deal, action
   const scroll = (d) => ref.current?.scrollBy({ left: d * ref.current.clientWidth * 0.85, behavior: 'smooth' });
   return (
     <section className="zrow">
-      <div className="zrow__head"><h2>{title}</h2>{sub && <span className="zrow__sub">{sub}</span>}{action || (to && <Link to={to} className="link">{more}</Link>)}</div>
+      <div className="zrow__head lhead"><div>{sub && <p className="lhead__eyebrow">{sub}</p>}<h2>{title}</h2></div>{action || (to && <Link to={to} className="lhead__more">{more} <span aria-hidden="true">→</span></Link>)}</div>
       <div className="zrow__wrap">
         <button className="zrow__arrow zrow__arrow--prev" onClick={() => scroll(-1)} aria-label="Scroll left"><ChevronIcon /></button>
         <div className="zrow__track" ref={ref}>{items.map((p) => <RowCard key={p.id} p={p} deal={deal} />)}</div>
@@ -163,7 +163,7 @@ export function DealOfDay({ deal }) {
   return (
     <section className="dotd">
       <div className="dotd__head">
-        <h2>⚡ Deal of the day</h2>
+        <h2><span className="lhead__eyebrow">Today only</span>Deal of the day</h2>
         {t && <span className="dotd__timer" aria-label="Ends in">Ends in <b>{pad(t.h + t.d * 24)}:{pad(t.m)}:{pad(t.s)}</b></span>}
       </div>
       <div className="dotd__body">
@@ -191,9 +191,9 @@ export function PersonalRows({ withDeal = false }) {
   return (
     <>
       {withDeal && <DealOfDay deal={r.deal} />}
-      {r.buyAgain?.length > 0 && <ItemsRow title="🔁 Buy it again" items={r.buyAgain} to="/account/orders" more="Your orders" />}
-      <ItemsRow title={r.personal ? '✨ Inspired by your browsing history' : '✨ Recommended for you'} sub={r.personal ? 'Picked from what you looked at' : 'Popular right now'} items={r.forYou} />
-      {r.recent?.length > 0 && <ItemsRow title="👀 Your recently viewed items" items={r.recent} action={<button className="link-btn link" onClick={r.clearHistory}>Clear history</button>} />}
+      {r.buyAgain?.length > 0 && <ItemsRow title="Buy it again" items={r.buyAgain} to="/account/orders" more="Your orders" />}
+      <ItemsRow title={r.personal ? 'Inspired by your browsing history' : 'Recommended for you'} sub={r.personal ? 'Picked from what you looked at' : 'Popular right now'} items={r.forYou} />
+      {r.recent?.length > 0 && <ItemsRow title="Your recently viewed items" items={r.recent} action={<button className="link-btn link" onClick={r.clearHistory}>Clear history</button>} />}
     </>
   );
 }

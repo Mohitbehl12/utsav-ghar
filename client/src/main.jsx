@@ -1,17 +1,19 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
+// Brand fonts are bundled with the site (no third-party font requests): Cormorant Garamond for
+// display headings, Jost for text, with Rozha One / Hind covering Hindi (Devanagari) characters.
+import '@fontsource/cormorant-garamond/latin-500.css';
+import '@fontsource/cormorant-garamond/latin-600.css';
+import '@fontsource/jost/latin-400.css';
+import '@fontsource/jost/latin-500.css';
+import '@fontsource/jost/latin-600.css';
+import '@fontsource/hind/devanagari-400.css';
+import '@fontsource/hind/devanagari-600.css';
+import '@fontsource/rozha-one/devanagari-400.css';
 import './styles/app.css';
 import './styles/mobile.css';
-
-// Web fonts load without blocking the first paint (system fonts show until they arrive).
-if (!document.querySelector('link[data-fonts]')) {
-  const l = document.createElement('link');
-  l.rel = 'stylesheet';
-  l.href = 'https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Rozha+One&display=swap';
-  l.dataset.fonts = '1';
-  document.head.appendChild(l);
-}
+import './styles/luxe.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

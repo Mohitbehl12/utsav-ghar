@@ -17,7 +17,7 @@ export default function HeroScene() {
           <stop offset="0" stopColor="#2A1640" />
           <stop offset="1" stopColor="#140B22" />
         </linearGradient>
-        <radialGradient id="hs-warm" cx="50%" cy="92%" r="60%">
+        <radialGradient id="hs-warm" cx="50%" cy="50%" r="50%">
           <stop offset="0" stopColor="#FFB347" stopOpacity=".55" />
           <stop offset="1" stopColor="#FFB347" stopOpacity="0" />
         </radialGradient>
@@ -44,7 +44,7 @@ export default function HeroScene() {
         <rect x="280" y="360" width="100" height="90" rx="6" />
       </g>
       <circle cx="248" cy="330" r="5" fill="#E9C46A" /><circle cx="272" cy="330" r="5" fill="#E9C46A" />
-      <rect x="0" y="0" width="520" height="520" fill="url(#hs-warm)" />
+      <ellipse cx="260" cy="430" rx="230" ry="88" fill="url(#hs-warm)" />
 
       {/* string lights along the arch */}
       <path d="M78,230 C90,120 170,58 260,58 C350,58 430,120 442,230" stroke="#3a2230" strokeWidth="2" fill="none" />

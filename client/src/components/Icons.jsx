@@ -30,6 +30,7 @@ export const EditIcon = I(<path d="M4 20h4L19 9l-4-4L4 16v4z" />);
 export const PlusIcon = I(<path d="M12 5v14M5 12h14" />);
 export const MinusIcon = I(<path d="M5 12h14" />);
 export const LogoutIcon = I(<><path d="M15 4h4v16h-4" /><path d="M10 8l-4 4 4 4M6 12h10" /></>);
+export const BoxIcon = I(<><path d="M3 8l9-5 9 5v8l-9 5-9-5V8z" /><path d="M3 8l9 5 9-5M12 13v8" /></>);
 
 export function InstagramIcon(p) { return <svg {...base} {...p}><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg>; }
 export function FacebookIcon(p) { return <svg {...base} {...p}><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z" /></svg>; }
