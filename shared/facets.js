@@ -33,8 +33,19 @@ export function facetsFor(products) {
     for (const m of materialsOf(p)) counts.set(m, (counts.get(m) || 0) + 1);
     min = Math.min(min, p.price); max = Math.max(max, p.price);
   }
+  // Country of origin (Legal Metrology rule 6(10A): searchable, sortable filter). Products without a declared
+  // country are grouped as "Not stated" so the filter never hides them silently.
+  const origins = new Map();
+  for (const p of products) { const o = originOf(p); origins.set(o, (origins.get(o) || 0) + 1); }
   return {
+    origins: [...origins.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([value, count]) => ({ value, label: value === 'not-stated' ? 'Not stated' : value.replace(/\b\w/g, (c) => c.toUpperCase()), count })),
     materials: MATERIALS.filter(([k]) => counts.has(k)).map(([k, label]) => ({ value: k, label, count: counts.get(k) })),
     price: products.length ? { min: Math.floor(min / 100), max: Math.ceil(max / 100) } : null,
   };
+}
+
+/** Normalised country-of-origin key for filtering: "India" → "india"; missing → "not-stated". */
+export function originOf(p) {
+  const c = String(p.origin_country || '').trim().toLowerCase().replace(/[^a-z ]/g, '').replace(/\s+/g, ' ');
+  return c || 'not-stated';
 }

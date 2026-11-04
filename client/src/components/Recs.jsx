@@ -1,13 +1,12 @@
 /**
  * Recommendation blocks: frequently bought together, compare similar items,
- * swipeable product rows, deal of the day, and the personal-picks hook.
+ * swipeable product rows, today's pick, and the personal-picks hook.
  */
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../lib/api.js';
 import { viewedIds, clearViewed } from '../lib/history.js';
 import { useCart, useMoney, useToast, useWishlist, useAuth } from '../state/store.jsx';
-import { useCountdown } from './Festive.jsx';
 import { useAddToCart } from './ProductCard.jsx';
 import { Media, Stars } from './ui.jsx';
 import { RowCard } from './Storefront.jsx';
@@ -152,24 +151,23 @@ export function CompareTable({ product, items }) {
   );
 }
 
-/** Deal of the day with a countdown to midnight (IST). */
+/**
+ * Today's pick: the best-value product, rotating daily. Its price does not change at midnight, so it carries
+ * no countdown or "today only" claim (false urgency is a prohibited dark pattern — CCPA Guidelines, 2023).
+ */
 export function DealOfDay({ deal }) {
   const add = useAddToCart();
   const { fmt } = useMoney();
-  const end = (() => { const n = new Date(Date.now() + 5.5 * 36e5); n.setUTCHours(24, 0, 0, 0); return new Date(n.getTime() - 5.5 * 36e5).toISOString(); })();
-  const t = useCountdown(end, 1);
   if (!deal) return null;
-  const pad = (n) => String(n).padStart(2, '0');
   return (
     <section className="dotd">
       <div className="dotd__head">
-        <h2><span className="lhead__eyebrow">Today only</span>Deal of the day</h2>
-        {t && <span className="dotd__timer" aria-label="Ends in">Ends in <b>{pad(t.h + t.d * 24)}:{pad(t.m)}:{pad(t.s)}</b></span>}
+        <h2><span className="lhead__eyebrow">Best value</span>Today's pick</h2>
       </div>
       <div className="dotd__body">
         <Link to={deal.url} className="dotd__img"><Media product={deal} /></Link>
         <div className="dotd__info">
-          <p className="zrc__deal"><span>{deal.discount_pct}% off</span> <em>Deal of the day</em></p>
+          <p className="zrc__deal"><span>{deal.discount_pct}% off M.R.P.</span> <em>Today's pick</em></p>
           <Link to={deal.url} className="dotd__name">{deal.name}</Link>
           <Stars value={deal.rating} count={deal.rating_count} />
           <p className="dotd__price"><b>{fmt(deal.price)}</b> <s>M.R.P. {fmt(deal.mrp)}</s></p>

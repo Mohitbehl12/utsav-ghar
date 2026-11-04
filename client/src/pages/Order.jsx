@@ -141,6 +141,9 @@ export default function Order() {
             {order.customer.email && <p className="small muted">A confirmation has been sent to {order.customer.email}.</p>}
           </section>
         </div>
+        {['confirmed', 'refunded'].includes(order.payment_status) && order.country !== 'INTL' && (
+          <p><a className="btn btn--ghost btn--sm" href={`/api/orders/${encodeURIComponent(order.order_number)}/invoice${token ? `?token=${encodeURIComponent(token)}` : ''}`} target="_blank" rel="noopener">🧾 Tax invoice</a></p>
+        )}
         <AfterSales order={order} token={token} onChange={setOrder} />
       </div>
     </div>

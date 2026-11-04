@@ -277,6 +277,8 @@ export const COMPANY_DEFAULTS = {
   support_email: 'support@utsavghar.in', support_phone: '[Support phone]', grievance_officer: '[Name of Grievance Officer]',
   grievance_email: 'grievance@utsavghar.in', jurisdiction_city: '[City]', website: 'www.utsavghar.in',
   legal_email: 'legal@utsavghar.in', authorised_signatory: '[Name of authorised signatory]', signatory_designation: '[Designation]',
+  // GST registration of the seller of record (needed to issue tax invoices): 15-character GSTIN and the state it is registered in.
+  company_gstin: '', company_state: '',
 };
 
 /** Commercial schedule text for one dealer (inserted into the agreement as {{commercial_schedule}}). */

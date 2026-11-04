@@ -1897,3 +1897,14 @@ html.is-app .chatfab { bottom: calc(80px + env(safe-area-inset-bottom)); }
 .testmode b { letter-spacing: .06em; }
 .testmode__short { display: none; }
 @media (max-width: 640px) { .testmode { font-size: 12px; padding: 5px 12px; } .testmode__long { display: none; } .testmode__short { display: inline; } }
+
+/* Cookie choices (ads measurement opt-in) */
+.consent { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 90; max-width: 720px; margin: 0 auto;
+  background: var(--card, #fff); color: var(--ink, #2a1a1f); border: 1px solid var(--line-2, #e7d9c8); border-radius: 14px; padding: 14px 16px;
+  box-shadow: 0 12px 32px -12px rgba(0,0,0,.35); display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.consent__text { margin: 0; flex: 1 1 320px; font-size: .92rem; line-height: 1.45; }
+.consent__text a { text-decoration: underline; }
+.consent__actions { display: flex; gap: 8px; margin-left: auto; }
+.consent .btn--ghost { border: 1px solid var(--line-2, #d8c7b4); }
+.footer__linkbtn { background: none; border: 0; padding: 0; color: inherit; font: inherit; cursor: pointer; text-align: left; }
+.footer__linkbtn:hover { text-decoration: underline; }

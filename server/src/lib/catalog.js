@@ -25,7 +25,11 @@ export function setSettings(obj) {
 /** Only non-secret settings are ever sent to the browser. */
 export function publicSettings() {
   const s = getSettings();
+  // Seller of record shown on product pages (E-Commerce Rules 2020); placeholders like "[Registered company name]" are hidden.
+  const co = (() => { try { return typeof s.legal_company === 'object' && s.legal_company ? s.legal_company : JSON.parse(s.legal_company || '{}') || {}; } catch { return {}; } })();
+  const real = (v) => (v && !/^\[/.test(String(v)) ? String(v) : '');
   return {
+    company_legal_name: real(co.company_legal_name),
     store_name: s.store_name,
     support_phone: s.support_phone,
     whatsapp_number: s.whatsapp_number || '',
@@ -172,12 +176,19 @@ export function serializeProduct(p, { offer, withImages = true, admin = false } 
     seo_title: p.seo_title || `${p.name} | Utsav Ghar`,
     seo_description: p.seo_description || p.short_description,
     url: `/shop/${p.category_slug}/${p.slug}`,
+    // Shown on the product page before purchase (E-Commerce Rules 2020; Legal Metrology rule 6(10)).
+    declarations: {
+      origin_country: p.origin_country || null, maker_type: p.maker_type || 'manufacturer', maker_name: p.maker_name || null,
+      maker_address: p.maker_address || null, net_quantity: p.net_quantity || null,
+    },
   };
   if (parts) {
     out.bundle_items = parts.map((x) => ({ product_id: x.product_id, name: x.name, slug: x.slug, qty: x.qty, price: x.price, url: `/shop/${x.category_slug}/${x.slug}` }));
     out.bundle_worth = parts.reduce((s, x) => s + x.price * x.qty, 0);
   }
   if (admin) {
+    Object.assign(out, { origin_country: p.origin_country || '', maker_type: p.maker_type || 'manufacturer', maker_name: p.maker_name || '', maker_address: p.maker_address || '',
+      net_quantity: p.net_quantity || '', hsn: p.hsn || '', gst_rate: p.gst_rate ?? '' });
     out.stock = p.stock;
     out.cost_price = p.cost_price;
     out.low_stock_threshold = p.low_stock_threshold;

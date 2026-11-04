@@ -67,8 +67,8 @@ export function createOrder({ items, couponCode, customer, address, userId, expe
           ship_line1, ship_line2, ship_city, ship_state, ship_pincode, ship_country, currency, fx_rate,
           mrp_total, subtotal, discount, delivery_fee, total, offer_id, offer_name, coupon_code,
           payment_method, estimated_delivery,
-          utm_source, utm_medium, utm_campaign, utm_content, utm_term, fbclid, fbp, fbc, ga_client_id, landing_page, referrer, client_ip, user_agent)
-         VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
+          utm_source, utm_medium, utm_campaign, utm_content, utm_term, fbclid, fbp, fbc, ga_client_id, landing_page, referrer, client_ip, user_agent, ads_consent)
+         VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
       )
       .run(
         `DIWALI${nextNo}`, userId ?? null, hashToken(token), customer.name, customer.phone, customer.email || null,
@@ -76,7 +76,7 @@ export function createOrder({ items, couponCode, customer, address, userId, expe
         q.mrpTotal, q.subtotal, q.discount, q.delivery, q.total, q.offer?.id ?? null, q.offer?.name ?? null,
         q.offer?.couponCode ?? null, cc === 'IN' ? 'upi' : 'intl', eta,
         cut(A.utm_source, 80), cut(A.utm_medium, 80), cut(A.utm_campaign, 120), cut(A.utm_content, 120), cut(A.utm_term, 120),
-        cut(A.fbclid, 500), cut(A.fbp, 120), cut(A.fbc, 600), cut(A.ga_client_id, 80), cut(A.landing_page, 500), cut(A.referrer, 500), cut(clientIp, 64), cut(userAgent, 400)
+        cut(A.fbclid, 500), cut(A.fbp, 120), cut(A.fbc, 600), cut(A.ga_client_id, 80), cut(A.landing_page, 500), cut(A.referrer, 500), cut(clientIp, 64), cut(userAgent, 400), A.ads_consent === true ? 1 : 0
       );
     const orderId = o.lastInsertRowid;
     const ins = db.prepare(

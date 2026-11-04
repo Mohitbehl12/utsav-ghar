@@ -1,0 +1,28 @@
+# Tests every pull request and every push to main. A person reviews and merges; Render deploys only on request
+# (autoDeploy is off in render.yaml).
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Install
+        run: npm ci --prefix server && npm ci --prefix client --include=dev
+      - name: Dependency audit (fails on critical)
+        run: npm audit --prefix server --omit=dev --audit-level=critical && npm audit --prefix client --omit=dev --audit-level=critical
+      - name: Unit tests
+        run: npm --prefix server test
+      - name: Build the website
+        run: npm --prefix client run build
+      - name: End-to-end suites (fresh throw-away database for each)
+        run: sh server/test/run-e2e.sh

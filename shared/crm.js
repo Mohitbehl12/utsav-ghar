@@ -153,7 +153,7 @@ export function buildMessage({ sub, products, signals, bought, sessions, i2i, re
   const items = personalPicks({ products, sub, signals, bought, sessions, i2i, recentSent: [...recentSent, ...inCart.map((p) => p.id)], limit: inCart.length ? 2 : 4 });
   const personal = (signals?.viewed?.length || 0) + (signals?.cart?.length || 0) + bought.length > 0;
   const sections = [{ slug: 'picks', title: personal ? '✨ Picked from what you looked at' : '✨ Popular picks for you', items }];
-  if (deal && !inCart.length && !items.some((p) => p.id === deal.id) && !recentSent.includes(deal.id)) sections.unshift({ slug: 'deal', title: `⚡ Deal of the day · ${deal.discount_pct}% off`, items: [deal] });
+  if (deal && !inCart.length && !items.some((p) => p.id === deal.id) && !recentSent.includes(deal.id)) sections.unshift({ slug: 'deal', title: `✨ Today's pick · ${deal.discount_pct}% off M.R.P.`, items: [deal] });
   if (inCart.length) sections.unshift({ slug: 'cart', title: '🛒 Still in your cart', items: inCart });
   const top = items[0];
   if (inCart.length) {
@@ -162,7 +162,7 @@ export function buildMessage({ sub, products, signals, bought, sessions, i2i, re
       preheader: inCart.map((p) => p.name).join(' · '), sections, offer, landing: '/cart' };
   }
   return {
-    kind: 'picks', subject: sub.frequency === 'weekly' ? `${first ? `${first}, your` : 'Your'} weekly picks from Utsav Ghar ✨` : deal ? `⚡ Today's deal: ${deal.name} at ${deal.discount_pct}% off` : `✨ ${top ? top.name : 'New picks'} and more, picked for you`,
+    kind: 'picks', subject: sub.frequency === 'weekly' ? `${first ? `${first}, your` : 'Your'} weekly picks from Utsav Ghar ✨` : deal ? `✨ Today's pick: ${deal.name}, ${deal.discount_pct}% off M.R.P.` : `✨ ${top ? top.name : 'New picks'} and more, picked for you`,
     hello, intro: personal ? 'Based on what you viewed and bought, we think you will like these.' : 'Here is what shoppers are loving right now.',
     preheader: sections.flatMap((s) => s.items).slice(0, 3).map((p) => p.name).join(' · '), sections, offer, landing: '/',
   };

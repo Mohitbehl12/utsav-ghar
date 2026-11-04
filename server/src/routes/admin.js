@@ -18,6 +18,8 @@ import jwt from 'jsonwebtoken';
 import { assertNotLocked, loginFailed, loginSucceeded, secEvent, adminIpAllowed } from '../lib/security.js';
 import { verifyTotp, newTotpSecret, otpauthUrl, newBackupCodes, passwordProblem } from '../../../shared/security.js';
 import { reportPurchase, conversionsStatus } from '../lib/conversions.js';
+import { ensureInvoice, invoiceBlockers, invoiceHtml } from '../lib/invoices.js';
+import { missingDeclarations } from '../../../shared/declarations.js';
 import { returnAction, refundAction, returnView, refundView } from '../lib/returns.js';
 import { preview as settlementPreview, createSettlement, settlementAction, settlementView } from '../lib/settlements.js';
 import { can, ADMIN_ROLES, ROLE_KEYS, PERMISSIONS, ACTIONS } from '../../../shared/roles.js';
@@ -178,8 +180,14 @@ r.get('/security', requireAdmin('owner', 'manager'), wrap(async (req, res) => {
   const locked = db.prepare('SELECT key, fails, locked_until FROM login_attempts WHERE locked_until > ? ORDER BY locked_until DESC').all(now());
   const defaultPw = await checkPassword(config.seedAdmin.password, db.prepare('SELECT password_hash FROM admin_users WHERE id = ?').get(req.admin.id).password_hash);
   const lastBackup = db.prepare("SELECT value FROM settings WHERE key = 'last_backup_at'").get()?.value || null;
+  // Legal readiness of the catalogue and invoicing (shared/declarations.js, lib/invoices.js)
+  const active = db.prepare('SELECT id, name, origin_country, maker_type, maker_name, maker_address, net_quantity, hsn, gst_rate FROM products WHERE is_active = 1').all();
+  const undeclared = active.filter((p) => missingDeclarations(p).length);
+  const invoiceGaps = invoiceBlockers(null);
   res.json({
     checks: [
+      { ok: !undeclared.length, label: `Every product shows country of origin, maker, net quantity, HSN and GST rate (${active.length - undeclared.length} of ${active.length} done)`, fix: `Admin → Products: fill "Legal information" for ${undeclared.slice(0, 5).map((p) => p.name).join(', ')}${undeclared.length > 5 ? ` and ${undeclared.length - 5} more` : ''}.` },
+      { ok: !invoiceGaps.length, label: 'GST tax invoices can be issued (company GSTIN, state, legal name and address set)', fix: invoiceGaps.join('; ') || '' },
       { ok: config.isProd, label: 'Running in production mode (HTTPS redirect, secure cookies, HSTS)', fix: 'Set NODE_ENV=production on your server.' },
       { ok: !config.testMode, label: 'TEST MODE is off (codes are not shown on screen)', fix: 'Remove TEST_MODE before real customers use the site.' },
       { ok: !defaultPw, label: 'Default admin password changed', fix: 'Admin → Security → Change password.' },
@@ -302,6 +310,14 @@ const productSchema = z.object({
   sort_order: z.coerce.number().int().default(0),
   seo_title: z.string().trim().max(70).optional().or(z.literal('')),
   seo_description: z.string().trim().max(170).optional().or(z.literal('')),
+  // Legal declarations (shared/declarations.js). Optional so older forms keep working; Launch readiness lists gaps.
+  origin_country: z.string().trim().max(60).optional().default(''),
+  maker_type: z.enum(['manufacturer', 'packer', 'importer']).optional().default('manufacturer'),
+  maker_name: z.string().trim().max(120).optional().default(''),
+  maker_address: z.string().trim().max(300).optional().default(''),
+  net_quantity: z.string().trim().max(60).optional().default(''),
+  hsn: z.string().trim().regex(/^(\d{4}|\d{6}|\d{8})?$/, 'HSN is 4, 6 or 8 digits').optional().default(''),
+  gst_rate: z.union([z.coerce.number().min(0).max(40), z.literal(''), z.null()]).optional().default(null),
 }).refine((p) => p.mrp >= p.price, { message: 'MRP must be greater than or equal to the selling price', path: ['mrp'] });
 
 r.get('/products', (req, res) => {
@@ -317,7 +333,8 @@ r.get('/products/:id', wrap((req, res) => {
 }));
 
 function writeProduct(id, b) {
-  const cols = ['name', 'slug', 'category_id', 'short_description', 'description', 'specs', 'price', 'mrp', 'cost_price', 'art', 'is_active', 'is_featured', 'is_bestseller', 'is_new', 'is_diwali', 'ships_international', 'is_bundle', 'sort_order', 'seo_title', 'seo_description'];
+  const cols = ['name', 'slug', 'category_id', 'short_description', 'description', 'specs', 'price', 'mrp', 'cost_price', 'art', 'is_active', 'is_featured', 'is_bestseller', 'is_new', 'is_diwali', 'ships_international', 'is_bundle', 'sort_order', 'seo_title', 'seo_description',
+    'origin_country', 'maker_type', 'maker_name', 'maker_address', 'net_quantity', 'hsn', 'gst_rate'];
   const vals = {
     ...b,
     specs: JSON.stringify(b.specs || {}),
@@ -331,6 +348,8 @@ function writeProduct(id, b) {
     is_bundle: b.is_bundle && b.bundle_items.length ? 1 : 0,
     seo_title: b.seo_title || null,
     seo_description: b.seo_description || null,
+    origin_country: b.origin_country || null, maker_type: b.maker_type || 'manufacturer', maker_name: b.maker_name || null, maker_address: b.maker_address || null,
+    net_quantity: b.net_quantity || null, hsn: b.hsn || null, gst_rate: b.gst_rate === '' || b.gst_rate == null ? null : Number(b.gst_rate),
   };
   return db.transaction(() => {
     if (id) {
@@ -579,6 +598,15 @@ r.get('/orders', (req, res) => {
     return d;
   }));
 });
+r.get('/orders/:id/invoice', wrap((req, res) => {
+  const o = db.prepare('SELECT * FROM orders WHERE id = ?').get(Number(req.params.id));
+  if (!o) throw new HttpError(404, 'Not found');
+  const inv = ensureInvoice(o);
+  audit(req, 'view', 'invoice', o.id, { invoice_no: inv.invoice_no });
+  res.set('Cache-Control', 'private, no-store');
+  if (req.query.format === 'json') return res.json({ invoice_no: inv.invoice_no, issued_at: inv.issued_at, ...inv.data });
+  res.type('html').send(invoiceHtml(inv));
+}));
 r.get('/orders/:id', wrap((req, res) => {
   const o = getOrderRow(Number(req.params.id));
   if (!o) throw new HttpError(404, 'Not found');
