@@ -167,6 +167,26 @@ export function detectIntent(text) {
   return pick('unknown');
 }
 
+/**
+ * Complaint time limits (Consumer Protection (E-Commerce) Rules 2020 r.4(5)): acknowledge within 48 hours (done
+ * automatically when the request is raised, with its number) and redress within one month. Our own target for the
+ * first reply from a person is 24 hours. Pure function; `firstReplyAt` = first staff message, if any.
+ */
+export const SLA = { firstReplyHours: 24, resolveDays: 30 };
+export function complaintSla(t, firstReplyAt, now = Date.now()) {
+  const created = new Date(t.created_at).getTime();
+  const done = ['resolved', 'closed'].includes(t.status);
+  const replyDue = created + SLA.firstReplyHours * 3600e3;
+  const resolveDue = created + SLA.resolveDays * 86400e3;
+  return {
+    reply_due: new Date(replyDue).toISOString(),
+    reply_overdue: !done && !firstReplyAt && now > replyDue,
+    resolve_due: new Date(resolveDue).toISOString(),
+    resolve_overdue: !done && now > resolveDue,
+    resolved_late: done && !!t.resolved_at && new Date(t.resolved_at).getTime() > resolveDue,
+  };
+}
+
 export const TICKET_STATUS = { open: 'Open', in_progress: 'We are working on it', waiting: 'Waiting for your reply', resolved: 'Resolved', closed: 'Closed' };
 
 /** Canned replies the admin can insert with one click. */

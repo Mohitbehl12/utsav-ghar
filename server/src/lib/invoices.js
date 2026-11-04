@@ -14,6 +14,7 @@
 import { db, now, parseJSON } from '../db.js';
 import { HttpError } from './http.js';
 import { companyVars } from './legal.js';
+import { marketplaceSellerOf } from './seller.js';
 import { GSTIN_RE, financialYear, splitGst } from '../../../shared/declarations.js';
 
 const norm = (s) => String(s || '').trim().toLowerCase().replace(/[^a-z]/g, '');
@@ -33,6 +34,10 @@ export function invoiceBlockers(order) {
     const missing = db.prepare(`SELECT oi.product_name FROM order_items oi LEFT JOIN products p ON p.id = oi.product_id
       WHERE oi.order_id = ? AND (p.id IS NULL OR p.hsn IS NULL OR p.hsn = '' OR p.gst_rate IS NULL)`).all(order.id);
     if (missing.length) out.push(`HSN code and GST rate for: ${missing.map((m) => m.product_name).join(', ')}`);
+    // A dealer on the commission model is the seller of record for their items: the dealer issues that tax invoice,
+    // not Utsav Ghar (CGST s.31). Marketplace invoicing isn't built yet, so don't issue a wrong invoice.
+    const market = db.prepare('SELECT DISTINCT product_id, product_name FROM order_items WHERE order_id = ?').all(order.id).filter((i) => i.product_id && marketplaceSellerOf(i.product_id));
+    if (market.length) out.push(`Items sold by a marketplace dealer are invoiced by that dealer: ${market.map((m) => m.product_name).join(', ')}`);
   }
   return out;
 }

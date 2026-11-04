@@ -1,3 +1,4 @@
+import { publicSeller } from '../lib/seller.js';
 import { Router } from 'express';
 import { z } from 'zod';
 import { db, parseJSON } from '../db.js';
@@ -157,7 +158,7 @@ r.get(
       .prepare(`${PRODUCT_SELECT} WHERE p.category_id = ? AND p.id != ? AND p.is_active = 1 ORDER BY p.rating_count DESC LIMIT 4`)
       .all(p.category_id, p.id);
     return {
-      product: decorate([serializeProduct(p, { offer })])[0],
+      product: { ...decorate([serializeProduct(p, { offer })])[0], seller: publicSeller(p.id) },
       offer: offer ? publicOffer(offer) : null,
       reviews,
       related: decorate(related.map((x) => serializeProduct(x, { offer }))),

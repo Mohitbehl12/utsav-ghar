@@ -347,7 +347,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container footer__bottom">
-        <span>© {new Date().getFullYear()} {BRAND.name}. Made with ❤️ in India.</span>
+        <span>© {new Date().getFullYear()} {settings?.company_legal_name || BRAND.name}{settings?.company_cin ? ` · CIN ${settings.company_cin}` : ''}. Made with ❤️ in India.</span>
         <button className="link-btn" onClick={motion.toggle} aria-pressed={motion.reduced}>
           <SparkIcon width={16} height={16} /> {motion.reduced ? 'Turn animations on' : 'Reduce animations'}
         </button>

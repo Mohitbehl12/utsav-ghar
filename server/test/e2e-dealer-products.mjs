@@ -131,4 +131,17 @@ const prof = (await D('GET', '/api/dealer/profile')).data;
 ok(prof.business_name === 'Gupta Diya House' && prof.phone === '9810011111', 'dealer profile & business info');
 ok((await D('PUT', '/api/dealer/profile', { email: 'gupta@example.com' })).data.email === 'gupta@example.com', 'dealer updates own email');
 ok((await C('GET', '/api/dealer/dashboard')).status === 401 && (await A('GET', '/api/dealer/dashboard')).status === 401, 'customer / admin cookies cannot open the dealer dashboard (role check on server)');
+
+// ---- marketplace seller (E-Commerce Rules 2020 r.5(3)(a)): a commission-model dealer is the seller of record
+const slug = slugUrl.split('/').pop();
+let pubNow = (await C('GET', `/api/products/${slug}`)).data;
+ok(pubNow.product.seller === null, 'supply-model dealer: Utsav Ghar is the seller (no marketplace seller shown)');
+r = await A('PUT', `/api/admin/dealer-verification/${dealerId}/commercial`, { model: 'commission', commission_pct: 12, platform_fee: 20, settlement_days: 10 });
+ok(r.status === 200, 'dealer moved to the commission (marketplace) model', r.data);
+await new Promise((res) => setTimeout(res, 3200)); await C('GET', '/api/products?limit=1'); // let the catalogue snapshot refresh
+pubNow = (await C('GET', `/api/products/${slug}`)).data;
+ok(pubNow.product.seller?.name === 'Gupta Diya House' && pubNow.product.seller.marketplace === true, 'product page names the dealer as seller', pubNow.product.seller);
+ok(!JSON.stringify(pubNow.product.seller).includes('9810011111') && !('dealer_id' in pubNow.product.seller), "…without the dealer's phone or internal id");
+const invNow = await C('GET', `/api/orders/${onum}/invoice?format=json`, null, { 'X-Order-Token': placed.data.accessToken });
+ok(invNow.status === 409 && invNow.data.missing.some((m) => /marketplace dealer/.test(m)), 'Utsav Ghar does not issue its own tax invoice for items the dealer sells', invNow.data);
 console.log('\nDealer product checks passed 🎉');
