@@ -43,4 +43,6 @@ export function financialYear(d = new Date()) {
 }
 
 /** GSTIN format check (15 characters; state code + PAN + entity + Z + checksum). Format only — not a registry lookup. */
+/** Corporate Identity Number (21 characters, e.g. U52390DL2025PTC123456). */
+export const CIN_RE = /^[LU]\d{5}[A-Z]{2}\d{4}[A-Z]{3}\d{6}$/;
 export const GSTIN_RE = /^[0-3][0-9][A-Z]{5}[0-9]{4}[A-Z][1-9A-Z]Z[0-9A-Z]$/;

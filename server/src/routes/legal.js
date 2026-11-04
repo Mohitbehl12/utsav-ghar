@@ -2,7 +2,7 @@
  * Dealer onboarding (register → business → KYC → documents → agreement → signature → verification → approval),
  * admin dealer verification, and admin legal-document management with version control and audit trail.
  */
-import { GSTIN_RE } from '../../../shared/declarations.js';
+import { CIN_RE, GSTIN_RE } from '../../../shared/declarations.js';
 import { Router } from 'express';
 import crypto from 'node:crypto';
 import multer from 'multer';
@@ -676,8 +676,10 @@ adminLegal.post('/legal/notices/read', (req, res) => { db.prepare("UPDATE legal_
 
 adminLegal.put('/legal/company', owner, wrap((req, res) => {
   const b = parse(z.object(Object.fromEntries(Object.keys(COMPANY_DEFAULTS).map((k) => [k, z.string().trim().max(300).optional().default('')])))
-    .refine((x) => !x.company_gstin || GSTIN_RE.test(x.company_gstin.toUpperCase()), { message: 'GSTIN must be 15 characters, e.g. 07ABCDE1234F1Z5', path: ['company_gstin'] }), req.body);
+    .refine((x) => !x.company_gstin || GSTIN_RE.test(x.company_gstin.toUpperCase()), { message: 'GSTIN must be 15 characters, e.g. 07ABCDE1234F1Z5', path: ['company_gstin'] })
+    .refine((x) => !x.company_cin || CIN_RE.test(x.company_cin.toUpperCase()), { message: 'CIN must be 21 characters, e.g. U52390DL2025PTC123456', path: ['company_cin'] }), req.body);
   if (b.company_gstin) b.company_gstin = b.company_gstin.toUpperCase();
+  if (b.company_cin) b.company_cin = b.company_cin.toUpperCase();
   setCompanyVars(b);
   legalAudit(req, { ...adminActor(req), action: 'company_updated', detail: b });
   res.json(companyVars());

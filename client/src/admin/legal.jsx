@@ -235,7 +235,7 @@ export function Company({ role }) {
   const toast = useToast();
   useEffect(() => { api.get('/admin/legal/docs').then((d) => { setF(d.company); setKeys(d.company_keys); }); }, []);
   if (!f) return <Spinner />;
-  const LABEL = { company_name: 'Brand name', company_legal_name: 'Registered company name', company_address: 'Registered office address', support_email: 'Support email', support_phone: 'Support phone', grievance_officer: 'Grievance Officer (name & designation)', grievance_email: 'Grievance email', jurisdiction_city: 'Courts / arbitration city', website: 'Website', company_gstin: 'GSTIN (for tax invoices)', company_state: 'State of GST registration (e.g. Delhi)', legal_email: 'Legal email', authorised_signatory: 'Authorised signatory', signatory_designation: 'Signatory designation' };
+  const LABEL = { company_name: 'Brand name', company_legal_name: 'Registered company name', company_address: 'Registered office address', support_email: 'Support email', support_phone: 'Support phone', grievance_officer: 'Grievance Officer (name & designation)', grievance_email: 'Grievance email', jurisdiction_city: 'Courts / arbitration city', website: 'Website', company_gstin: 'GSTIN (for tax invoices)', company_state: 'State of GST registration (e.g. Delhi)', company_cin: 'CIN (Corporate Identity Number, shown in the footer)', legal_email: 'Legal email', authorised_signatory: 'Authorised signatory', signatory_designation: 'Signatory designation' };
   const save = async (e) => { e.preventDefault(); try { setF(await api.put('/admin/legal/company', f)); toast('Saved — documents now show these details'); } catch (x) { toast(x.message, 'warn'); } };
   return (
     <form className="card form" onSubmit={save}>

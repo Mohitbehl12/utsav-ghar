@@ -19,7 +19,7 @@ import { notifyContact } from '../lib/notify.js';
 import { audit } from '../lib/audit.js';
 import { config } from '../config.js';
 import { normalizeIndianPhone } from '../../../shared/phone.js';
-import { TOPICS, topicOf, SOLUTIONS, TICKET_STATUS } from '../../../shared/support.js';
+import { TOPICS, topicOf, SOLUTIONS, TICKET_STATUS, complaintSla } from '../../../shared/support.js';
 
 export const publicSupport = Router();
 export const adminSupport = Router();
@@ -160,14 +160,16 @@ adminSupport.get('/support/tickets', wrap((req, res) => {
   if (q.q) { where.push('(t.number LIKE ? OR t.name LIKE ? OR t.phone LIKE ? OR t.email LIKE ? OR o.order_number LIKE ?)'); const l = `%${q.q}%`; args.push(l, l, l, l, l); }
   const rows = db.prepare(`SELECT t.*, o.order_number,
       (SELECT body FROM ticket_messages m WHERE m.ticket_id = t.id AND m.author != 'system' ORDER BY m.id DESC LIMIT 1) last_body,
-      (SELECT author FROM ticket_messages m WHERE m.ticket_id = t.id AND m.author != 'system' ORDER BY m.id DESC LIMIT 1) last_author
+      (SELECT author FROM ticket_messages m WHERE m.ticket_id = t.id AND m.author != 'system' ORDER BY m.id DESC LIMIT 1) last_author,
+      (SELECT MIN(created_at) FROM ticket_messages m WHERE m.ticket_id = t.id AND m.author = 'admin') first_reply_at
     FROM support_tickets t LEFT JOIN orders o ON o.id = t.order_id ${where.length ? `WHERE ${where.join(' AND ')}` : ''}
     ORDER BY CASE t.priority WHEN 'urgent' THEN 0 WHEN 'high' THEN 1 ELSE 2 END, t.updated_at DESC LIMIT 200`).all(...args);
   const counts = Object.fromEntries(db.prepare('SELECT status, COUNT(*) n FROM support_tickets GROUP BY status').all().map((r) => [r.status, r.n]));
   const rated = db.prepare('SELECT AVG(rating) a, COUNT(rating) n FROM support_tickets WHERE rating IS NOT NULL').get();
   res.json({
     counts, satisfaction: rated.n ? { avg: Math.round(rated.a * 10) / 10, n: rated.n } : null,
-    items: rows.map((t) => ({ number: t.number, topic: t.topic, topic_label: topicOf(t.topic).label, priority: t.priority, status: t.status, name: t.name, phone: t.phone, order_number: t.order_number, updated_at: t.updated_at, created_at: t.created_at, last_body: (t.last_body || '').slice(0, 140), awaiting_us: t.last_author === 'customer' })),
+    items: rows.map((t) => ({ number: t.number, topic: t.topic, topic_label: topicOf(t.topic).label, priority: t.priority, status: t.status, name: t.name, phone: t.phone, order_number: t.order_number, updated_at: t.updated_at, created_at: t.created_at, last_body: (t.last_body || '').slice(0, 140), awaiting_us: t.last_author === 'customer', ...complaintSla(t, t.first_reply_at) })),
+    overdue: { reply: rows.filter((t) => complaintSla(t, t.first_reply_at).reply_overdue).length, resolve: rows.filter((t) => complaintSla(t, t.first_reply_at).resolve_overdue).length },
   });
 }));
 adminSupport.get('/support/tickets/:number', wrap((req, res) => {

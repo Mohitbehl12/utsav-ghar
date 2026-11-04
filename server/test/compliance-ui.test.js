@@ -2,7 +2,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { missingDeclarations, splitGst, financialYear, GSTIN_RE } from '../../shared/declarations.js';
+import { missingDeclarations, splitGst, financialYear, GSTIN_RE, CIN_RE } from '../../shared/declarations.js';
+import { complaintSla } from '../../shared/support.js';
 import { originOf, facetsFor } from '../../shared/facets.js';
 
 const src = (p) => readFileSync(new URL(`../../client/src/${p}`, import.meta.url), 'utf8');
@@ -55,4 +56,21 @@ test('country-of-origin facet', () => {
   assert.equal(originOf({}), 'not-stated');
   const f = facetsFor([{ price: 100, origin_country: 'India' }, { price: 200, origin_country: 'China' }, { price: 300 }]);
   assert.deepEqual(f.origins.map((o) => o.value), ['china', 'india', 'not-stated']);
+});
+
+test('CIN format (Companies Act s.12(3)(c) on the website)', () => {
+  assert.ok(CIN_RE.test('U52390DL2025PTC123456'));
+  assert.ok(CIN_RE.test('L17110MH1973PLC019786'));
+  assert.ok(!CIN_RE.test('U52390DL2025PTC12345') && !CIN_RE.test('07AAACU1234F1Z5'));
+});
+
+test('complaint time limits: first reply 24 h, redress within 30 days (E-Commerce Rules r.4(5))', () => {
+  const t0 = Date.parse('2026-11-01T00:00:00Z');
+  const t = { created_at: '2026-11-01T00:00:00Z', status: 'open', resolved_at: null };
+  assert.equal(complaintSla(t, null, t0 + 23 * 3600e3).reply_overdue, false);
+  assert.equal(complaintSla(t, null, t0 + 25 * 3600e3).reply_overdue, true);
+  assert.equal(complaintSla(t, '2026-11-01T05:00:00Z', t0 + 25 * 3600e3).reply_overdue, false, 'a staff reply stops the first-reply clock');
+  assert.equal(complaintSla(t, '2026-11-01T05:00:00Z', t0 + 31 * 86400e3).resolve_overdue, true);
+  const done = { ...t, status: 'resolved', resolved_at: '2026-12-05T00:00:00Z' };
+  assert.deepEqual([complaintSla(done, null, t0 + 40 * 86400e3).resolve_overdue, complaintSla(done, null).resolved_late], [false, true]);
 });

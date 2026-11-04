@@ -19,6 +19,7 @@ import { assertNotLocked, loginFailed, loginSucceeded, secEvent, adminIpAllowed 
 import { verifyTotp, newTotpSecret, otpauthUrl, newBackupCodes, passwordProblem } from '../../../shared/security.js';
 import { reportPurchase, conversionsStatus } from '../lib/conversions.js';
 import { ensureInvoice, invoiceBlockers, invoiceHtml } from '../lib/invoices.js';
+import { companyVars } from '../lib/legal.js';
 import { missingDeclarations } from '../../../shared/declarations.js';
 import { returnAction, refundAction, returnView, refundView } from '../lib/returns.js';
 import { preview as settlementPreview, createSettlement, settlementAction, settlementView } from '../lib/settlements.js';
@@ -188,6 +189,7 @@ r.get('/security', requireAdmin('owner', 'manager'), wrap(async (req, res) => {
     checks: [
       { ok: !undeclared.length, label: `Every product shows country of origin, maker, net quantity, HSN and GST rate (${active.length - undeclared.length} of ${active.length} done)`, fix: `Admin → Products: fill "Legal information" for ${undeclared.slice(0, 5).map((p) => p.name).join(', ')}${undeclared.length > 5 ? ` and ${undeclared.length - 5} more` : ''}.` },
       { ok: !invoiceGaps.length, label: 'GST tax invoices can be issued (company GSTIN, state, legal name and address set)', fix: invoiceGaps.join('; ') || '' },
+      { ok: !!companyVars().company_cin, label: 'Company CIN shown on the website (Companies Act 2013 s.12(3)(c); skip if not a company)', fix: 'Admin → Legal → Company details: add the CIN from your Certificate of Incorporation.' },
       { ok: config.isProd, label: 'Running in production mode (HTTPS redirect, secure cookies, HSTS)', fix: 'Set NODE_ENV=production on your server.' },
       { ok: !config.testMode, label: 'TEST MODE is off (codes are not shown on screen)', fix: 'Remove TEST_MODE before real customers use the site.' },
       { ok: !defaultPw, label: 'Default admin password changed', fix: 'Admin → Security → Change password.' },

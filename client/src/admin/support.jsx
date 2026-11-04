@@ -78,6 +78,7 @@ export function Support() {
         <div className="kpi kpi--bad"><span className="kpi__label">Open</span><b className="kpi__value">{(c.open || 0) + (c.in_progress || 0)}</b><span className="kpi__sub">need a reply from us</span></div>
         <div className="kpi"><span className="kpi__label">Waiting for customer</span><b className="kpi__value">{c.waiting || 0}</b></div>
         <div className="kpi kpi--good"><span className="kpi__label">Resolved</span><b className="kpi__value">{(c.resolved || 0) + (c.closed || 0)}</b></div>
+        <div className={`kpi ${d?.overdue?.resolve ? 'kpi--bad' : ''}`}><span className="kpi__label">Past time limit</span><b className="kpi__value">{(d?.overdue?.reply || 0) + (d?.overdue?.resolve || 0)}</b><span className="kpi__sub">first reply 24 h · resolve within 30 days</span></div>
         <div className="kpi"><span className="kpi__label">Satisfaction</span><b className="kpi__value">{d?.satisfaction ? `${d.satisfaction.avg}★` : '—'}</b><span className="kpi__sub">{d?.satisfaction ? `${d.satisfaction.n} ratings` : 'no ratings yet'}</span></div>
       </div>
       <div className="support">
@@ -91,7 +92,7 @@ export function Support() {
               {d.items.map((t) => (
                 <li key={t.number}>
                   <button className={`tk ${number === t.number ? 'is-on' : ''}`} onClick={() => nav(`/admin/support/${t.number}`)}>
-                    <span className="tk__top"><b>{t.number}</b> <Pill tone={PRI[t.priority]}>{t.priority}</Pill> <Pill tone={TONE[t.status]}>{TICKET_STATUS[t.status]}</Pill>{t.awaiting_us && <span className="tk__dot" title="Customer is waiting for us">●</span>}</span>
+                    <span className="tk__top"><b>{t.number}</b> <Pill tone={PRI[t.priority]}>{t.priority}</Pill> <Pill tone={TONE[t.status]}>{TICKET_STATUS[t.status]}</Pill>{t.awaiting_us && <span className="tk__dot" title="Customer is waiting for us">●</span>}{t.resolve_overdue ? <Pill tone="bad">Over 30 days</Pill> : t.reply_overdue ? <Pill tone="warn">No reply in 24 h</Pill> : null}</span>
                     <span className="tk__topic">{t.topic_label}{t.order_number ? ` · #${t.order_number}` : ''}</span>
                     <span className="tk__who small">{t.name} · {fmtDateTime(t.updated_at)}</span>
                     <span className="tk__last small muted">{t.last_body}</span>

@@ -221,7 +221,7 @@ export default function Product() {
               <li><ShieldIcon /> <span><b>Pay securely via UPI.</b> Dispatched after payment verification.</span></li>
             </ul>
 
-            <dl className="buybox__meta"><div><dt>Ships from</dt><dd>Utsav Ghar</dd></div><div><dt>Sold by</dt><dd>{settings?.company_legal_name || 'Utsav Ghar'}</dd></div>{p.declarations?.origin_country && <div><dt>Country of origin</dt><dd>{p.declarations.origin_country}</dd></div>}<div><dt>Payment</dt><dd>🔒 Secure UPI</dd></div></dl>
+            <dl className="buybox__meta"><div><dt>Ships from</dt><dd>{p.seller ? p.seller.name : 'Utsav Ghar'}</dd></div><div><dt>Sold by</dt><dd>{p.seller ? p.seller.name : settings?.company_legal_name || 'Utsav Ghar'}</dd></div>{p.declarations?.origin_country && <div><dt>Country of origin</dt><dd>{p.declarations.origin_country}</dd></div>}<div><dt>Payment</dt><dd>🔒 Secure UPI</dd></div></dl>
         </aside>
         <div className="pdp__more">
           <details className="acc" open>
@@ -244,7 +244,7 @@ export default function Product() {
               <tr><th scope="row">{{ manufacturer: 'Manufacturer', packer: 'Packer', importer: 'Importer' }[p.declarations?.maker_type] || 'Manufacturer'}</th><td>{p.declarations?.maker_name ? `${p.declarations.maker_name}${p.declarations.maker_address ? `, ${p.declarations.maker_address}` : ''}` : 'Being updated — ask us before ordering'}</td></tr>
               <tr><th scope="row">Net quantity</th><td>{p.declarations?.net_quantity || 'Being updated'}</td></tr>
               <tr><th scope="row">M.R.P.</th><td>{rupeesText(p.mrp)} (inclusive of all taxes)</td></tr>
-              <tr><th scope="row">Sold by</th><td>{settings?.company_legal_name || 'Utsav Ghar'}</td></tr>
+              <tr><th scope="row">Sold by</th><td>{p.seller ? <>{p.seller.name}<br /><small>{p.seller.address}{p.seller.gstin ? ` · GSTIN ${p.seller.gstin}` : ''}</small><br /><small>Sold on Utsav Ghar marketplace. Utsav Ghar handles orders, payments, returns and complaints.</small></> : settings?.company_legal_name || 'Utsav Ghar'}</td></tr>
               <tr><th scope="row">Consumer care</th><td>{[settings?.support_phone, settings?.support_email].filter(Boolean).join(' · ') || <Link className="link" to="/contact">Contact us</Link>}</td></tr>
             </tbody></table>
           </details>

@@ -30,6 +30,7 @@ export function publicSettings() {
   const real = (v) => (v && !/^\[/.test(String(v)) ? String(v) : '');
   return {
     company_legal_name: real(co.company_legal_name),
+    company_cin: real(co.company_cin),
     store_name: s.store_name,
     support_phone: s.support_phone,
     whatsapp_number: s.whatsapp_number || '',
