@@ -24,7 +24,7 @@ npm run dev:client             # store on http://localhost:5173 (proxies /api)
 
 * Store: http://localhost:5173
 * Admin: http://localhost:5173/admin — `admin@utsavghar.in` / `ChangeMe@2026` (**change it** in Admin → Payment & Store → Your admin password, or set `ADMIN_EMAIL`/`ADMIN_PASSWORD` before the first seed)
-* Tests: `npm test` (pricing engine unit tests) and `node server/test/e2e.mjs` against a running server (full order → payment → admin lifecycle, CSRF, tampering checks)
+* Tests: `npm test` (unit tests) and `sh server/test/run-e2e.sh` after `npm run build` — runs every end-to-end suite, each on a fresh throw-away database with the right seed (GitHub Actions runs the same on every pull request)
 
 ## 2. Production
 

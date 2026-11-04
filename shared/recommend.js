@@ -161,7 +161,7 @@ export function forCart({ products, cartIds = [], baskets = [], i2i, limit = 12 
   }, limit);
 }
 
-/** Today's deal: the biggest discount among good products, changing every day (IST). */
+/** Today's pick: the biggest discount among good products, rotating every day (IST). The price itself doesn't change. */
 export function dealOfTheDay({ products, now = new Date() }) {
   const day = Math.floor((now.getTime() + 5.5 * 36e5) / 864e5);
   const pool = products.filter((p) => available(p) && p.mrp > p.price && (p.rating || 0) >= 4.3)

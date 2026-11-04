@@ -6,6 +6,7 @@ import { CountryButton } from './Locale.jsx';
 import { WelcomeCard, SubscribeSheet, openSubscribe, useSignalSync } from './Subscribe.jsx';
 import { VoiceShop } from './VoiceShop.jsx';
 import { ChatBot } from './ChatBot.jsx';
+import { ConsentBanner, openCookieChoices } from './ConsentBanner.jsx';
 import { track } from '../lib/track.js';
 import { isApp, openExternal } from '../lib/native.js';
 import { api } from '../lib/api.js';
@@ -322,6 +323,7 @@ export function Footer() {
           <ul>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/privacy">Privacy Policy</Link></li>
+            <li><button type="button" className="footer__linkbtn" onClick={openCookieChoices}>Cookie choices</button></li>
             <li><Link to="/terms">Terms &amp; Conditions</Link></li>
             <li><Link to="/policies">All Policies</Link></li>
             <li><Link to="/help/manual">User Manual (English / हिंदी)</Link></li>
@@ -442,6 +444,7 @@ export default function Layout() {
       <SubscribeSheet />
       <VoiceShop />
       <ChatBot />
+      <ConsentBanner />
     </>
   );
 }

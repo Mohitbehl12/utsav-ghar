@@ -22,6 +22,16 @@ const cookie = (name) => {
 let cfg = { pixel: '', ga4: '', country: 'IN' };
 let loaded = false;
 
+// Advertising/analytics consent (DPDP Act 2023: specific, informed, opt-in). Meta Pixel and GA4 load — and the
+// server reports purchases to them — only after the visitor taps "Allow". Essential site storage is unaffected.
+const CONSENT_KEY = 'ug_consent';
+export const trackingConfigured = () => !!(cfg.pixel || cfg.ga4);
+export function trackingConsent() { const c = ls.get(CONSENT_KEY); return c && typeof c.ads === 'boolean' ? c.ads : null; }
+export function setTrackingConsent(ads) {
+  ls.set(CONSENT_KEY, { ads: !!ads, at: Date.now(), v: 1 });
+  if (ads) load();
+}
+
 export function sessionId() {
   const s = ls.get('sa_sid');
   if (s && Date.now() - s.at < 30 * 60e3) { ls.set('sa_sid', { ...s, at: Date.now() }); return s.id; }
@@ -56,15 +66,17 @@ export function captureAttribution() {
 
 /** Attribution to attach to an order / checkout session. */
 export function attribution() {
+  const consent = trackingConsent() === true;
   const a = ls.get('sa_attr') || {};
   let fbc = cookie('_fbc');
   if (!fbc && a.fbclid) fbc = `fb.1.${a.at || Date.now()}.${a.fbclid}`;
   const ga = cookie('_ga'); // GA1.1.123.456 → 123.456
   return {
     utm_source: a.utm_source, utm_medium: a.utm_medium, utm_campaign: a.utm_campaign, utm_content: a.utm_content, utm_term: a.utm_term,
-    fbclid: a.fbclid, fbp: cookie('_fbp') || undefined, fbc: fbc || undefined,
-    ga_client_id: ga ? ga.split('.').slice(-2).join('.') : undefined,
-    landing_page: a.landing_page, referrer: a.referrer,
+    // Ad-platform identifiers only with consent; UTM tags and landing page are first-party and kept either way.
+    fbclid: consent ? a.fbclid : undefined, fbp: consent ? cookie('_fbp') || undefined : undefined, fbc: consent ? fbc || undefined : undefined,
+    ga_client_id: consent && ga ? ga.split('.').slice(-2).join('.') : undefined,
+    landing_page: a.landing_page, referrer: a.referrer, ads_consent: consent,
     crm_code: (() => { const c = ls.get('ug_crm'); return c && Date.now() - c.at < 7 * 864e5 ? c.code : undefined; })(),
   };
 }
@@ -76,10 +88,14 @@ function inject(src, text) {
   document.head.appendChild(s);
 }
 
-/** Load Meta Pixel / GA4 once, if configured (never in the preview build). */
+/** Remember the store's tracking IDs; load Meta Pixel / GA4 only if the visitor has allowed it (never in the preview build). */
 export function initTracking({ pixel = '', ga4 = '', country = 'IN' } = {}) {
   cfg = { pixel, ga4, country };
-  if (loaded || __DEMO__) return;
+  if (trackingConsent() === true) load();
+}
+function load() {
+  const { pixel, ga4 } = cfg;
+  if (loaded || __DEMO__ || !(pixel || ga4)) return;
   loaded = true;
   if (pixel && /^\d+$/.test(pixel)) {
     inject(null, `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${pixel}');`);

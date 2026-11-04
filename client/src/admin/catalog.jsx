@@ -59,6 +59,7 @@ const emptyProduct = {
   price: '', mrp: '', cost_price: '', stock: 0, low_stock_threshold: 10, art: { type: 'diya', tone: 'gold' }, is_active: true, is_featured: false, is_bestseller: false,
   is_new: true, is_diwali: true, sort_order: 0, seo_title: '', seo_description: '',
   ships_international: true, is_bundle: false, bundle_items: [],
+  origin_country: 'India', maker_type: 'manufacturer', maker_name: '', maker_address: '', net_quantity: '', hsn: '', gst_rate: '',
 };
 
 export function ProductForm() {
@@ -191,6 +192,21 @@ export function ProductForm() {
               </div>
             ))}
             <button type="button" className="btn btn--ghost btn--sm" onClick={() => setF({ ...f, specs: { ...f.specs, [`Label ${specs.length + 1}`]: '' } })}>+ Add row</button>
+          </section>
+          <section className="card form">
+            <h2>Legal information</h2>
+            <p className="small muted">Shown on the product page before purchase (Consumer Protection E-Commerce Rules 2020; Legal Metrology rule 6(10)). HSN and GST rate are needed for tax invoices.</p>
+            <div className="grid2">
+              <Field label="Country of origin" id="p-origin"><input id="p-origin" maxLength={60} value={f.origin_country || ''} onChange={upd('origin_country')} placeholder="India" /></Field>
+              <Field label="Net quantity" id="p-netq" hint='e.g. "1 N", "Set of 6", "500 g"'><input id="p-netq" maxLength={60} value={f.net_quantity || ''} onChange={upd('net_quantity')} /></Field>
+              <Field label="Declared as" id="p-mtype"><select id="p-mtype" value={f.maker_type || 'manufacturer'} onChange={upd('maker_type')}><option value="manufacturer">Manufacturer</option><option value="packer">Packer</option><option value="importer">Importer (imported product)</option></select></Field>
+              <Field label="Name" id="p-mname"><input id="p-mname" maxLength={120} value={f.maker_name || ''} onChange={upd('maker_name')} /></Field>
+            </div>
+            <Field label="Address" id="p-maddr"><input id="p-maddr" maxLength={300} value={f.maker_address || ''} onChange={upd('maker_address')} /></Field>
+            <div className="grid2">
+              <Field label="HSN code" id="p-hsn" hint="4, 6 or 8 digits"><input id="p-hsn" inputMode="numeric" maxLength={8} value={f.hsn || ''} onChange={upd('hsn')} /></Field>
+              <Field label="GST rate (%)" id="p-gst" hint="Ask your CA for the correct rate"><input id="p-gst" type="number" min="0" max="40" step="0.25" value={f.gst_rate ?? ''} onChange={upd('gst_rate')} /></Field>
+            </div>
           </section>
           <section className="card form">
             <h2>Search engine listing</h2>

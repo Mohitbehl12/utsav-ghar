@@ -12,6 +12,7 @@ import { notifyOrder } from '../lib/notify.js';
 import { createGatewayOrder, gatewayEnabled, verifyCheckoutSignature, verifyWebhook, fetchPaymentInstrument, describeInstrument } from '../lib/razorpay.js';
 import { config } from '../config.js';
 import { reportPurchase } from '../lib/conversions.js';
+import { ensureInvoice, invoiceHtml } from '../lib/invoices.js';
 import { cancelOrder, createReturn, returnView, paymentAfterCancel } from '../lib/returns.js';
 
 const r = Router();
@@ -22,6 +23,7 @@ const attributionSchema = z.object({
   fbp: z.string().max(120).optional(), fbc: z.string().max(600).optional(), ga_client_id: z.string().max(80).optional(),
   landing_page: z.string().max(500).optional(), referrer: z.string().max(500).optional(),
   crm_code: z.string().regex(/^[a-z0-9]{6,20}$/).optional(),
+  ads_consent: z.boolean().optional(), // visitor allowed Meta/Google ads measurement (cookie banner)
 }).partial().optional().default({});
 
 import { normalizeIndianPhone } from '../../../shared/phone.js';
@@ -155,6 +157,14 @@ function authorizedOrder(req) {
 }
 
 r.get('/orders/:number', wrap((req, res) => res.json(orderDetail(authorizedOrder(req)))));
+
+// GST tax invoice for a paid order (issued on first request). ?format=json for apps.
+r.get('/orders/:number/invoice', wrap((req, res) => {
+  const inv = ensureInvoice(authorizedOrder(req));
+  res.set('Cache-Control', 'private, no-store');
+  if (req.query.format === 'json') return res.json({ invoice_no: inv.invoice_no, issued_at: inv.issued_at, ...inv.data });
+  res.type('html').send(invoiceHtml(inv));
+}));
 
 // Customer cancels (free until packed). Paid orders get a full refund opened automatically.
 r.post('/orders/:number/cancel', wrap((req, res) => {

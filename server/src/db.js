@@ -442,6 +442,9 @@ addColumn('order_items', 'unit_cost', 'INTEGER NOT NULL DEFAULT 0');
 addColumn('order_items', 'discount_share', 'INTEGER NOT NULL DEFAULT 0');
 addColumn('products', 'is_bundle', 'INTEGER NOT NULL DEFAULT 0');
 addColumn('products', 'ships_international', 'INTEGER NOT NULL DEFAULT 1');
+// Mandatory declarations for online sale (shared/declarations.js): E-Commerce Rules 2020, Legal Metrology rule 6(10)/(10A), GST
+for (const [c, d] of [['origin_country', 'TEXT'], ['maker_type', "TEXT NOT NULL DEFAULT 'manufacturer'"], ['maker_name', 'TEXT'], ['maker_address', 'TEXT'],
+  ['net_quantity', 'TEXT'], ['hsn', 'TEXT'], ['gst_rate', 'REAL']]) addColumn('products', c, d);
 addColumn('categories', 'segment', "TEXT NOT NULL DEFAULT 'festive-decor'");
 addColumn('checkout_sessions', 'reminded2_at', 'TEXT');
 // security
@@ -522,7 +525,8 @@ CREATE INDEX IF NOT EXISTS idx_tmsg_ticket ON ticket_messages(ticket_id, id);`);
 for (const [c, d] of [['ship_country', "TEXT NOT NULL DEFAULT 'IN'"], ['currency', "TEXT NOT NULL DEFAULT 'INR'"], ['fx_rate', 'REAL'],
   ['utm_source', 'TEXT'], ['utm_medium', 'TEXT'], ['utm_campaign', 'TEXT'], ['utm_content', 'TEXT'], ['utm_term', 'TEXT'],
   ['fbclid', 'TEXT'], ['fbp', 'TEXT'], ['fbc', 'TEXT'], ['ga_client_id', 'TEXT'], ['landing_page', 'TEXT'], ['referrer', 'TEXT'],
-  ['client_ip', 'TEXT'], ['user_agent', 'TEXT'], ['conversion_sent', 'INTEGER NOT NULL DEFAULT 0']]) addColumn('orders', c, d);
+  ['client_ip', 'TEXT'], ['user_agent', 'TEXT'], ['conversion_sent', 'INTEGER NOT NULL DEFAULT 0'],
+  ['ads_consent', 'INTEGER NOT NULL DEFAULT 0']]) addColumn('orders', c, d); // ads_consent: may this purchase be reported to Meta/GA4?
 db.exec('CREATE INDEX IF NOT EXISTS idx_orders_utm ON orders(utm_source, utm_campaign)');
 // Older databases have a CHECK that only allows percent/flat offers: rebuild that table once.
 const offersSql = db.prepare("SELECT sql FROM sqlite_master WHERE type='table' AND name='offers'").get()?.sql || '';
@@ -629,3 +633,16 @@ export function parseJSON(v, fallback = null) {
     return fallback;
   }
 }
+
+// GST tax invoices: one per paid order, numbered per financial year (INV/2026-27/000001). The snapshot keeps the
+// invoice exactly as issued even if prices, products or company details change later.
+db.exec(`CREATE TABLE IF NOT EXISTS invoices (
+  id         INTEGER PRIMARY KEY,
+  order_id   INTEGER NOT NULL UNIQUE REFERENCES orders(id) ON DELETE RESTRICT,
+  invoice_no TEXT NOT NULL UNIQUE,
+  fy         TEXT NOT NULL,
+  seq        INTEGER NOT NULL,
+  issued_at  TEXT NOT NULL,
+  data       TEXT NOT NULL,
+  UNIQUE (fy, seq)
+);`);

@@ -96,6 +96,11 @@ export async function reportPurchase(orderId) {
   const o = db.prepare('SELECT * FROM orders WHERE id = ?').get(orderId);
   if (!o || o.conversion_sent || o.payment_status !== 'confirmed') return;
   db.prepare('UPDATE orders SET conversion_sent = 1 WHERE id = ?').run(o.id); // claim first: no double sends
+  // DPDP: the customer's hashed phone/email, IP and browser go to Meta/Google only if they allowed ads measurement.
+  if (!o.ads_consent) {
+    db.prepare('INSERT INTO order_events(order_id, status, note, created_at) VALUES(?,?,?,?)').run(o.id, 'conversion_reported', 'Not sent: the customer did not allow ads measurement', now());
+    return;
+  }
   const items = db.prepare('SELECT product_id, product_name, unit_price, qty FROM order_items WHERE order_id = ?').all(o.id);
   const s = getSettings();
   const results = await Promise.allSettled([sendMeta(o, items, s), sendGa4(o, items, s)]);

@@ -8,7 +8,7 @@ import {
 import { isOfferLive, isProductEligible, offerLabel } from '../../../shared/pricing.js';
 import { boughtTogether, alsoViewed, alsoBought, similar, forYou, forCart, dealOfTheDay } from '../../../shared/recommend.js';
 import { search, tokens, relevance, completions, POPULAR_SEARCHES } from '../../../shared/ranking.js';
-import { facetsFor, materialsOf } from '../../../shared/facets.js';
+import { facetsFor, materialsOf, originOf } from '../../../shared/facets.js';
 import { catalogueVersion, recData, out, decorate } from '../lib/recommend.js';
 import { upsertSubscriber } from '../lib/crm.js';
 import { rejectBots } from '../lib/security.js';
@@ -47,9 +47,10 @@ const listQuery = z.object({
   flag: z.enum(['bestseller', 'new', 'featured', 'diwali']).optional(),
   segment: z.string().regex(/^[a-z0-9-]{2,40}$/).optional(),
   material: z.string().regex(/^[a-z,]{2,120}$/).optional(),
+  origin: z.string().regex(/^[a-z ,-]{2,200}$/).optional(), // country of origin (Legal Metrology rule 6(10A))
   intl: z.enum(['1', 'true']).optional(),
   offer: z.enum(['1', 'true']).optional(),
-  sort: z.enum(['featured', 'popular', 'bestsellers', 'price_asc', 'price_desc', 'rating', 'discount', 'newest']).default('featured'),
+  sort: z.enum(['featured', 'popular', 'bestsellers', 'price_asc', 'price_desc', 'rating', 'discount', 'newest', 'origin']).default('featured'),
   page: z.coerce.number().int().min(1).default(1),
   limit: z.coerce.number().int().min(1).max(60).default(24),
 });
@@ -87,12 +88,14 @@ r.get(
     const facets = facetsFor(found.items); // counts before the material filter, so options don't vanish
     rows = found.items;
     if (f.material) { const want = new Set(f.material.split(',')); rows = rows.filter((p) => materialsOf(p).some((m) => want.has(m))); }
+    if (f.origin) { const want = new Set(f.origin.split(',')); rows = rows.filter((p) => want.has(originOf(p))); }
     const disc = (p) => (p.mrp > 0 ? (p.mrp - p.price) / p.mrp : 0);
     const sorters = {
       price_asc: (a, b) => a.price - b.price,
       price_desc: (a, b) => b.price - a.price,
       rating: (a, b) => b.rating - a.rating || b.rating_count - a.rating_count,
       discount: (a, b) => disc(b) - disc(a),
+      origin: (a, b) => originOf(a).localeCompare(originOf(b)) || a.name.localeCompare(b.name),
       newest: (a, b) => b.is_new - a.is_new || String(b.created_at).localeCompare(String(a.created_at)) || b.id - a.id,
       bestsellers: (a, b) => (d.b.get(b.id)?.velocity || 0) - (d.b.get(a.id)?.velocity || 0) || (d.ranks.get(a.id) || 99) - (d.ranks.get(b.id) || 99),
     };

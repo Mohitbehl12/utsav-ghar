@@ -25,7 +25,7 @@ export default function Shop() {
     const q = new URLSearchParams();
     const cats = category ? category : sp.get('category');
     if (cats) q.set('category', cats);
-    for (const k of ['q', 'min', 'max', 'rating', 'discount', 'inStock', 'offer', 'sort', 'flag', 'material', 'intl']) if (sp.get(k)) q.set(k, sp.get(k));
+    for (const k of ['q', 'min', 'max', 'rating', 'discount', 'inStock', 'offer', 'sort', 'flag', 'material', 'origin', 'intl']) if (sp.get(k)) q.set(k, sp.get(k));
     if (collection === 'diwali' || collection === 'festival') q.set('flag', 'diwali');
     q.set('limit', '24');
     return q.toString();
@@ -61,19 +61,22 @@ export default function Shop() {
     s.has(slug) ? s.delete(slug) : s.add(slug);
     set('category', [...s].join(','));
   };
-  const activeCount = ['q', 'min', 'max', 'rating', 'discount', 'inStock', 'offer', 'category', 'material', 'intl'].filter((k) => sp.get(k)).length;
+  const activeCount = ['q', 'min', 'max', 'rating', 'discount', 'inStock', 'offer', 'category', 'material', 'origin', 'intl'].filter((k) => sp.get(k)).length;
   const mats = (sp.get('material') || '').split(',').filter(Boolean);
   const toggleMat = (m) => set('material', (mats.includes(m) ? mats.filter((x) => x !== m) : [...mats, m]).join(','));
+  const origins = (sp.get('origin') || '').split(',').filter(Boolean);
+  const toggleOrigin = (o) => set('origin', (origins.includes(o) ? origins.filter((x) => x !== o) : [...origins, o]).join(','));
   const [range, setRange] = useState({ min: sp.get('min') || '', max: sp.get('max') || '' });
   useEffect(() => { setRange({ min: sp.get('min') || '', max: sp.get('max') || '' }); }, [sp]);
   const applyRange = (e) => { e.preventDefault(); const n = new URLSearchParams(sp); range.min ? n.set('min', range.min) : n.delete('min'); range.max ? n.set('max', range.max) : n.delete('max'); setSp(n, { replace: true }); };
-  const drop = (k, v) => { const n = new URLSearchParams(sp); if (v && k === 'material') { const left = mats.filter((x) => x !== v); left.length ? n.set(k, left.join(',')) : n.delete(k); } else if (v && k === 'category') { const left = selectedCats.filter((x) => x !== v); left.length ? n.set(k, left.join(',')) : n.delete(k); } else if (k === 'price') { n.delete('min'); n.delete('max'); } else n.delete(k); setSp(n, { replace: true }); };
+  const drop = (k, v) => { const n = new URLSearchParams(sp); if (v && k === 'material') { const left = mats.filter((x) => x !== v); left.length ? n.set(k, left.join(',')) : n.delete(k); } else if (v && k === 'origin') { const left = origins.filter((x) => x !== v); left.length ? n.set(k, left.join(',')) : n.delete(k); } else if (v && k === 'category') { const left = selectedCats.filter((x) => x !== v); left.length ? n.set(k, left.join(',')) : n.delete(k); } else if (k === 'price') { n.delete('min'); n.delete('max'); } else n.delete(k); setSp(n, { replace: true }); };
   const matLabel = (m) => data.facets?.materials?.find((x) => x.value === m)?.label || m;
   const chips = [
     ...(sp.get('q') ? [['q', null, `“${sp.get('q')}”`]] : []),
     ...(!category ? selectedCats.map((c) => ['category', c, categories.find((x) => x.slug === c)?.name || c]) : []),
     ...((sp.get('min') || sp.get('max')) ? [['price', null, `₹${sp.get('min') || 0} – ${sp.get('max') ? `₹${sp.get('max')}` : 'any'}`]] : []),
     ...mats.map((m) => ['material', m, matLabel(m)]),
+    ...origins.map((o) => ['origin', o, `Made in ${data.facets?.origins?.find((x) => x.value === o)?.label || o}`]),
     ...(sp.get('rating') ? [['rating', null, `${sp.get('rating')}★ & up`]] : []),
     ...(sp.get('discount') ? [['discount', null, `${sp.get('discount')}%+ off`]] : []),
     ...(sp.get('inStock') ? [['inStock', null, 'In stock']] : []),
@@ -112,6 +115,17 @@ export default function Shop() {
         <input type="number" inputMode="numeric" min={0} placeholder={`₹${data.facets?.price?.max ?? 'Max'}`} aria-label="Maximum price" value={range.max} onChange={(e) => setRange({ ...range, max: e.target.value })} />
         <button className="btn btn--ghost btn--sm">Go</button>
       </form>
+      {data.facets?.origins?.length > 0 && (
+        <fieldset>
+          <legend>Country of origin</legend>
+          {data.facets.origins.map((o) => (
+            <label key={o.value} className="check">
+              <input type="checkbox" checked={origins.includes(o.value)} onChange={() => toggleOrigin(o.value)} />
+              <span>{o.label}</span><small>{o.count}</small>
+            </label>
+          ))}
+        </fieldset>
+      )}
       {data.facets?.materials?.length > 0 && (
         <fieldset>
           <legend>Material</legend>
@@ -172,6 +186,7 @@ export default function Shop() {
             <option value="newest">Newest Arrivals</option>
             <option value="bestsellers">Best Sellers</option>
             <option value="discount">Biggest Discount</option>
+            <option value="origin">Country of origin (A–Z)</option>
           </select>
         </label>
       </div>
